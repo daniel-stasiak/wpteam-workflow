@@ -8,14 +8,7 @@
   "license": "ISC",
   "keywords": [
     "keyword"
-  ],
-  "moduleType": [
-    "amd",
-    "es6",
-    "globals",
-    "node",
-    "yui"
-  ],
+  ]
   "homepage": "http://dawidstasiak.pl/en",
   "ignore": [
     "**/.*",
@@ -28,6 +21,7 @@
     "animsition": "git://github.com/blivesta/animsition.git#^4.0.1",
     "bootstrap-sass": "^3.3.6",
     "animate.css": "git://github.com/daneden/animate.css.git#^3.5.1",
-    "wow": "git://github.com/matthieua/WOW.git#^1.1.2"
+    "wow": "git://github.com/matthieua/WOW.git#^1.1.2",
+    "modernizr": "^3.3.1"
   }
 }
