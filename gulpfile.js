@@ -46,7 +46,7 @@ gulp.task('styles', function() {
 // Scripts
 gulp.task('scripts', function() {
   return gulp.src('assets/scripts/**/*.js')
-    .pipe(concat('main.min.js'))
+    .pipe(concat('scripts.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('scripts'))
     .pipe(notify({ message: 'Scripts task complete' }));
