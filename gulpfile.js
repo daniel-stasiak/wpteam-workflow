@@ -55,7 +55,7 @@ gulp.task('scripts', function() {
 // Images
 gulp.task('images', function() {
   return gulp.src('assets/images/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    // .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest('images'))
     .pipe(notify({ message: 'Images task complete' }));
 });
@@ -84,7 +84,10 @@ gulp.task('default', ['clean', 'bower-files', 'sass'], function() {
 gulp.task('watch', function() {
 
   // Watch .scss files
-  gulp.watch('assets/styles/**/*.scss', ['styles']);
+  gulp.watch('assets/styles/**/*.scss', ['sass']);
+
+  // Watch .css files
+  gulp.watch('assets/styles/**/*.css', ['styles']);
 
   // Watch .js files
   gulp.watch('assets/scripts/**/*.js', ['scripts']);
