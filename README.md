@@ -1,4 +1,4 @@
-# Insites holding page
+# WebApp Generator
 
 Generator with bower and gulp for new project created by [Dawid Stasiak](https://dawidstasiak.pl/en).
 
