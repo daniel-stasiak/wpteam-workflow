@@ -120,7 +120,7 @@ input:focus{
 
     h1 {
         @include lato('regular');
-        color: $navy-blue;
+        // color: $navy-blue;
         font-size: 46px;
         line-height: 56px;
 
@@ -141,7 +141,7 @@ input:focus{
     }
 
     h2 {
-        color: $navy-blue;
+        // color: $navy-blue;
         @include lato('medium');
         font-size: 30px;
         line-height: 38px;
@@ -163,7 +163,7 @@ input:focus{
     }
 
     h3 {
-        color: $navy-blue;
+        // color: $navy-blue;
         @include lato('bold');
         font-size: 21px;
         line-height: 27px;
