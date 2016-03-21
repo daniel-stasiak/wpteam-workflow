@@ -119,7 +119,7 @@ input:focus{
     /* ~~~~~~~~~~ Titles ~~~~~~~~~~ */
 
     h1 {
-        @include lato('regular');
+        // @include lato('regular');
         // color: $navy-blue;
         font-size: 46px;
         line-height: 56px;
@@ -142,7 +142,7 @@ input:focus{
 
     h2 {
         // color: $navy-blue;
-        @include lato('medium');
+        // @include lato('medium');
         font-size: 30px;
         line-height: 38px;
 
@@ -164,7 +164,7 @@ input:focus{
 
     h3 {
         // color: $navy-blue;
-        @include lato('bold');
+        // @include lato('bold');
         font-size: 21px;
         line-height: 27px;
 
@@ -188,7 +188,7 @@ input:focus{
     /* ~~~~~~~~~~ Paragraphs ~~~~~~~~~~ */
 
     p {
-        @include lato('medium');
+        // @include lato('medium');
         font-size: 18px;
         line-height: 26px;
         color: rgba(33,34,36,0.8);
@@ -211,8 +211,7 @@ input:focus{
 
         b,
         strong {
-            @include lato('bold');
-            opacity: 1;
+            // @include lato('bold');
         }
 
         a {
