@@ -111,6 +111,12 @@ input:focus{
     outline: 0;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    img[src*=".svg"] {
+        width: 100%;
+    }
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Repeats for Insites ~~~~~~~~~~ */
@@ -255,6 +261,35 @@ input:focus{
             @extend p;
             text-indent: -1em;
             padding-left: 1em;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Images ~~~~~~~~~~ */
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-top: 25px;
+
+        &.alignleft {
+            float: left;
+            width: auto;
+            margin: 0 25px 15px 0;
+
+            @media (max-width: 479px) {
+                width: 100%;
+            }
+        }
+
+         &.alignright {
+            float: right;
+            width: auto;
+            margin: 0 0 15px 25px;
+
+            @media (max-width: 479px) {
+                width: 100%;
+            }
         }
     }
 
