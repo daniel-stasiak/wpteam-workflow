@@ -125,6 +125,19 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    text-decoration: none;
+    @extend %single-transition;
+
+    &:hover,
+    &:focus {
+        @extend %single-transition;
+        text-decoration: none;
+    }
+
+    &:active,
+    &:focus {
+        outline:none;
+    }
 }
 
 /* change colours to suit your needs */
@@ -168,4 +181,25 @@ hr {
 
 input, select {
     vertical-align:middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-style: normal;
+}
+
+textarea:focus,
+input:focus{
+    outline: 0;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    img[src*=".svg"] {
+        width: 100%;
+    }
 }
