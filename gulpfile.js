@@ -52,14 +52,6 @@ gulp.task('scripts', function() {
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
-// Images
-gulp.task('images', function() {
-  return gulp.src('assets/images/**/*')
-    // .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('images'))
-    .pipe(notify({ message: 'Images task complete' }));
-});
-
 // Fonts
 gulp.task('fonts', function() {
     return gulp.src([
@@ -72,12 +64,12 @@ gulp.task('fonts', function() {
 
 // Clean
 gulp.task('clean', function() {
-  return del(['styles', 'scripts', 'images']);
+  return del(['styles', 'scripts']);
 });
 
 // Default task
 gulp.task('default', ['clean', 'bower-files', 'sass'], function() {
-  gulp.start('styles', 'scripts', 'images', 'fonts');
+  gulp.start('styles', 'scripts', 'fonts');
 });
 
 // Watch
@@ -91,9 +83,6 @@ gulp.task('watch', function() {
 
   // Watch .js files
   gulp.watch('assets/scripts/**/*.js', ['scripts']);
-
-  // Watch image files
-  gulp.watch('assets/images/**/*', ['images']);
 
   // Watch fonts files
   gulp.watch('assets/fonts/**/*', ['fonts']);
