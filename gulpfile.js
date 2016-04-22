@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
@@ -89,8 +88,5 @@ gulp.task('watch', function() {
 
   // Create LiveReload server
   livereload.listen();
-
-  // Watch any files in , reload on change
-  gulp.watch(['**']).on('change', livereload.changed);
 
 });
