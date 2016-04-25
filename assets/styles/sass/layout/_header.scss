@@ -1,0 +1,137 @@
+/* ~~~~~~~~~~ Navbar ~~~~~~~~~~ */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	left: 0;
+  	z-index: 20;
+
+  	> .container {
+  		padding-right: 0;
+  		padding-left: 0;
+	}
+
+	.navbar {
+  		padding-right: 15px;
+  		padding-left: 15px;
+
+  		.container {
+  			width: auto;
+		}
+	}
+}
+
+.navbar-inverse {
+  	background-color: #414042;
+  	border-color: transparent;
+
+  	.navbar-nav {
+  		> li {
+  			> a {
+  				font-family: $font-stack;
+  				font-size: 16px;
+  				font-weight: 300;
+  				color: #eee;
+  			}
+  		}
+
+  		> .active > a,
+  		> .active > a:hover,
+  		> li > a:hover{
+  			color: $primary-color;
+  			background-color: transparent;
+  		}
+
+  		> .open > a,
+  		> .open > a:focus,
+  		> .open > a:hover {
+  			background-color: transparent;
+  			color: $primary-color !important;
+  		}
+  	}
+}
+
+/*.navbar-wrapper .navbar.navbar-inverse.navbar-static-top .nav-container {
+  padding: 30px 20px 20px 20px;
+}*/
+
+.navbar-brand {
+  	height: 150px;
+  	padding: 50px 40px;
+
+  	img {
+  		width: 150px;
+  		height: auto;
+	}
+}
+
+#navbar {
+	ul {
+		&.nav.navbar-nav.navbar-right {
+			padding-top: 70px;
+  			padding-right: 30px;
+		}
+
+		li {
+			ul {
+				li {
+					background: transparent;
+    				padding-left: 0;
+				}
+			}
+
+			& + li {
+				background: url('../img/imm-drop.png') no-repeat center left;
+	  			padding-left: 10px;
+	  		}
+		}
+	}
+}
+
+.dropdown-menu {
+  	background-color: $secondary-color;
+
+  	li {
+  		a {
+  			color: #eee;
+    		padding-top: 7px;
+    		padding-bottom: 7px;
+  		}
+  	}
+
+  	.divider {
+    	background: transparent;
+    	background-color: #e5e5e5 !important;
+    	opacity: 0.2;
+  	}
+
+  	> .active > a,
+  	> .active > a:focus,
+  	> .active > a:hover {
+  		background-color: $primary-color;
+  	}
+}
+
+.navbar-contact {
+  	position: absolute;
+  	top: 0;
+  	right: 40px;
+
+  	a {
+    	margin: 0;
+    	min-width: 200px;
+    	background-color: $primary-color;
+    	color: #fff;
+    	padding: 10px;
+    	font-size: 110%;
+    	border: 0;
+    	border-radius: 0 0 10px 10px;
+    	transition: 0.3s ease-out all;
+  	}
+}
+
+.caret {
+  	margin-left: 10px;
+}
