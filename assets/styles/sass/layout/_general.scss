@@ -1,4 +1,29 @@
-/* ~~~~~~~~~~ Titles ~~~~~~~~~~ */
+/* ~~~~~~~~~~ Body ~~~~~~~~~~ */
+
+body {
+    // @include lato('medium');
+    // color: #000;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (max-width: 1199px) {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 15px;
+        line-height: 23px;
+    }
+}
+
+
+/* ~~~~~~~~~~ Headlines ~~~~~~~~~~ */
 
 h1 {
     // @include lato('regular');
@@ -70,26 +95,7 @@ h3 {
 /* ~~~~~~~~~~ Paragraphs ~~~~~~~~~~ */
 
 p {
-    // @include lato('medium');
-    font-size: 18px;
-    line-height: 26px;
-    color: rgba(33,34,36,0.8);
     margin-top: 25px;
-
-    @media (max-width: 1199px) {
-        font-size: 17px;
-        line-height: 25px;
-    }
-
-    @media (max-width: 991px) {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    @media (max-width: 767px) {
-        font-size: 15px;
-        line-height: 23px;
-    }
 
     b,
     strong {
