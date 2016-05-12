@@ -1,6 +1,6 @@
 // Load plugins
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify'),
@@ -9,8 +9,11 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
-    del = require('del');
-    lib = require('bower-files')();
+    del = require('del'),
+    connect = require('gulp-connect-php'),
+    lib = require('bower-files')(),
+    browserSync = require('browser-sync'),
+    sourcemaps = require('gulp-sourcemaps');
 
 // Bower files
 gulp.task('bower-files', function () {
@@ -26,16 +29,26 @@ gulp.task('bower-files', function () {
 });
 
 // Sass
-gulp.task('sass', function() {
-  return sass('assets/styles/sass/style.scss', { style: 'expanded' })
-    .pipe(autoprefixer('last 2 version'))
-    .pipe(gulp.dest('assets/styles/css'))
-    .pipe(notify({ message: 'Sass task complete' }));
+gulp.task('sass', function () {
+  return gulp.src('assets/styles/sass/style.scss')
+      .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('assets/styles/css'))
+      .pipe(notify({ message: 'Sass task complete' }));
 });
 
 // Styles
 gulp.task('styles', function() {
-  return gulp.src('assets/styles/**/*.css')
+  return gulp.src('assets/styles/css/**/*.css')
+    .pipe(concat('style.min.css'))
+    .pipe(gulp.dest('styles'))
+    .pipe(notify({ message: 'Styles task complete' }));
+});
+
+// Styles minified
+gulp.task('styles-minified', function() {
+  return gulp.src('assets/styles/css/**/*.css')
     .pipe(concat('style.min.css'))
     .pipe(cssnano())
     .pipe(gulp.dest('styles'))
@@ -68,25 +81,29 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean', 'bower-files', 'sass'], function() {
-  gulp.start('styles', 'scripts', 'fonts');
+  gulp.start('styles-minified', 'scripts', 'fonts');
 });
 
 // Watch
 gulp.task('watch', function() {
-
-  // Watch .scss files
-  gulp.watch('assets/styles/**/*.scss', ['sass']);
-
-  // Watch .css files
-  gulp.watch('assets/styles/**/*.css', ['styles']);
-
-  // Watch .js files
+  gulp.watch('assets/styles/sass/**/*.scss', ['sass']);
+  gulp.watch('assets/styles/css/*.css', ['styles']);
   gulp.watch('assets/scripts/**/*.js', ['scripts']);
-
-  // Watch fonts files
   gulp.watch('assets/fonts/**/*', ['fonts']);
-
-  // Create LiveReload server
   livereload.listen();
+});
 
+// Serve
+gulp.task('serve', ['watch'], function() {
+  connect.server({}, function (){
+    browserSync({
+      open: 'local',
+      proxy: '127.0.0.1:8000',
+      files: [
+        '**/*.php',
+        '**/*.css',
+        '**/*.js'
+      ]
+    });
+  });
 });
