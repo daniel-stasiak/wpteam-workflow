@@ -1,5 +1,2 @@
-dist
 .idea
-.tmp
 .sass-cache
-test/bower_components
