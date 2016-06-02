@@ -177,3 +177,56 @@ img {
         }
     }
 }
+
+
+/* ~~~~~~~~~~ Section ~~~~~~~~~~ */
+
+.section-paddings {
+    &--both {
+        padding: 75px 0;
+
+        @media (max-width: 1199px) {
+            padding: 50px 0;
+        }
+
+        @media (max-width: 991px) {
+            padding: 35px 0;
+        }
+
+        @media (max-width: 767px) {
+            padding: 25px 0;
+        }
+    }
+
+    &--top {
+        padding-top: 75px;
+
+        @media (max-width: 1199px) {
+            padding-top: 50px;
+        }
+
+        @media (max-width: 991px) {
+            padding-top: 35px;
+        }
+
+        @media (max-width: 767px) {
+            padding-top: 25px;
+        }
+    }
+
+    &--bottom {
+        padding-bottom: 75px;
+
+        @media (max-width: 1199px) {
+            padding-bottom: 50px;
+        }
+
+        @media (max-width: 991px) {
+            padding-bottom: 35px;
+        }
+
+        @media (max-width: 767px) {
+            padding-bottom: 25px;
+        }
+    }
+}
