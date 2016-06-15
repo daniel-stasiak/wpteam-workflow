@@ -149,6 +149,26 @@ ol {
     }
 }
 
+.centered-list {
+    text-align: center;
+
+    ul {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        /* For IE, the outcast */
+        zoom:1;
+        *display: inline;
+
+        li {
+            float: left;
+            text-indent: 0;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
 
 /* ~~~~~~~~~~ Images ~~~~~~~~~~ */
 
