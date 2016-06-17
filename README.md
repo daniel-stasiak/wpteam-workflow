@@ -14,7 +14,7 @@ Repository works great with WordPress.
 
 ## Installation
 
-1. Just clone this repository to your local ```git clone https://github.com/agencja-acclaim/gulp-bower-webapp.git```
+1. Just clone this repository to your local ```git clone https://github.com/agencja-acclaim/gulp-bower-webapp.git .```
 2. Install npm modules ```npm install```
 3. Install bower components ```bower install```
 4. Enjoy!
