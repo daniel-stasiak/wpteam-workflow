@@ -1,5 +1,7 @@
 
-        <script src="scripts/scripts.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/scripts/scripts.min.js"></script>
+
+        <?php wp_footer(); ?>
 
         <script>
             new WOW().init();
