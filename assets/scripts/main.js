@@ -1,8 +1,9 @@
 $(function() {
 
-    /* ~~~~~~~~~~ Animsition ~~~~~~~~~~ */
-
     $(document).ready(function() {
+
+        /* ~~~~~~~~~~ Animsition ~~~~~~~~~~ */
+
         $(".animsition").animsition({
             inClass: 'fade-in',
             outClass: 'fade-out',
@@ -23,5 +24,10 @@ $(function() {
             transition: function(url){ window.location.href = url; }
         });
     });
+
+
+    /* ~~~~~~~~~~ WOW Initial ~~~~~~~~~~ */
+
+    new WOW().init();
 
 });
