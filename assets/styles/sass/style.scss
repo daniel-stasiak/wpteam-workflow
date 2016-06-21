@@ -4,7 +4,7 @@
 
     /* ~~~~~~~~~~ Bootstrap ~~~~~~~~~~ */
 
-    @import "../../../bower_components/bootstrap/dist/css/bootstrap";
+    @import "../../../bower_components/bootstrap/scss/bootstrap";
 
 
     /* ~~~~~~~~~~ Font awesome ~~~~~~~~~~ */
@@ -30,9 +30,9 @@
 /* ~~~~~~~~~~ Helpers ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-    /* ~~~~~~~~~~ Variables ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Mixins ~~~~~~~~~~ */
 
-    @import "helpers/variables";
+    @import "helpers/mixins";
 
 
     /* ~~~~~~~~~~ Repaters ~~~~~~~~~~ */
@@ -40,23 +40,18 @@
     @import "helpers/repeaters";
 
 
+    /* ~~~~~~~~~~ Variables ~~~~~~~~~~ */
+
+    @import "helpers/variables";
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Components ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-    /* ~~~~~~~~~~ Bootstrap breakpoint MS ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Bootstrap 4 responsive navbar fixed ~~~~~~~~~~ */
 
-    @import "components/bootstrap-breakpoint-ms";
-
-
-    /* ~~~~~~~~~~ Bootstrap centered columns ~~~~~~~~~~ */
-
-    @import "components/bootstrap-centered-columns";
-
-
-    /* ~~~~~~~~~~ Bootstrap height adjust columns ~~~~~~~~~~ */
-
-    @import "components/bootstrap-height-adjust-columns";
+    @import "components/bootstrap-4-responsive-navbar-fixed";
 
 
     /* ~~~~~~~~~~ WOW animations ~~~~~~~~~~ */

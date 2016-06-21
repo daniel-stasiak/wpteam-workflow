@@ -35,3 +35,33 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <header class="main-header">
+            <nav class="navbar navbar-light bg-faded">
+                <h2 class="hide">Main navigation</h2>
+
+                <?php if ( is_admin_bar_showing() ) echo '<div class="adminbar-fix"></div>'; ?>
+
+                <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+                    &#9776;
+                </button>
+
+                <div id="CollapsingNavbar" class="collapse navbar-toggleable-xs">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link"><<img src="#" alt="Logo"></a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link animsition-link">First</a>
+                        </li><!-- /.nav-item -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link animsition-link">Second</a>
+                        </li><!-- /.nav-item -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link animsition-link">Third</a>
+                        </li><!-- /.nav-item -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link animsition-link">Fourth</a>
+                        </li><!-- /.nav-item -->
+                    </ul><!-- /.nav navbar-nav -->
+                </div><!-- /#CollapsingNavbar.collapse navbar-toggleable-xs -->
+            </nav><!-- /.navbar navbar-light bg-faded -->
+        </header><!-- /.main-header -->

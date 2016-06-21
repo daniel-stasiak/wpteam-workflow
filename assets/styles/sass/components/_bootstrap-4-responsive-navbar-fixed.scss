@@ -1,0 +1,33 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ Bootstrap 4.0 Navbar fixed ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.navbar-brand {
+    float: none;
+}
+
+.navbar-nav .nav-item {
+    float: none;
+}
+
+.navbar-divider,
+.navbar-nav .nav-item+.nav-item,
+.navbar-nav .nav-link + .nav-link {
+    margin-left: 0;
+}
+
+@include media-breakpoint-up(sm) {
+    .navbar-brand {
+        float: left;
+    }
+
+    .navbar-nav .nav-item {
+        float: left;
+    }
+
+    .navbar-divider,
+    .navbar-nav .nav-item+.nav-item,
+    .navbar-nav .nav-link + .nav-link {
+        margin-left: 1rem;
+    }
+}

@@ -1,4 +1,8 @@
-@media (max-width: 991px) {
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ WOW animations ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@include media-breakpoint-down(md) {
     .wow {
         visibility: visible !important;
         -webkit-animation: none !important;

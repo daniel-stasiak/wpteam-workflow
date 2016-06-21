@@ -64,16 +64,6 @@ gulp.task('scripts', function() {
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
-// Fonts
-gulp.task('fonts', function() {
-    return gulp.src([
-      'bower_components/components-font-awesome/fonts/**/*',
-      'bower_components/bootstrap-sass/assets/fonts/bootstrap/**/*'
-      ])
-      .pipe(gulp.dest('fonts'))
-      .pipe(notify({ message: 'Fonts task complete' }));
-});
-
 // Clean
 gulp.task('clean', function() {
   return del(['styles', 'scripts']);
@@ -81,7 +71,7 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean', 'bower-files', 'sass'], function() {
-  gulp.start('styles-minified', 'scripts', 'fonts');
+  gulp.start('styles-minified', 'scripts');
 });
 
 // Watch
@@ -89,7 +79,6 @@ gulp.task('watch', function() {
   gulp.watch('assets/styles/sass/**/*.scss', ['sass']);
   gulp.watch('assets/styles/css/*.css', ['styles']);
   gulp.watch('assets/scripts/**/*.js', ['scripts']);
-  gulp.watch('assets/fonts/**/*', ['fonts']);
   livereload.listen();
 });
 
