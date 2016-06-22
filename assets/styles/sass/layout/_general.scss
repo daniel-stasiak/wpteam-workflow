@@ -112,6 +112,7 @@
     ol {
         &.reset-list {
             list-style: none;
+            padding: 0;
 
             ul,
             ol {
@@ -160,62 +161,124 @@
 
     .section-paddings {
         &--both {
-            padding: $section-padding__xl 0;
+            padding: $section-space__xl 0;
 
             @include media-breakpoint-down(lg) {
-                padding: $section-padding__lg 0;
+                padding: $section-space__lg 0;
             }
 
             @include media-breakpoint-down(md) {
-                padding: $section-padding__md 0;
+                padding: $section-space__md 0;
             }
 
             @include media-breakpoint-down(sm) {
-                padding: $section-padding__sm 0;
+                padding: $section-space__sm 0;
             }
 
             @include media-breakpoint-down(xs) {
-                padding: $section-padding__xs 0;
+                padding: $section-space__xs 0;
             }
         }
 
         &--top {
-            padding-top: $section-padding__xl;
+            padding-top: $section-space__xl;
 
             @include media-breakpoint-down(lg) {
-                padding-top: $section-padding__lg;
+                padding-top: $section-space__lg;
             }
 
             @include media-breakpoint-down(md) {
-                padding-top: $section-padding__md;
+                padding-top: $section-space__md;
             }
 
             @include media-breakpoint-down(sm) {
-                padding-top: $section-padding__sm;
+                padding-top: $section-space__sm;
             }
 
             @include media-breakpoint-down(xs) {
-                padding-top: $section-padding__xs;
+                padding-top: $section-space__xs;
             }
         }
 
         &--bottom {
-            padding-bottom: $section-padding__xl;
+            padding-bottom: $section-space__xl;
 
             @include media-breakpoint-down(lg) {
-                padding-bottom: $section-padding__lg;
+                padding-bottom: $section-space__lg;
             }
 
             @include media-breakpoint-down(md) {
-                padding-bottom: $section-padding__md;
+                padding-bottom: $section-space__md;
             }
 
             @include media-breakpoint-down(sm) {
-                padding-bottom: $section-padding__sm;
+                padding-bottom: $section-space__sm;
             }
 
             @include media-breakpoint-down(xs) {
-                padding-bottom: $section-padding__xs;
+                padding-bottom: $section-space__xs;
+            }
+        }
+    }
+
+    .section-margins {
+        &--both {
+            margin: $section-space__xl 0;
+
+            @include media-breakpoint-down(lg) {
+                margin: $section-space__lg 0;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin: $section-space__md 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin: $section-space__sm 0;
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin: $section-space__xs 0;
+            }
+        }
+
+        &--top {
+            margin-top: $section-space__xl;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: $section-space__lg;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-top: $section-space__md;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-top: $section-space__sm;
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin-top: $section-space__xs;
+            }
+        }
+
+        &--bottom {
+            margin-bottom: $section-space__xl;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: $section-space__lg;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: $section-space__md;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: $section-space__sm;
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin-bottom: $section-space__xs;
             }
         }
     }
