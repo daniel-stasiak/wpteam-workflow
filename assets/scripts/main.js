@@ -23,6 +23,17 @@ $(function() {
             overlayParentElement : 'html',
             transition: function(url){ window.location.href = url; }
         });
+
+
+        /* ~~~~~~~~~~ Match height ~~~~~~~~~~ */
+
+        $('.match-height').matchHeight({
+            byRow: true,
+            property: 'min-height',
+            target: null,
+            remove: false
+        });
+
     });
 
 

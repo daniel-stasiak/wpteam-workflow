@@ -37,6 +37,14 @@
     p {
         margin-top: 25px;
 
+        @include media-breakpoint-down(sm) {
+            margin-top: 20px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            margin-top: 15px;
+        }
+
         b,
         strong {
             // @include lato('bold');

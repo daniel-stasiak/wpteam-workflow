@@ -39,7 +39,9 @@
 
     .hide {
         text-indent: -998em;
-        height: 0px;
+        height: 0;
+        margin: 0;
+        padding: 0;
     }
 
     .clearfix {
