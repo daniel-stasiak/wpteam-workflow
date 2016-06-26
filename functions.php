@@ -68,7 +68,7 @@ function mysite_opengraph_content($val) {
 
 /* ~~~~~~~~~~ Add featured image to page ~~~~~~~~~~ */
 
-add_theme_support( 'post-thumbnails', array( 'post', 'destinations_archive', 'activities_archive', 'camps_archive', 'page' ) );
+add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
 
 
