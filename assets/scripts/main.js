@@ -53,6 +53,23 @@ $(function() {
             }, 1000, 'swing');
         }
 
+
+        /* ~~~~~~~~~~ Return to top button ~~~~~~~~~~ */
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 100) {
+                $('#return-to-top').addClass('isVisible');
+            } else {
+                $('#return-to-top').removeClass('isVisible');
+            }
+        });
+
+        $('#return-to-top').click(function() {
+            $('body,html').animate({
+                scrollTop : 0
+            }, 500);
+        });
+
     });
 
 

@@ -36,6 +36,12 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <a href="javascript:" id="return-to-top">
+            <div class="vertical-center">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </div><!-- /.vertical-center -->
+        </a>
+
         <header class="main-header">
             <nav class="navbar navbar-light bg-faded">
                 <h2 class="hide">Main navigation</h2>

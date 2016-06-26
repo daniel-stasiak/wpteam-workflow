@@ -290,3 +290,36 @@
             }
         }
     }
+
+
+    /* ~~~~~~~~~~ To top ~~~~~~~~~~ */
+
+    #return-to-top {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        background: #aaa;
+        width: 45px;
+        height: 45px;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 5;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        &.isVisible {
+            opacity: 0.75;
+            visibility: visible;
+            @extend %single-transition;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
