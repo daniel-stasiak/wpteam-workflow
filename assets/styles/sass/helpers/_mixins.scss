@@ -62,31 +62,31 @@
 	/* ~~~~~~~~~~ Letter spacing ~~~~~~~~~~~ */
 
 	@mixin letter-spacing($letterSpacing) {
-		$letterSpacingToEm : ($letterSpacing * 0.001);
+		$letterSpacingToEm: ($letterSpacing * 0.001);
 
 		letter-spacing: $letterSpacingToEm + em;
 
 		@include media-breakpoint-down(lg) {
-			$letterSpacingToEmAfterChangeSize: $letterSpacingToEm * 0.8;
+			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.8);
 
-			letter-spacing: round($letterSpacingToEmAfterChangeSize) + em;
+			letter-spacing: $letterSpacingToEmAfterChangeSize + em;
 		}
 
 		@include media-breakpoint-down(md) {
-			$letterSpacingToEmAfterChangeSize: $letterSpacingToEm * 0.6;
+			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.6);
 
-			letter-spacing: round($letterSpacingToEmAfterChangeSize) + em;
+			letter-spacing: $letterSpacingToEmAfterChangeSize + em;
 		}
 
 		@include media-breakpoint-down(sm) {
-			$letterSpacingToEmAfterChangeSize: $letterSpacingToEm * 0.4;
+			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.4);
 
-			letter-spacing: round($letterSpacingToEmAfterChangeSize) + em;
+			letter-spacing: $letterSpacingToEmAfterChangeSize + em;
 		}
 
 		@include media-breakpoint-down(xs) {
-			$letterSpacingToEmAfterChangeSize: $letterSpacingToEm * 0.2;
+			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.2);
 
-			letter-spacing: round($letterSpacingToEmAfterChangeSize) + em;
+			letter-spacing: $letterSpacingToEmAfterChangeSize + em;
 		}
 	}
