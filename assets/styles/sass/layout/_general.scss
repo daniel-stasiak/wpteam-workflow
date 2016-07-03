@@ -102,16 +102,13 @@
 
         ul {
             display: inline-block;
-            margin: 0;
-            padding: 0;
             zoom:1;
             *display: inline;
+            list-style: none;
 
             li {
                 float: left;
                 text-indent: 0;
-                padding: 0;
-                margin: 0;
             }
         }
     }
@@ -120,7 +117,6 @@
     ol {
         &.reset-list {
             list-style: none;
-            padding: 0;
 
             ul,
             ol {
@@ -129,8 +125,6 @@
 
             li {
                 text-indent: 0;
-                padding: 0;
-                margin: 0;
             }
         }
     }
