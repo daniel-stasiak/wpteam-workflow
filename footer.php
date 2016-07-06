@@ -1,4 +1,8 @@
 
+        <footer class="main-footer">
+
+        </footer><!-- /.main-footer -->
+
         <script src="<?php echo get_template_directory_uri(); ?>/scripts/scripts.min.js"></script>
 
         <?php wp_footer(); ?>

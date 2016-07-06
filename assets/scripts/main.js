@@ -2,6 +2,7 @@ $(function() {
 
     $(document).ready(function() {
 
+
         /* ~~~~~~~~~~ Animsition ~~~~~~~~~~ */
 
         $(".animsition").animsition({
@@ -10,14 +11,17 @@ $(function() {
             inDuration: 1500,
             outDuration: 800,
             linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
             loading: true,
-            loadingParentElement: 'html',
+            loadingParentElement: 'html', //animsition wrapper element
             loadingClass: 'animsition-loading',
-            loadingInner: '',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
             timeout: false,
             timeoutCountdown: 5000,
             onLoadEvent: true,
             browser: [ 'animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
             overlay : false,
             overlayClass : 'animsition-overlay-slide',
             overlayParentElement : 'html',
@@ -67,6 +71,17 @@ $(function() {
         $('#return-to-top').click(function() {
             $('body,html').animate({
                 scrollTop : 0
+            }, 500);
+        });
+
+
+        /* ~~~~~~~~~~ Smooth scroll ~~~~~~~~~~ */
+
+        $(document).on('click', 'a.page-scroll', function(event){
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 500);
         });
 

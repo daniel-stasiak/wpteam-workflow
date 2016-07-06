@@ -1,0 +1,9 @@
+@include media-breakpoint-down(sm) {
+    #rc-imageselect,
+    .g-recaptcha {
+    	transform:scale(0.75);
+    	-webkit-transform:scale(0.75);
+    	transform-origin:0 0;
+    	-webkit-transform-origin:0 0;
+   	}
+}
