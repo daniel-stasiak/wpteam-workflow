@@ -30,6 +30,11 @@
 /* ~~~~~~~~~~ Helpers ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+    /* ~~~~~~~~~~ Variables ~~~~~~~~~~ */
+
+    @import "helpers/variables";
+
+
     /* ~~~~~~~~~~ Mixins ~~~~~~~~~~ */
 
     @import "helpers/mixins";
@@ -38,11 +43,6 @@
     /* ~~~~~~~~~~ Repaters ~~~~~~~~~~ */
 
     @import "helpers/repeaters";
-
-
-    /* ~~~~~~~~~~ Variables ~~~~~~~~~~ */
-
-    @import "helpers/variables";
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
