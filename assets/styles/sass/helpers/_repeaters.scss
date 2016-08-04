@@ -2,6 +2,8 @@
 /* ~~~~~~~~~~ Repeaters ~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+    /* ~~~~~~~~~~ Absolute center ~~~~~~~~~~ */
+
     %absolute-center {
         left: 0;
         right: 0;
@@ -10,9 +12,15 @@
         text-align: center;
     }
 
+
+    /* ~~~~~~~~~~ Single transition ~~~~~~~~~~ */
+
     %single-transition {
         transition: all 0.2s ease-in-out;
     }
+
+
+    /* ~~~~~~~~~~ Vertical center ~~~~~~~~~~ */
 
     .vertical-center {
         position: relative;
@@ -30,12 +38,18 @@
         }
     }
 
+
+    /* ~~~~~~~~~~ Background cover ~~~~~~~~~~ */
+
     .background-cover {
         width: 100%;
         height: 100%;
         background-position: center;
         background-size: cover;
     }
+
+
+    /* ~~~~~~~~~~ Hide ~~~~~~~~~~ */
 
     .hide {
         text-indent: -998em;
@@ -44,6 +58,179 @@
         padding: 0;
     }
 
+
+    /* ~~~~~~~~~~ Clearfix ~~~~~~~~~~ */
+
     .clearfix {
         clear: both;
+    }
+
+
+    /* ~~~~~~~~~~ Lists ~~~~~~~~~~ */
+
+    .centered-list {
+        text-align: center;
+
+        ul {
+            display: inline-block;
+            zoom:1;
+            *display: inline;
+            list-style: none;
+
+            li {
+                float: left;
+                text-indent: 0;
+
+                @include media-breakpoint-down(sm) {
+                    float: none;
+                }
+            }
+        }
+    }
+
+    .reset-list {
+        list-style: none;
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        li {
+            text-indent: 0;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Overflow ~~~~~~~~~~ */
+
+    .overflow-x-hidden {
+        overflow-x: hidden;
+    }
+
+
+    /* ~~~~~~~~~~ Section paddings and margins ~~~~~~~~~~ */
+
+    .section-paddings {
+        &--both {
+            padding: $section-space__xl 0;
+
+            @include media-breakpoint-down(lg) {
+                padding: $section-space__lg 0;
+            }
+
+            @include media-breakpoint-down(md) {
+                padding: $section-space__md 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: $section-space__sm 0;
+            }
+
+            @include media-breakpoint-down(xs) {
+                padding: $section-space__xs 0;
+            }
+        }
+
+        &--top {
+            padding-top: $section-space__xl;
+
+            @include media-breakpoint-down(lg) {
+                padding-top: $section-space__lg;
+            }
+
+            @include media-breakpoint-down(md) {
+                padding-top: $section-space__md;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding-top: $section-space__sm;
+            }
+
+            @include media-breakpoint-down(xs) {
+                padding-top: $section-space__xs;
+            }
+        }
+
+        &--bottom {
+            padding-bottom: $section-space__xl;
+
+            @include media-breakpoint-down(lg) {
+                padding-bottom: $section-space__lg;
+            }
+
+            @include media-breakpoint-down(md) {
+                padding-bottom: $section-space__md;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding-bottom: $section-space__sm;
+            }
+
+            @include media-breakpoint-down(xs) {
+                padding-bottom: $section-space__xs;
+            }
+        }
+    }
+
+    .section-margins {
+        &--both {
+            margin: $section-space__xl 0;
+
+            @include media-breakpoint-down(lg) {
+                margin: $section-space__lg 0;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin: $section-space__md 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin: $section-space__sm 0;
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin: $section-space__xs 0;
+            }
+        }
+
+        &--top {
+            margin-top: $section-space__xl;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: $section-space__lg;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-top: $section-space__md;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-top: $section-space__sm;
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin-top: $section-space__xs;
+            }
+        }
+
+        &--bottom {
+            margin-bottom: $section-space__xl;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: $section-space__lg;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: $section-space__md;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: $section-space__sm;
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin-bottom: $section-space__xs;
+            }
+        }
     }

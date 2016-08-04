@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
-<h1>Hello Word</h1>
+<main id="main" class="homepage" tabindex="-1">
+
+	<h1>Hello Word</h1>
+
+</main><!-- /#main.homepage -->
 
 <?php get_footer(); ?>

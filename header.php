@@ -53,7 +53,7 @@
                 </button>
 
                 <div id="CollapsingNavbar" class="collapse navbar-toggleable-xs">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link"><<img src="#" alt="Logo"></a>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link"><img src="#" alt="Logo"></a>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
                             <a href="#" class="nav-link animsition-link">First</a>
