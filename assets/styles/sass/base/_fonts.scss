@@ -2,14 +2,16 @@
 /* ~~~~~~~~~~ Fonts ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-@mixin lato($fontName) {
-    @if $fontName == "normal" {
-        font-weight: 300;
-    } @elseif $fontName == "medium" {
-        font-weight: 400;
-    } @elseif $fontName == "bold" {
-        font-weight: 700;
-    }
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
-}
+	/* ~~~~~~~~~~ Lato ~~~~~~~~~~ */
+
+	@mixin primary-font($fontName) {
+	    @if $fontName == "normal" {
+	        font-weight: 300;
+	    } @elseif $fontName == "medium" {
+	        font-weight: 400;
+	    } @elseif $fontName == "bold" {
+	        font-weight: 700;
+	    }
+	    font-family: 'Lato', sans-serif;
+	    font-style: normal;
+	}

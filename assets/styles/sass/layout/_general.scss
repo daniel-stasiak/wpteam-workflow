@@ -34,27 +34,6 @@
 
     /* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
 
-    p {
-        margin-top: 25px;
-
-        @include media-breakpoint-down(sm) {
-            margin-top: 20px;
-        }
-
-        @include media-breakpoint-down(xs) {
-            margin-top: 15px;
-        }
-
-        a {
-            border-bottom: 1px dotted transparent;
-
-            &:hover,
-            &:focus {
-                border-color: inherit;
-            }
-        }
-    }
-
     b,
     strong {
         // @include fira-sans('medium');
@@ -62,73 +41,6 @@
 
     em {
         // @include fira-sans('light-italic');
-    }
-
-
-    /* ~~~~~~~~~~ ul, ol lists ~~~~~~~~~~ */
-
-    ul {
-        list-style-type: disc;
-    }
-
-    ol {
-        list-style-type: decimal;
-    }
-
-    ul,
-    ol {
-        list-style-position: inside;
-
-        ul,
-        ol {
-            list-style-position: inside;
-            margin-left: 15px;
-        }
-
-        ul {
-            list-style-type: circle;
-        }
-
-        ol {
-            list-style-type: lower-latin;
-        }
-
-        li {
-            @extend p;
-            text-indent: -1em;
-            padding-left: 1em;
-            margin-top: 7px;
-        }
-    }
-
-
-    /* ~~~~~~~~~~ Images ~~~~~~~~~~ */
-
-    img {
-        width: 100%;
-        height: auto;
-        margin-top: 25px;
-        display: block;
-
-        &.alignleft {
-            float: left;
-            width: auto;
-            margin: 0 25px 15px 0;
-
-            @include media-breakpoint-down(xs) {
-                width: 100%;
-            }
-        }
-
-         &.alignright {
-            float: right;
-            width: auto;
-            margin: 0 0 15px 25px;
-
-            @include media-breakpoint-down(xs) {
-                width: 100%;
-            }
-        }
     }
 
 

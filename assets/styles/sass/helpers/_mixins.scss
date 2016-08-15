@@ -21,9 +21,9 @@
 			@include font-adjust-breakpoints($fourty, $fontSizeSingleBreakpoint, $lineHeightSingleBreakpoint);
 		} @elseif $fontSizeSingleBreakpoint >= 30 and $fontSizeSingleBreakpoint < 39 {
 			@include font-adjust-breakpoints($thirty, $fontSizeSingleBreakpoint, $lineHeightSingleBreakpoint);
-		} @elseif $fontSizeSingleBreakpoint > 20 and $fontSizeSingleBreakpoint < 29 {
+		} @elseif $fontSizeSingleBreakpoint > 18 and $fontSizeSingleBreakpoint < 29 {
 			@include font-adjust-breakpoints($twenty, $fontSizeSingleBreakpoint, $lineHeightSingleBreakpoint);
-		} @elseif $fontSizeSingleBreakpoint <= 20 {
+		} @elseif $fontSizeSingleBreakpoint <= 18 {
 			font-size: ($fontSizeSingleBreakpoint - $less) + px;
 
 			@if $lineHeightSingleBreakpoint != "" {

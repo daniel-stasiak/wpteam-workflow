@@ -30,6 +30,11 @@
 /* ~~~~~~~~~~ Helpers ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+    /* ~~~~~~~~~~ Content ~~~~~~~~~~ */
+
+    @import "helpers/content";
+
+
     /* ~~~~~~~~~~ Variables ~~~~~~~~~~ */
 
     @import "helpers/variables";
@@ -48,6 +53,11 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Components ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
+
+    @import "components/mobile-navigation";
+
 
     /* ~~~~~~~~~~ Skip to main for disabled ~~~~~~~~~~ */
 
@@ -83,10 +93,8 @@
     @import "layout/footer";
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~ Pages ~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Pages ~~~~~~~~~~ */
 
-    /* ~~~~~~~~~~ Homepage ~~~~~~~~~~ */
+        /* ~~~~~ Homepage ~~~~~ */
 
-    @import "pages/homepage";
+        @import "layout/pages/homepage";

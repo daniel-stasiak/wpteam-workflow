@@ -1,7 +1,21 @@
 
-        <footer class="main-footer">
+            <footer class="main-footer">
 
-        </footer><!-- /.main-footer -->
+            </footer><!-- /.main-footer -->
+
+        </div><!-- /.main-content -->
+
+        <?php
+            wp_nav_menu(
+                array(
+                    // 'container' => 'nav',
+                    // 'container_id' => 'lateral-nav',
+                    // 'container_class' => 'menu-mobile-container',
+                    // 'menu_class' => 'navigation single-item-wrapper reset-list',
+                    // 'theme_location' => 'main_navigation_mobile'
+                )
+            );
+        ?>
 
         <script src="<?php echo get_template_directory_uri(); ?>/scripts/scripts.min.js"></script>
 

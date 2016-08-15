@@ -76,8 +76,7 @@ add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 /* ~~~~~~~~~~ Custom function ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
-    /* ~~~~~~~~~~ the_slug() functions ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Show the slug functions ~~~~~~~~~~ */
 
     function the_slug($echo=true){
     	$slug = basename(get_permalink());
@@ -89,8 +88,7 @@ add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
     }
 
 
-
-    /* ~~~~~~~~~~ get_the_slug() function ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Get the slug function ~~~~~~~~~~ */
 
     function get_the_slug() {
         global $post;
