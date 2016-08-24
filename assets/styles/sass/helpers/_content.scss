@@ -23,7 +23,7 @@
 
 	/* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
 
-	p {
+	> p:not(li) {
         margin-top: 25px;
 
         @include media-breakpoint-down(sm) {

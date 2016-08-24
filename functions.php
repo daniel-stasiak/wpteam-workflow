@@ -71,6 +71,21 @@ function mysite_opengraph_content($val) {
 add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
 
+/* ~~~~~~~~~~ Add BS4 Navwalker ~~~~~~~~~~ */
+
+require_once('bs4navwalker.php');
+
+
+/* ~~~~~~~~~~ ACF Google Maps API Key ~~~~~~~~~~ */
+
+// function my_acf_init() {
+
+//     acf_update_setting('google_api_key', 'XXXXXXXXXXXXXXXXXXXX');
+// }
+
+// add_action('acf/init', 'my_acf_init');
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Custom function ~~~~~~~~~~ */

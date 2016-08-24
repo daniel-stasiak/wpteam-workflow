@@ -52,16 +52,14 @@
                     <div class="row">
                         <div class="col-lg-3">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link"><img src="#" alt="Logo"></a>
-                            <a class="menu-trigger hidden-sm-down" href="#0"><span class="menu-icon"></span></a>
+                            <a class="menu-trigger hidden-md-up" href="#0"><span class="menu-icon"></span></a>
                         </div><!-- /.col-lg-3 -->
                         <div class="col-lg-9">
                             <?php
                                 // wp_nav_menu([
-                                //     'menu'            => 'Main - navigation (Second floor)',
-                                //     'theme_location'  => 'main_navigation_second_floor',
-                                //     'container'       => 'div',
-                                //     'container_id'    => 'exCollapsingNavbar2',
-                                //     'container_class' => 'collapse navbar-toggleable-sm navbar__second-floor',
+                                //     'menu'            => 'Main - navigation',
+                                //     'theme_location'  => 'main_navigation',
+                                //     'container'       => false,
                                 //     'menu_id'         => false,
                                 //     'menu_class'      => 'nav navbar-nav',
                                 //     'depth'           => 2,
