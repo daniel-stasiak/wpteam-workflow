@@ -149,10 +149,10 @@
 	 	-ms-transform: translateX(80px);
 	 	-o-transform: translateX(80px);
 	 	transform: translateX(80px);
-	 	display: none;
+	 	opacity: 0;
 
-	 	@include media-breakpoint-down(md) {
-	 		display: block;
+	 	&.display {
+	 		opacity: 1;
 	 	}
 
 	 	.navigation {
