@@ -35,11 +35,6 @@
     @import "helpers/variables";
 
 
-    /* ~~~~~~~~~~ Content ~~~~~~~~~~ */
-
-    @import "helpers/content";
-
-
     /* ~~~~~~~~~~ Mixins ~~~~~~~~~~ */
 
     @import "helpers/mixins";
@@ -48,6 +43,11 @@
     /* ~~~~~~~~~~ Repaters ~~~~~~~~~~ */
 
     @import "helpers/repeaters";
+
+
+    /* ~~~~~~~~~~ Content ~~~~~~~~~~ */
+
+    @import "helpers/content";
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
