@@ -143,6 +143,11 @@ $(function() {
             $(this).toggleClass('submenu-open').next('.sub-menu').slideToggle(200).end().parent('.menu-item-has-children').siblings('.menu-item-has-children').children('a').removeClass('submenu-open').next('.sub-menu').slideUp(200);
         });
 
+
+        /* ~~~~~~~~~~ Modal fix ~~~~~~~~~~ */
+
+        $('.modal').appendTo("body");
+
     });
 
 
