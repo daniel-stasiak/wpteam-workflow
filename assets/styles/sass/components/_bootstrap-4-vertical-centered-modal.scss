@@ -2,22 +2,29 @@
 /* ~~~~~~~~~~ Bootstrap 4 Vertical Center Modal ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-.modal {
-  	text-align: center;
-  	padding: 0!important;
+/*
+<div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center" role="document">
+    </div>
+</div>
+*/
 
-  	&:before {
-  		content: '';
-  		display: inline-block;
-  		height: 100%;
-  		vertical-align: middle;
-  		margin-right: -4px;
-	}
-
-	.modal-dialog {
-  		display: inline-block;
-  		text-align: left;
-  		vertical-align: middle;
-	}
+.vertical-alignment-helper {
+    display: table;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
 }
 
+.vertical-align-center {
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events: none;
+}
+
+.modal-content {
+    width: inherit;
+    height: inherit;
+    margin: 0 auto;
+    pointer-events: all;
+}
