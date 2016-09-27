@@ -4,35 +4,27 @@
 
 .content {
 
-	/* ~~~~~~~~~~ Headlines ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Headlines ~~~~~~~~~~ */
 
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		margin-top: 40px;
-	}
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 40px;
+    }
 
-	h2 {
-		&:first-of-type {
-			margin-top: 0;
-		}
-	}
-
-
-	/* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
-
-	> p:not(li) {
-        margin-top: 25px;
-
-        @include media-breakpoint-down(sm) {
-            margin-top: 20px;
+    h2 {
+        &:first-of-type {
+            margin-top: 0;
         }
+    }
 
-        @include media-breakpoint-down(xs) {
-            margin-top: 15px;
-        }
+
+    /* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
+
+    > p:not(li) {
+        @extend .small-element-margin-top;
 
         a {
             border-bottom: 1px dotted transparent;
@@ -58,6 +50,7 @@
     ul,
     ol {
         list-style-position: inside;
+        @extend .small-element-margin-top;
 
         ul,
         ol {
