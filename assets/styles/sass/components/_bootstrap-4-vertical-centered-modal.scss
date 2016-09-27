@@ -12,7 +12,8 @@
 .vertical-alignment-helper {
     display: table;
     height: 100%;
-    width: 100%;
+    width: calc(100% - 30px);
+    margin: 0 auto;
     pointer-events: none;
 }
 
