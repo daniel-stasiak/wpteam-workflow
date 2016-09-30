@@ -71,19 +71,16 @@
     .centered-list {
         text-align: center;
 
-        ul {
+        @include media-breakpoint-down(sm) {
+            text-align: left;
+        }
+
+        li {
+            position: relative;
             display: inline-block;
-            zoom:1;
-            *display: inline;
-            list-style: none;
 
-            li {
-                float: left;
-                text-indent: 0;
-
-                @include media-breakpoint-down(sm) {
-                    float: none;
-                }
+            @include media-breakpoint-down(sm) {
+                display: block;
             }
         }
     }
