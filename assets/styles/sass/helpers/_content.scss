@@ -49,13 +49,14 @@
 
     ul,
     ol {
-        list-style-position: inside;
+        list-style-position: outside;
         @extend .small-element-margin-top;
+        margin-left: 25px;
 
         ul,
         ol {
-            list-style-position: inside;
-            margin-left: 15px;
+            list-style-position: outside;
+            margin-left: 25px;
         }
 
         ul {
@@ -68,9 +69,7 @@
 
         li {
             @extend p;
-            text-indent: -1em;
-            padding-left: 1em;
-            margin-top: 7px;
+            margin-top: 10px;
         }
     }
 
