@@ -5,17 +5,19 @@
 
         </div><!-- /.main-content -->
 
-        <?php
-            wp_nav_menu(
-                array(
-                    // 'container' => 'nav',
-                    // 'container_id' => 'lateral-nav',
-                    // 'container_class' => 'menu-mobile-container',
-                    // 'menu_class' => 'navigation single-item-wrapper reset-list',
-                    // 'theme_location' => 'main_navigation_mobile'
-                )
-            );
-        ?>
+         <nav id="lateral-nav" class="menu-mobile-container">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link"><img src="<?php echo get_template_directory_uri(); ?>/images/logo__tts-inspire.svg" alt="TTS Inspire"></a>
+            <?php
+                // wp_nav_menu(
+                //     array(
+                //         'container' => false,
+                //         'menu_id' => false,
+                //         'menu_class' => 'navigation single-item-wrapper reset-list',
+                //         'menu' => 'Main - navigation'
+                //     )
+                // );
+            ?>
+        </nav><!-- /#lateral-nav.menu-mobile-container -->
 
         <script src="<?php echo get_template_directory_uri(); ?>/scripts/scripts.min.js"></script>
 
