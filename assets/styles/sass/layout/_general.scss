@@ -72,13 +72,18 @@
             display: none;
         }
 
+        &:hover {
+            opacity: 1;
+        }
+
         &.isVisible {
             opacity: 0.75;
             visibility: visible;
             @extend %single-transition;
         }
 
-        &:hover {
-            opacity: 1;
+        i {
+            position: relative;
+            top: -2px;
         }
     }
