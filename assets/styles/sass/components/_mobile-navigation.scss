@@ -155,39 +155,6 @@
 	 		opacity: 1;
 	 	}
 
-	 	.navigation {
-	 		margin: 10px 0 16px;
-
-	 		@media only screen and (min-width: 62em) {
-	 			margin: 20px 0;
-	 		}
-		}
-
-		.sub-menu {
-	 		padding: 0 10px 20px 15px;
-	 		display: none;
-		}
-
-		a {
-	 		display: block;
-	 		line-height: 2em;
-	 		padding: 0 16px 0 32px;
-	 		color: #aab5b7;
-
-	 		&.current {
-	 			background-color: #3a4a4d;
-	 			color: #FFF;
-			}
-		}
-
-		.no-touch & {
-			a {
-				&:hover {
-					color: #FFF;
-				}
-			}
-		}
-
 		&.lateral-menu-is-open {
 	 		-webkit-transform: translateX(0);
 	 		-moz-transform: translateX(0);
@@ -196,45 +163,57 @@
 	 		transform: translateX(0);
 	 	}
 
-	 	.item-has-children {
-	 		> a {
-	 			position: relative;
-	 			text-transform: uppercase;
-	 			font-weight: 600;
-
-	 			&:after {
-	 				content: '';
+	 	.navigation {
+	 		li {
+	 			a {
+	 				color: #fff;
 	 				display: block;
-	 				height: 11px;
-	 				width: 8px;
-	 				position: absolute;
-	 				top: 50%;
-	 				bottom: auto;
-	 				-webkit-transform: translateY(-50%);
-	 				-moz-transform: translateY(-50%);
-	 				-ms-transform: translateY(-50%);
-	 				-o-transform: translateY(-50%);
-	 				transform: translateY(-50%);
-	 				right: 1em;
-	 				background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-arrow-sec-exp-nav.svg") no-repeat center center;
-	 				background-size: 8px 11px;
-	 				-webkit-transition-property: -webkit-transform;
-	 				-moz-transition-property: -moz-transform;
-	 				transition-property: transform;
-	 				-webkit-transition-duration: 0.2s;
-	 				-moz-transition-duration: 0.2s;
-	 				transition-duration: 0.2s;
 	 			}
 
-	 			&.submenu-open {
-	 				&:after {
-	 					-webkit-transform: translateY(-50%) rotate(90deg);
-	 					-moz-transform: translateY(-50%) rotate(90deg);
-	 					-ms-transform: translateY(-50%) rotate(90deg);
-	 					-o-transform: translateY(-50%) rotate(90deg);
-	 					transform: translateY(-50%) rotate(90deg);
-	 				}
-	 			}
+	 			&.menu-item-has-children {
+			 		> a {
+			 			position: relative;
+
+			 			&:after {
+			 				content: '';
+			 				display: block;
+			 				height: 11px;
+			 				width: 8px;
+			 				position: absolute;
+			 				top: 50%;
+			 				bottom: auto;
+			 				-webkit-transform: translateY(-50%);
+			 				-moz-transform: translateY(-50%);
+			 				-ms-transform: translateY(-50%);
+			 				-o-transform: translateY(-50%);
+			 				transform: translateY(-50%);
+			 				right: 0;
+			 				background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-arrow-sec-exp-nav.svg") no-repeat center center;
+			 				background-size: 8px 11px;
+			 				-webkit-transition-property: -webkit-transform;
+			 				-moz-transition-property: -moz-transform;
+			 				transition-property: transform;
+			 				-webkit-transition-duration: 0.2s;
+			 				-moz-transition-duration: 0.2s;
+			 				transition-duration: 0.2s;
+			 			}
+
+			 			&.submenu-open {
+			 				&:after {
+			 					-webkit-transform: translateY(-50%) rotate(90deg);
+			 					-moz-transform: translateY(-50%) rotate(90deg);
+			 					-ms-transform: translateY(-50%) rotate(90deg);
+			 					-o-transform: translateY(-50%) rotate(90deg);
+			 					transform: translateY(-50%) rotate(90deg);
+			 				}
+			 			}
+			 		}
+			 	}
+
+			 	.sub-menu {
+					padding: 0 0 20px 15px;
+	 				display: none;
+			 	}
 	 		}
 	 	}
 	}
