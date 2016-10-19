@@ -148,6 +148,11 @@ $(function() {
 
         $('.modal').appendTo("body");
 
+
+        /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
+
+        $('select').select2();
+
     });
 
 
