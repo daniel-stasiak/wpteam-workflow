@@ -36,7 +36,17 @@ $(function() {
         });
 
 
-        /* ~~~~~~~~~~ Set animation scroll when URL is with #anchor ~~~~~~~~~~ */
+        /* ~~~~~~~~~~ Modal fix ~~~~~~~~~~ */
+
+        $('.modal').appendTo("body");
+
+
+        /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
+
+        $('select').select2();
+
+
+        /* ~~~~~~~~~~ Set animation scroll when URL is with #anchor and make smooth scroll ~~~~~~~~~~ */
 
         if ( window.location.hash ) scroll(0,0);
         setTimeout( function() { scroll(0,0); }, 1);
@@ -44,13 +54,13 @@ $(function() {
         $('.scroll').on('click', function(e) {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: $($(this).attr('href')).offset().top + 'px'
+                scrollTop: ($($(this).attr('href')).offset().top - $('.main-header').height()) + 'px'
             }, 1000, 'swing');
         });
 
         if(window.location.hash) {
             $('html, body').animate({
-                scrollTop: ($(window.location.hash).offset().top - 50) + 'px'
+                scrollTop: ($(window.location.hash).offset().top - $('.main-header').height()) + 'px'
             }, 1000, 'swing');
         }
 
@@ -68,17 +78,6 @@ $(function() {
         $('#return-to-top').click(function() {
             $('body,html').animate({
                 scrollTop : 0
-            }, 500);
-        });
-
-
-        /* ~~~~~~~~~~ Smooth scroll ~~~~~~~~~~ */
-
-        $(document).on('click', 'a.page-scroll', function(event){
-            event.preventDefault();
-
-            $('html, body').animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 500);
         });
 
@@ -142,17 +141,6 @@ $(function() {
             event.preventDefault();
             $(this).toggleClass('submenu-open').next('.sub-menu').slideToggle(200).end().parent('.menu-item-has-children').siblings('.menu-item-has-children').children('a').removeClass('submenu-open').next('.sub-menu').slideUp(200);
         });
-
-
-        /* ~~~~~~~~~~ Modal fix ~~~~~~~~~~ */
-
-        $('.modal').appendTo("body");
-
-
-        /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
-
-        $('select').select2();
-
     });
 
 
