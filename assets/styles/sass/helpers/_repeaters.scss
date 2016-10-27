@@ -254,3 +254,19 @@
             margin-top: 15px;
         }
     }
+
+
+    /* ~~~~~~~~~~ Flexbox ~~~~~~~~~~~ */
+
+    .flexbox {
+        display: flex;
+        list-style: none;
+
+        &--space-between {
+            justify-content: space-between;
+        }
+
+        &--wrap {
+            flex-wrap: wrap;
+        }
+    }
