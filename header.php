@@ -8,24 +8,28 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link"><img src="#" alt="Logo"></a>
-                        <a class="menu-trigger hidden-md-up" href="#0"><span class="menu-icon"></span></a>
-                    </div><!-- /.col-lg-3 -->
-                    <div class="col-lg-9">
-                        <?php
-                            // wp_nav_menu([
-                            //     'menu'            => 'Main - navigation',
-                            //     'theme_location'  => 'main_navigation',
-                            //     'container'       => false,
-                            //     'menu_id'         => false,
-                            //     'menu_class'      => 'nav navbar-nav',
-                            //     'depth'           => 2,
-                            //     'fallback_cb'     => 'bs4navwalker::fallback',
-                            //     'walker'          => new bs4navwalker()
-                            // ]);
-                        ?>
-                    </div><!-- /.col-lg-9 -->
+                    <div class="col-xs-12">
+                        <ul class="flexbox flexbox--space-between">
+                            <li>
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link"><img src="#" alt="Logo"></a>
+                                <a class="menu-trigger hidden-md-up" href="#0"><span class="menu-icon"></span></a>
+                            </li>
+                            <li>
+                                <?php
+                                    // wp_nav_menu([
+                                    //     'menu'            => 'Main - navigation',
+                                    //     'theme_location'  => 'main_navigation',
+                                    //     'container'       => false,
+                                    //     'menu_id'         => false,
+                                    //     'menu_class'      => 'nav navbar-nav',
+                                    //     'depth'           => 2,
+                                    //     'fallback_cb'     => 'bs4navwalker::fallback',
+                                    //     'walker'          => new bs4navwalker()
+                                    // ]);
+                                ?>
+                            </li>
+                        </ul><!-- /.flexbox flexbox--space-between -->
+                    </div><!-- /.col-xs-12 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </nav><!-- /.navbar navbar-light bg-faded -->
