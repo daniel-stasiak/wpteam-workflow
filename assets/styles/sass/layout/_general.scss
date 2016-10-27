@@ -5,8 +5,7 @@
     /* ~~~~~~~~~~ Body ~~~~~~~~~~ */
 
     body {
-        // @include lato('medium');
-        // color: #000;
+        // @include primary-font('regular');
         // @include font-adjust(18, 26);
     }
 
@@ -14,21 +13,8 @@
     /* ~~~~~~~~~~ Headlines ~~~~~~~~~~ */
 
     h1 {
-        // @include lato('regular');
-        // color: $navy-blue;
-        // @include font-adjust(46, 56);
-    }
-
-    h2 {
-        // @include lato('medium');
-        // color: $navy-blue;
-        // @include font-adjust(30, 38);
-    }
-
-    h3 {
-        // @include lato('bold');
-        // color: $navy-blue;
-        // @include font-adjust(21, 27);
+        // @include primary-font('regular');
+        // @include font-adjust(18, 26);
     }
 
 
@@ -36,7 +22,7 @@
 
     b,
     strong {
-        // @include fira-sans('medium');
+        // @include primary-font('bold');
     }
 
     em {
