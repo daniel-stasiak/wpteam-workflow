@@ -11,8 +11,12 @@
                     <div class="col-xs-12">
                         <ul class="flexbox flexbox--space-between">
                             <li>
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link"><img src="#" alt="Logo"></a>
-                                <a class="menu-trigger hidden-md-up" href="#0"><span class="menu-icon"></span></a>
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand animsition-link">
+                                    <img src="<?php echo file_get_contents(get_template_directory_uri().'/images/XXX.svg'); ?>" alt="Logo">
+                                </a>
+                                <a class="menu-trigger hidden-md-up" href="#0">
+                                    <span class="menu-icon"></span>
+                                </a>
                             </li>
                             <li>
                                 <?php
