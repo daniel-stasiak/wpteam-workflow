@@ -2,10 +2,10 @@
 
 		</div><!-- /.main-content -->
 
-        <nav id="lateral-nav" class="menu-mobile-container">
-           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link">
+        <nav id="mobile-navigation">
+            <!--<a href="<?php //echo esc_url( home_url( '/' ) ); ?>" class="logo animsition-link">
                 <?php //echo file_get_contents(get_template_directory_uri().'/images/logo__silverless.svg'); ?>
-            </a>
+            </a>-->
             <?php
                 // wp_nav_menu(
                 //     array(
@@ -16,7 +16,7 @@
                 //     )
                 // );
             ?>
-        </nav><!-- /#lateral-nav.menu-mobile-container -->
+        </nav><!-- /#mobile-navigation -->
 
 		<?php get_template_part('partials/footer/scripts'); ?>
 
