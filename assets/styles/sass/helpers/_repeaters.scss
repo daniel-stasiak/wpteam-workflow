@@ -117,126 +117,30 @@
     /* ~~~~~~~~~~ Element paddings and margins ~~~~~~~~~~ */
 
     .element-paddings {
-        padding: $element-space__xl 0;
-
-        @include media-breakpoint-down(lg) {
-            padding: $element-space__lg 0;
-        }
-
-        @include media-breakpoint-down(md) {
-            padding: $element-space__md 0;
-        }
-
-        @include media-breakpoint-down(sm) {
-            padding: $element-space__sm 0;
-        }
-
-        @include media-breakpoint-down(xs) {
-            padding: $element-space__xs 0;
-        }
+        padding: 7vw 0;
 
         &--top {
-            padding-top: $element-space__xl;
+            padding-top: 7vw;
             padding-bottom: 0;
-
-            @include media-breakpoint-down(lg) {
-                padding-top: $element-space__lg;
-            }
-
-            @include media-breakpoint-down(md) {
-                padding-top: $element-space__md;
-            }
-
-            @include media-breakpoint-down(sm) {
-                padding-top: $element-space__sm;
-            }
-
-            @include media-breakpoint-down(xs) {
-                padding-top: $element-space__xs;
-            }
         }
 
         &--bottom {
-            padding-bottom: $element-space__xl;
+            padding-bottom: 7vw;
             padding-top: 0;
-
-            @include media-breakpoint-down(lg) {
-                padding-bottom: $element-space__lg;
-            }
-
-            @include media-breakpoint-down(md) {
-                padding-bottom: $element-space__md;
-            }
-
-            @include media-breakpoint-down(sm) {
-                padding-bottom: $element-space__sm;
-            }
-
-            @include media-breakpoint-down(xs) {
-                padding-bottom: $element-space__xs;
-            }
         }
     }
 
     .element-margins {
-        margin: $element-space__xl 0;
-
-        @include media-breakpoint-down(lg) {
-            margin: $element-space__lg 0;
-        }
-
-        @include media-breakpoint-down(md) {
-            margin: $element-space__md 0;
-        }
-
-        @include media-breakpoint-down(sm) {
-            margin: $element-space__sm 0;
-        }
-
-        @include media-breakpoint-down(xs) {
-            margin: $element-space__xs 0;
-        }
+        margin: 7vw 0;
 
         &--top {
-            margin-top: $element-space__xl;
+            margin-top: 7vw;
             margin-bottom: 0;
-
-            @include media-breakpoint-down(lg) {
-                margin-top: $element-space__lg;
-            }
-
-            @include media-breakpoint-down(md) {
-                margin-top: $element-space__md;
-            }
-
-            @include media-breakpoint-down(sm) {
-                margin-top: $element-space__sm;
-            }
-
-            @include media-breakpoint-down(xs) {
-                margin-top: $element-space__xs;
-            }
         }
 
         &--bottom {
-            margin-bottom: $element-space__xl;
+            margin-bottom: 7vw;
             margin-top: 0;
-
-            @include media-breakpoint-down(lg) {
-                margin-bottom: $element-space__lg;
-            }
-
-            @include media-breakpoint-down(md) {
-                margin-bottom: $element-space__md;
-            }
-
-            @include media-breakpoint-down(sm) {
-                margin-bottom: $element-space__sm;
-            }
-
-            @include media-breakpoint-down(xs) {
-                margin-bottom: $element-space__xs;
-            }
         }
     }
 
@@ -244,15 +148,7 @@
     /* ~~~~~~~~~~ Small element margin top ~~~~~~~~~~ */
 
     .small-element-margin-top {
-        margin-top: 25px;
-
-        @include media-breakpoint-down(sm) {
-            margin-top: 20px;
-        }
-
-        @include media-breakpoint-down(xs) {
-            margin-top: 15px;
-        }
+        margin-top: 3vw;
     }
 
 
@@ -264,10 +160,17 @@
 
         &--space-between {
             justify-content: space-between;
-            margin: 0 -15px;
 
             li {
                 padding: 0 15px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
             }
         }
 

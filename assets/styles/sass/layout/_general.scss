@@ -5,6 +5,7 @@
     /* ~~~~~~~~~~ Body ~~~~~~~~~~ */
 
     body {
+        background: #fff;
         // @include primary-font('regular');
         // @include font-adjust(18, 26);
     }
@@ -71,5 +72,36 @@
         i {
             position: relative;
             top: -2px;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Hamburger ~~~~~~~~~~ */
+
+    .hamburger {
+        transform:scale(0.7);
+        -webkit-transform:scale(0.7);
+        -moz-transform:scale(0.7);
+        -o-transform:scale(0.7);
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        margin-top: -12px;
+        right: 12px;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+
+        .hamburger-box {
+            .hamburger-inner {
+                &,
+                &:after,
+                &:before {
+                    background-color: #000;
+                    height: 3px;
+                    border-radius: 3px;
+                }
+            }
         }
     }

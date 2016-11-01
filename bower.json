@@ -29,6 +29,7 @@
     "font-awesome": "^4.6.3",
     "matchHeight": "matchheight#^0.7.0",
     "select2": "^4.0.3",
-    "jQuery.mmenu": "mmenu#^5.7.4"
+    "jQuery.mmenu": "mmenu#^5.7.4",
+    "css-hamburgers": "^0.5.0"
   }
 }

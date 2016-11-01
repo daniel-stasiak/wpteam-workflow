@@ -17,6 +17,11 @@
     @import "../../../bower_components/select2/src/scss/core.scss";
 
 
+    /* ~~~~~~~~~~ Hamburgers ~~~~~~~~~~ */
+
+    @import "../../../bower_components/css-hamburgers/_sass/screen.scss";
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Base ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -72,11 +77,6 @@
     /* ~~~~~~~~~~ Gravity forms reset styles ~~~~~~~~~~ */
 
     // @import "components/gravity-forms-reset-styles";
-
-
-    /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
-
-    // @import "components/mobile-navigation";
 
 
     /* ~~~~~~~~~~ Re-captcha mobile fix ~~~~~~~~~~ */
