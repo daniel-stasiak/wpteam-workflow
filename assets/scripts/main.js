@@ -84,19 +84,37 @@ $(function() {
 
         /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
 
-        $("#mobile-navigation").mmenu({
-           "extensions": [
-              "pagedim-black",
-              "theme-dark"
-           ],
-           "offCanvas": {
-              "position": "right"
-           },
-           "navbars": [
-              {
-                 "position": "top"
-              }
+        var $menu = $("#mobile-navigation").mmenu({
+            "extensions": [
+                "pagedim-black",
+                "theme-dark"
+            ],
+            "offCanvas": {
+                "position": "right"
+            },
+            "navbars": [
+                {
+                    "position": "top"
+                }
            ]
+        });
+
+        var $icon = $("#mmenu-triger");
+        var API = $menu.data( "mmenu" );
+
+        $icon.on( "click", function() {
+           API.open();
+        });
+
+        API.bind( "opened", function() {
+           setTimeout(function() {
+              $icon.addClass( "is-active" );
+           }, 10);
+        });
+        API.bind( "closed", function() {
+           setTimeout(function() {
+              $icon.removeClass( "is-active" );
+           }, 10);
         });
     });
 

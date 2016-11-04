@@ -25,31 +25,31 @@
 	/* ~~~~~~~~~~ Letter spacing ~~~~~~~~~~~ */
 
 	@mixin letter-spacing($letterSpacing) {
-		$letterSpacingToEm: ($letterSpacing * 0.001);
+		$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.2);
 
-		letter-spacing: $letterSpacingToEm + em;
+		letter-spacing: $letterSpacingToEmAfterChangeSize + em;
 
-		@include media-breakpoint-down(lg) {
-			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.8);
-
-			letter-spacing: $letterSpacingToEmAfterChangeSize + em;
-		}
-
-		@include media-breakpoint-down(md) {
-			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.6);
-
-			letter-spacing: $letterSpacingToEmAfterChangeSize + em;
-		}
-
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-up(sm) {
 			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.4);
 
 			letter-spacing: $letterSpacingToEmAfterChangeSize + em;
 		}
 
-		@include media-breakpoint-down(xs) {
-			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.2);
+		@include media-breakpoint-up(md) {
+			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.6);
 
 			letter-spacing: $letterSpacingToEmAfterChangeSize + em;
+		}
+
+		@include media-breakpoint-up(lg) {
+			$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.8);
+
+			letter-spacing: $letterSpacingToEmAfterChangeSize + em;
+		}
+
+		@include media-breakpoint-up(xl) {
+			$letterSpacingToEm: ($letterSpacing * 0.001);
+
+			letter-spacing: $letterSpacingToEm + em;
 		}
 	}
