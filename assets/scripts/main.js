@@ -82,6 +82,11 @@ $(function() {
         });
 
 
+        /* ~~~~~~~~~~ First content element fix ~~~~~~~~~~ */
+
+        $('.content').prepend('<span class="first-element-fix"></span>');
+
+
         /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
 
         var $menu = $("#mobile-navigation").mmenu({

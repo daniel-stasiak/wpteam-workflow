@@ -4,6 +4,15 @@
 
 .content {
 
+    /* ~~~~~~~~~~ First element fix ~~~~~~~~~~ */
+
+    .first-element-fix {
+        & + * {
+            margin-top: 0;
+        }
+    }
+
+
     /* ~~~~~~~~~~ Headlines ~~~~~~~~~~ */
 
     h2,
@@ -12,12 +21,6 @@
     h5,
     h6 {
         margin-top: 40px;
-    }
-
-    h2 {
-        &:first-of-type {
-            margin-top: 0;
-        }
     }
 
 
