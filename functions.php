@@ -122,7 +122,7 @@ require_once('bs4navwalker.php');
         global $wp_query;
         $big = 999999999; // need an unlikely integer
         $pages = paginate_links(
-        	array(
+            array(
                 'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
                 'format' => '?paged=%#%',
                 'current' => max( 1, get_query_var('paged') ),
@@ -130,18 +130,38 @@ require_once('bs4navwalker.php');
                 'prev_next' => false,
                 'type'  => 'array',
                 'prev_next'   => TRUE,
-    			'prev_text'    => __('<'),
-    			'next_text'    => __('>'),
+                'prev_text'    => __('&laquo;'),
+                'next_text'    => __('&raquo;'),
             )
         );
 
         if( is_array( $pages ) ) {
             $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
-            echo '<ul class="pagination">';
+            echo '<nav aria-label="Page navigation">
+                    <ul class="pagination">';
             foreach ( $pages as $page ) {
-                echo "<li>$page</li>";
+                echo "<li class=\"page-item\">$page</li>";
             }
-           	echo '</ul>';
+            echo '</ul>
+            </nav>';
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Author full name ~~~~~~~~~~ */
+
+    function author_full_name() {
+        global $post;
+        $fname = get_the_author_meta('first_name');
+        $lname = get_the_author_meta('last_name');
+        $full_name = '';
+
+        if( empty($fname)){
+            return $lname;
+        } elseif( empty( $lname )){
+            return $fname;
+        } else {
+            return "{$fname} {$lname}";
         }
     }
 

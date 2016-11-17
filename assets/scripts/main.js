@@ -26,6 +26,11 @@ $(function() {
         });
 
 
+        /* ~~~~~~~~~~ Animsition link for WP navigation ~~~~~~~~~~ */
+
+        $('ul [id*="menu-item-"] a').addClass('animsition-link');
+
+
         /* ~~~~~~~~~~ Match height ~~~~~~~~~~ */
 
         $('.match-height').matchHeight({
@@ -121,7 +126,14 @@ $(function() {
               $icon.removeClass( "is-active" );
            }, 10);
         });
+
+        $('#mobile-navigation .navigation li a').addClass('mm-fullsubopen');
     });
+
+
+    /* ~~~~~~~~~~ Custom pagination link class fix ~~~~~~~~~~ */
+
+    // $('.pagination .page-item a, .pagination .page-item span').addClass('page-link');
 
 
     /* ~~~~~~~~~~ WOW Initial ~~~~~~~~~~ */

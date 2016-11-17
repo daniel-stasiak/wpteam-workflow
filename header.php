@@ -14,7 +14,7 @@
                             <ul class="flexbox flexbox--space-between">
                                 <li>
                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand animsition-link">
-                                        <?php echo file_get_contents(get_template_directory_uri().'/images/logo__XXX.svg'); ?>
+                                        <?php //echo file_get_contents(get_template_directory_uri().'/images/logo__XXX.svg'); ?>
                                     </a>
                                 </li>
                                 <li>
@@ -30,7 +30,7 @@
                                         //     'walker'          => new bs4navwalker()
                                         // ]);
                                     ?>
-                                    <button id="mmenu-triger" class="hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation">
+                                    <button id="mmenu-triger" class="hamburger hamburger--squeeze" type="button" aria-label="Menu">
                                         <span class="hamburger-box">
                                             <span class="hamburger-inner"></span>
                                         </span>

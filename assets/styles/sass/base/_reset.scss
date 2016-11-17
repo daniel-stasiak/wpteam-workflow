@@ -131,11 +131,13 @@ a {
     background:transparent;
     text-decoration: none;
     @extend %single-transition;
+    color: currentColor;
 
     &:hover,
     &:focus {
-        @extend %single-transition;
         text-decoration: none;
+        color: currentColor;
+        cursor: pointer;
     }
 
     &:active,
@@ -206,4 +208,8 @@ input:focus{
     img[src*=".svg"] {
         width: 100%;
     }
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
