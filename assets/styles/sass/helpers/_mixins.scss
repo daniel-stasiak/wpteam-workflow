@@ -25,6 +25,7 @@
 	/* ~~~~~~~~~~ Letter spacing ~~~~~~~~~~~ */
 
 	@mixin letter-spacing($letterSpacing) {
+		$letterSpacingToEm: ($letterSpacing * 0.001);
 		$letterSpacingToEmAfterChangeSize: ($letterSpacingToEm * 0.2);
 
 		letter-spacing: $letterSpacingToEmAfterChangeSize + em;
@@ -48,8 +49,6 @@
 		}
 
 		@include media-breakpoint-up(xl) {
-			$letterSpacingToEm: ($letterSpacing * 0.001);
-
 			letter-spacing: $letterSpacingToEm + em;
 		}
 	}
