@@ -137,7 +137,6 @@ var gulp = require('gulp'),
         gulp.watch('assets/styles/sass/**/*.scss', ['sass']);
         gulp.watch('assets/styles/css/*.css', ['styles']);
         gulp.watch('assets/scripts/**/*.js', ['scripts-validation', 'scripts']);
-        gulp.watch('assets/images/*', ['images']);
         livereload.listen();
     });
 
