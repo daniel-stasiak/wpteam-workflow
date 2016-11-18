@@ -7,7 +7,7 @@
     body {
         background: #fff;
         // @include primary-font('regular');
-        // @include font-adjust(18px, 16px);
+        // @include fluid-type(18px, 16px);
     }
 
 
@@ -15,7 +15,7 @@
 
     h1 {
         // @include primary-font('regular');
-        // @include font-adjust(42px, 32px);
+        // @include fluid-type(42px, 32px);
     }
 
 
