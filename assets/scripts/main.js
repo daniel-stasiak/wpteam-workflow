@@ -137,17 +137,23 @@ $(function() {
     });
 
 
-    $(window).resize(function(){
+    $(window).on("load resize",function(){
 
         /* ~~~~~~~~~~ WP Admin Bar Fix on Fixed header ~~~~~~~~~~ */
 
         if($('#wpadminbar').length) {
             var $WPAdminBarHeight = $('#wpadminbar').height();
 
+            $('#wpadminbar').addClass('Fixed');
             $('.main-header').css("top", $WPAdminBarHeight);
         }
 
-    }).resize();
+
+        /* ~~~~~~~~~~ Main offset top like header height ~~~~~~~~~~ */
+
+        $('main').css('margin-top', $('.main-header').height());
+
+    });
 
 
     /* ~~~~~~~~~~ WOW Initial ~~~~~~~~~~ */
