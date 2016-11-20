@@ -92,12 +92,12 @@ require_once('bs4navwalker.php');
 // function theme_name_widgets_init() {
 //     register_sidebar(
 //         array(
-//             'name' => __( 'Blog Seitenleiste', 'theme_name' ),
+//             'name' => __( 'Blog', 'theme_name' ),
 //             'id' => 'sidebar-blog',
-//             'description' => __( 'Widgets in diesem Bereich werden auf Blogseiten angezeigt.', 'theme_name' ),
+//             'description' => __( 'Widgets in this section are displayed on blog pages.', 'theme_name' ),
 //             'before_widget' => '<li id="%1$s" class="widget %2$s">',
 //         'after_widget'  => '</li>',
-//         'before_title'  => '<h2 class="widgettitle">',
+//         'before_title'  => '<h2 class="widget-title">',
 //         'after_title'   => '</h2>',
 //         )
 //     );
