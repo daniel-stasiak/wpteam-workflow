@@ -28,14 +28,14 @@
 
     > p:not(li) {
         @extend .small-element-margin-top;
+    }
 
-        a {
-            border-bottom: 1px dotted transparent;
+    a {
+        border-bottom: 1px dotted transparent;
 
-            &:hover,
-            &:focus {
-                border-color: inherit;
-            }
+        &:hover,
+        &:focus {
+            border-color: inherit;
         }
     }
 
@@ -52,8 +52,8 @@
 
     ul,
     ol {
-        list-style-position: outside;
         @extend .small-element-margin-top;
+        list-style-position: outside;
         margin-left: 25px;
 
         ul,
