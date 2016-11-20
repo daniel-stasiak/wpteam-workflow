@@ -137,7 +137,7 @@ $(function() {
     });
 
 
-    $( window ).load(function() {
+    $(window).resize(function(){
 
         /* ~~~~~~~~~~ WP Admin Bar Fix on Fixed header ~~~~~~~~~~ */
 
@@ -146,7 +146,8 @@ $(function() {
 
             $('.main-header').css("top", $WPAdminBarHeight);
         }
-    });
+
+    }).resize();
 
 
     /* ~~~~~~~~~~ WOW Initial ~~~~~~~~~~ */
