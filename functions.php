@@ -86,6 +86,24 @@ require_once('bs4navwalker.php');
 // add_action('acf/init', 'my_acf_init');
 
 
+/* ~~~~~~~~~~ Init Sidebar ~~~~~~~~~~ */
+
+// add_action( 'widgets_init', 'theme_name_widgets_init' );
+// function theme_name_widgets_init() {
+//     register_sidebar(
+//         array(
+//             'name' => __( 'Blog Seitenleiste', 'theme_name' ),
+//             'id' => 'sidebar-blog',
+//             'description' => __( 'Widgets in diesem Bereich werden auf Blogseiten angezeigt.', 'theme_name' ),
+//             'before_widget' => '<li id="%1$s" class="widget %2$s">',
+//         'after_widget'  => '</li>',
+//         'before_title'  => '<h2 class="widgettitle">',
+//         'after_title'   => '</h2>',
+//         )
+//     );
+// }
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Custom function ~~~~~~~~~~ */
