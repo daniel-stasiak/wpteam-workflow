@@ -137,6 +137,18 @@ $(function() {
     });
 
 
+    $( window ).load(function() {
+
+        /* ~~~~~~~~~~ WP Admin Bar Fix on Fixed header ~~~~~~~~~~ */
+
+        if($('#wpadminbar').length) {
+            var $WPAdminBarHeight = $('#wpadminbar').height();
+
+            $('.main-header').css("top", $WPAdminBarHeight);
+        }
+    });
+
+
     /* ~~~~~~~~~~ WOW Initial ~~~~~~~~~~ */
 
     new WOW().init();
