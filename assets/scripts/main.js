@@ -92,6 +92,15 @@ $(function() {
         $('.content').prepend('<span class="first-element-fix"></span>');
 
 
+        /* ~~~~~~~~~~ Add mmenu class to fixed elements ~~~~~~~~~~ */
+
+        $('.main-header').addClass('mmenu-fixed');
+
+        if($('#wpadminbar').length) {
+            $('#wpadminbar').addClass('mmenu-fixed');
+        }
+
+
         /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
 
         var $menu = $("#mobile-navigation").mmenu({
@@ -106,7 +115,13 @@ $(function() {
                 {
                     "position": "top"
                 }
-           ]
+            ]
+        }, {
+            classNames: {
+                fixedElements: {
+                    fixed: "mmenu-fixed"
+                }
+            }
         });
 
         var $icon = $("#mmenu-triger");
@@ -144,7 +159,6 @@ $(function() {
         if($('#wpadminbar').length) {
             var $WPAdminBarHeight = $('#wpadminbar').height();
 
-            $('#wpadminbar').addClass('Fixed');
             $('.main-header').css("top", $WPAdminBarHeight);
         }
 
