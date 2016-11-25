@@ -154,18 +154,21 @@ $(function() {
 
     $(window).on("load resize",function(){
 
-        /* ~~~~~~~~~~ WP Admin Bar Fix on Fixed header ~~~~~~~~~~ */
 
-        if($('#wpadminbar').length) {
-            var $WPAdminBarHeight = $('#wpadminbar').height();
+        /* ~~~~~~~~~~ Main margin top ~~~~~~~~~~ */
 
-            $('.main-header').css("top", $WPAdminBarHeight);
-        }
+        $(function(){
+            var marginTop = $('.main-header').height();
 
+            if($('#wpadminbar').length) {
+                var $WPAdminBarHeight = $('#wpadminbar').height();
 
-        /* ~~~~~~~~~~ Main offset top like header height ~~~~~~~~~~ */
+                marginTop += $WPAdminBarHeight;
+                $('.main-header').css("top", $WPAdminBarHeight);
+            }
 
-        $('main').css('margin-top', $('.main-header').height());
+            $('main').css('margin-top', marginTop);
+        });
 
     });
 
