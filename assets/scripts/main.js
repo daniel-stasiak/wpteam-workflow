@@ -43,7 +43,7 @@ $(function() {
 
         /* ~~~~~~~~~~ Modal fix ~~~~~~~~~~ */
 
-        $('.modal').appendTo("body");
+        $('.modal').insertAfter($('body'));
 
 
         /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
