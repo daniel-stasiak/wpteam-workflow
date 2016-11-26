@@ -154,21 +154,36 @@ $(function() {
 
     $(window).on("load resize",function(){
 
-
         /* ~~~~~~~~~~ Main margin top ~~~~~~~~~~ */
 
         $(function(){
             var marginTop = $('.main-header').height();
 
             if($('#wpadminbar').length) {
-                var $WPAdminBarHeight = $('#wpadminbar').height();
+                var WPAdminBarHeight = $('#wpadminbar').height();
 
-                marginTop += $WPAdminBarHeight;
-                $('.main-header').css("top", $WPAdminBarHeight);
+                marginTop += WPAdminBarHeight;
+                $('.main-header').css("top", WPAdminBarHeight);
             }
 
             $('main').css('margin-top', marginTop);
         });
+
+
+        /* ~~~~~~~~~~ Bootstrap modal margin top if WP admin exist ~~~~~~~~~~ */
+
+        if($('#wpadminbar').length) {
+            $('.modal').on('shown.bs.modal', function (e) {
+                var modalHeight = $(this).find('.modal-content').height();
+                var WPAdminBarHeight = $('#wpadminbar').height();
+
+                if(modalHeight >= $(window).height()) {
+                    $('.modal .vertical-alignment-helper').css("padding-top", (WPAdminBarHeight + 15));
+                } else {
+                    $('.modal .vertical-alignment-helper').css("padding-top", 15);
+                }
+            });
+        }
 
     });
 
