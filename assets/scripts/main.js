@@ -149,6 +149,15 @@ $(function() {
 
         // $('.pagination .page-item a, .pagination .page-item span').addClass('page-link');
 
+
+        /* ~~~~~~~~~~ Make dropdowns visible on hover ~~~~~~~~~~ */
+
+        $('ul.nav li.dropdown').hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeIn();
+        }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeOut();
+        });
+
     });
 
 
