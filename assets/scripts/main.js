@@ -196,9 +196,4 @@ $(function() {
 
     });
 
-
-    /* ~~~~~~~~~~ WOW Initial ~~~~~~~~~~ */
-
-    new WOW().init();
-
 });
