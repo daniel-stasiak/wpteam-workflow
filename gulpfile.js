@@ -15,7 +15,9 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     sourcemaps = require('gulp-sourcemaps'),
     jshint = require('gulp-jshint'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer');
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -68,6 +70,7 @@ var gulp = require('gulp'),
     gulp.task('styles-minified', function() {
         return gulp.src('assets/styles/css/**/*.css')
             .pipe(sourcemaps.init())
+            .pipe(postcss([ autoprefixer({ browsers: ['last 5 versions'] }) ]))
             .pipe(concat('style.min.css'))
             .pipe(sourcemaps.write())
             .pipe(cssnano())
