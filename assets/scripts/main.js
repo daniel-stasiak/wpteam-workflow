@@ -196,4 +196,12 @@ $(function() {
 
     });
 
+
+    /* ~~~~~~~~~~ Check if current devices is mobile ~~~~~~~~~~ */
+
+    function isMobile() {
+        try{ document.createEvent("TouchEvent"); return true; }
+        catch(e){ return false; }
+    }
+
 });
