@@ -70,7 +70,7 @@ var gulp = require('gulp'),
     gulp.task('styles-minified', function() {
         return gulp.src('assets/styles/css/**/*.css')
             .pipe(sourcemaps.init())
-            .pipe(postcss([ autoprefixer({ browsers: ['last 5 versions'] }) ]))
+            .pipe(postcss([ autoprefixer({ browsers: ['last 10 versions'] }) ]))
             .pipe(concat('style.min.css'))
             .pipe(sourcemaps.write())
             .pipe(cssnano())
