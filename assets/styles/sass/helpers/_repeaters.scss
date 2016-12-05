@@ -282,3 +282,10 @@
             flex-wrap: wrap;
         }
     }
+
+
+    /* ~~~~~~~~~~ Long email addresses break ~~~~~~~~~~ */
+
+    a[href*='mailto'] {
+        word-wrap: break-word;
+    }
