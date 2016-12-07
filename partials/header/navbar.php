@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar">
     <h2 class="hide">Main navigation</h2>
     <div class="container">
         <div class="row">
@@ -32,4 +32,4 @@
             </div><!-- /.col-xs-12 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
-</nav><!-- /.navbar navbar-light bg-faded -->
+</nav><!-- /.navbar -->
