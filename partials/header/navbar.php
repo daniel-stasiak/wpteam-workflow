@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <ul class="flexbox flexbox--space-between">
+                <ul class="grid flexbox flexbox--space-between">
                     <li>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand animsition-link">
                             <?php //echo file_get_contents(get_template_directory_uri().'/images/logo__XXX.svg'); ?>
@@ -28,7 +28,7 @@
                             </span>
                         </button>
                     </li>
-                </ul><!-- /.flexbox flexbox--space-between -->
+                </ul><!-- /.grid flexbox flexbox--space-between -->
             </div><!-- /.col-xs-12 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
