@@ -124,13 +124,13 @@ q:before, q:after {
 }
 
 a {
+    @extend %single-transition;
     margin:0;
     padding:0;
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
     text-decoration: none;
-    @extend %single-transition;
     color: currentColor;
 
     &:hover,
@@ -212,4 +212,16 @@ input:focus{
 
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+button,
+input {
+    @extend %single-transition;
+
+    &[type='submit'] {
+        &:hover,
+        &:focus {
+            cursor: pointer;
+        }
+    }
 }
