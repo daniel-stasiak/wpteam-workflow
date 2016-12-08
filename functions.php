@@ -104,6 +104,16 @@ require_once('bs4navwalker.php');
 // }
 
 
+/* ~~~~~~~~~~ Removing standard posts from WP Admin ~~~~~~~~~~ */
+
+// add_action( 'admin_menu', 'my_remove_menu_pages' );
+
+// function my_remove_menu_pages() {
+//     remove_menu_page('edit.php');
+// }
+
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Custom function ~~~~~~~~~~ */
