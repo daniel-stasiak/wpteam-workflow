@@ -106,14 +106,6 @@
     }
 
 
-    /* ~~~~~~~~~~ Icons ~~~~~~~~~~ */
-
-    i {
-        line-height: 0;
-        vertical-align: middle;
-    }
-
-
     /* ~~~~~~~~~~ Element paddings and margins ~~~~~~~~~~ */
 
     .element-paddings {
@@ -241,9 +233,9 @@
     }
 
 
-    /* ~~~~~~~~~~ Small element margin top ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Element small margin / padding top ~~~~~~~~~~ */
 
-    .small-element-margin-top {
+    .element-small-margin-top {
         margin-top: 15px;
 
         @include media-breakpoint-up(sm) {
@@ -252,6 +244,18 @@
 
         @include media-breakpoint-up(md) {
             margin-top: 25px;
+        }
+    }
+
+    .element-small-padding-top {
+        padding-top: 15px;
+
+        @include media-breakpoint-up(sm) {
+            padding-top: 20px;
+        }
+
+        @include media-breakpoint-up(md) {
+            padding-top: 25px;
         }
     }
 
