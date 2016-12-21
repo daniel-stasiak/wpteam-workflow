@@ -144,6 +144,10 @@ a {
     &:focus {
         outline:none;
     }
+
+    &[href*='mailto'] {
+        word-wrap: break-word;
+    }
 }
 
 /* change colours to suit your needs */
@@ -202,6 +206,10 @@ h6 {
 textarea:focus,
 input:focus{
     outline: 0;
+}
+
+img {
+    display: inline-block;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
