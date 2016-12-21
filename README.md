@@ -26,7 +26,7 @@ This is the default task which compiled all files, uglify, and minify them
 
 ## Installation
 
-1. Clone this repository to your local ```git clone https://github.com/agencja-acclaim/gulp-bower-webapp.git```
+1. Clone this repository to your local ```git clone https://github.com/weareacclaim/gulp-bower-webapp.git```
 2. Install npm modules ```npm install```
 3. Install bower components ```bower install```
 4. Enjoy!
