@@ -55,7 +55,7 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 /* ~~~~~~~~~~ Protection for e-mail addresses in html ~~~~~~~~~~ */
 
-//add_filter('acf/load_value', 'eae_encode_emails');
+add_filter('acf/load_value', 'eae_encode_emails');
 
 
 /* ~~~~~~~~~~ OG Image fix ~~~~~~~~~~ */
@@ -69,11 +69,6 @@ function mysite_opengraph_content($val) {
 /* ~~~~~~~~~~ Add featured image to page ~~~~~~~~~~ */
 
 add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
-
-
-/* ~~~~~~~~~~ Add BS4 Navwalker ~~~~~~~~~~ */
-
-require_once('bs4navwalker.php');
 
 
 /* ~~~~~~~~~~ ACF Google Maps API Key ~~~~~~~~~~ */

@@ -27,7 +27,7 @@
     /* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
 
     > p:not(li) {
-        @extend .small-element-margin-top;
+        @extend .element-small-margin-top;
     }
 
     a {
@@ -52,7 +52,7 @@
 
     ul,
     ol {
-        @extend .small-element-margin-top;
+        @extend .element-small-margin-top;
         list-style-position: outside;
         margin-left: 25px;
 

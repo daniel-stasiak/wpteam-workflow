@@ -61,9 +61,9 @@ function wp_team_register_required_plugins() {
 
 		// This is an example of how to include a plugin bundled with a theme.
 		array(
-			'name'               => 'TGM Example Plugin', // The plugin name.
-			'slug'               => 'tgm-example-plugin', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/lib/plugins/tgm-example-plugin.zip', // The plugin source.
+			'name'               => 'Advanced Custom Fields PRO', // The plugin name.
+			'slug'               => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
+			'source'             => 'https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NDQ3Mjl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTExLTIwIDEyOjI5OjIx', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
@@ -72,41 +72,112 @@ function wp_team_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
-		// This is an example of how to include a plugin from an arbitrary external source in your theme.
 		array(
-			'name'         => 'TGM New Media Plugin', // The plugin name.
-			'slug'         => 'tgm-new-media-plugin', // The plugin slug (typically the folder name).
-			'source'       => 'https://s3.amazonaws.com/tgm/tgm-new-media-plugin.zip', // The plugin source.
-			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
+			'name'               => 'Custom Post Type UI', // The plugin name.
+			'slug'               => 'custom-post-type-ui', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/WebDevStudios/custom-post-type-ui/archive/master.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
-		// This is an example of how to include a plugin from a GitHub repository in your theme.
-		// This presumes that the plugin code is based in the root of the GitHub repository
-		// and not in a subdirectory ('/src') of the repository.
 		array(
-			'name'      => 'Adminbar Link Comments to Pending',
-			'slug'      => 'adminbar-link-comments-to-pending',
-			'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
+			'name'               => 'AJAX Thumbnail Rebuild', // The plugin name.
+			'slug'               => 'ajax-thumbnail-rebuild', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/breiti/ajax-thumbnail-rebuild/archive/master.zip', // The plugin source.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
-			'name'      => 'BuddyPress',
-			'slug'      => 'buddypress',
-			'required'  => false,
+			'name'               => 'Yoast SEO', // The plugin name.
+			'slug'               => 'wordpress-seo', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/wp-plugins/wordpress-seo/archive/master.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
-		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
-		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
-		// 'wordpress-seo-premium'.
-		// By setting 'is_callable' to either a function from that plugin or a class method
-		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
-		// recognize the plugin as being installed.
 		array(
-			'name'        => 'WordPress SEO by Yoast',
-			'slug'        => 'wordpress-seo',
-			'is_callable' => 'wpseo_init',
+			'name'               => 'Advanced Automatic Updates', // The plugin name.
+			'slug'               => 'automatic-updater', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/pento/automatic-updater/archive/master.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+
+		array(
+			'name'               => 'Email Address Encoder', // The plugin name.
+			'slug'               => 'email-address-encoder', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/wp-plugins/email-address-encoder/archive/master.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+
+		array(
+			'name'               => 'Wordfence', // The plugin name.
+			'slug'               => 'wordfence', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/wp-plugins/wordfence/archive/master.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+
+		array(
+			'name'               => 'Easy FancyBox', // The plugin name.
+			'slug'               => 'easy-fancybox', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/wp-plugins/easy-fancybox/archive/master.zip', // The plugin source.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+
+		array(
+			'name'               => 'Post Duplicator', // The plugin name.
+			'slug'               => 'post-duplicator', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/meta4creations/post-duplicator/archive/master.zip', // The plugin source.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+
+		array(
+			'name'               => 'WordPress Post Type Archive Links', // The plugin name.
+			'slug'               => 'post-type-archive-links', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/stephenharris/WordPress-Post-Type-Archive-Links/archive/master.zip', // The plugin source.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
 	);
