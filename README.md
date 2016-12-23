@@ -31,4 +31,4 @@ This is the default task which compiled all files, uglify, and minify them
 3. Install bower components ```bower install```
 4. Enjoy!
 
-ⓒ 2017. [WP Team](http://wpteam.com). All rights reserved.
+ⓒ 2017 All rights reserved. [WP Team](http://wpteam.com). WPTeam is a division of [Acclaim](http://weareacclaim.com).
