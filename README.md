@@ -31,4 +31,4 @@ This is the default task which compiled all files, uglify, and minify them
 3. Install bower components ```bower install```
 4. Enjoy!
 
-(C) Acclaim. 2016. All rights reserved.
+ⓒ 2017. [WP Team](http://wpteam.com). All rights reserved.
