@@ -9,15 +9,13 @@ $(function() {
             $(".animsition").animsition({
                 inClass: 'overlay-slide-in-top',
                 outClass: 'overlay-slide-out-top',
-                inDuration: 1500,
-                outDuration: 800,
+                inDuration: 750,
+                outDuration: 400,
                 linkElement: '.animsition-link',
-                // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
                 loading: true,
                 loadingParentElement: 'html',
                 loadingClass: 'animsition-loading',
-                loadingInner: '', // e.g '<img src="loading.svg" />'
-                timeout: false,
+                timeout: true,
                 timeoutCountdown: 5000,
                 onLoadEvent: true,
                 browser: [ 'animation-duration', '-webkit-animation-duration'],

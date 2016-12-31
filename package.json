@@ -2,7 +2,7 @@
   "name": "gulp-bower-webapp",
   "version": "1.0.0",
   "private": true,
-  "description": "Generator by Dawid Stasiak (http://dawidstasiak.pl/en)",
+  "description": "Created by WP Team (http://wpteam.com)",
   "main": "index.php",
   "scripts": {
     "test": "test"
@@ -10,7 +10,7 @@
   "keywords": [
     "keyword"
   ],
-  "author": "Dawid Stasiak",
+  "author": "WP Team",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
