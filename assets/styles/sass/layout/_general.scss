@@ -51,17 +51,18 @@
             display: none;
         }
 
-        &:hover {
-            opacity: 1;
-        }
-
         &.isVisible {
             opacity: 0.75;
             visibility: visible;
             @extend %single-transition;
+
+            &:hover {
+                opacity: 1;
+            }
         }
 
         i {
+            @include fluid-type(16px, 15px);
             position: relative;
             top: -2px;
         }

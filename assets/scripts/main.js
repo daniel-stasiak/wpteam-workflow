@@ -5,25 +5,23 @@ $(function() {
 
         /* ~~~~~~~~~~ Animsition ~~~~~~~~~~ */
 
-        $(document).ready(function() {
-            $(".animsition").animsition({
-                inClass: 'overlay-slide-in-top',
-                outClass: 'overlay-slide-out-top',
-                inDuration: 750,
-                outDuration: 400,
-                linkElement: '.animsition-link',
-                loading: true,
-                loadingParentElement: 'html',
-                loadingClass: 'animsition-loading',
-                timeout: true,
-                timeoutCountdown: 5000,
-                onLoadEvent: true,
-                browser: [ 'animation-duration', '-webkit-animation-duration'],
-                overlay : true,
-                overlayClass : 'animsition-overlay-slide',
-                overlayParentElement : 'html',
-                transition: function(url){ window.location.href = url; }
-            });
+        $(".animsition").animsition({
+            inClass: 'overlay-slide-in-top',
+            outClass: 'overlay-slide-out-top',
+            inDuration: 750,
+            outDuration: 400,
+            linkElement: '.animsition-link',
+            loading: true,
+            loadingParentElement: 'html',
+            loadingClass: 'animsition-loading',
+            timeout: true,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: [ 'animation-duration', '-webkit-animation-duration'],
+            overlay : true,
+            overlayClass : 'animsition-overlay-slide',
+            overlayParentElement : 'html',
+            transition: function(url){ window.location.href = url; }
         });
 
 
