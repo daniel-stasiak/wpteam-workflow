@@ -8,8 +8,8 @@ $(function() {
         $(".animsition").animsition({
             inClass: 'overlay-slide-in-top',
             outClass: 'overlay-slide-out-top',
-            inDuration: 750,
-            outDuration: 400,
+            inDuration: 500,
+            outDuration: 250,
             linkElement: '.animsition-link',
             loading: true,
             loadingParentElement: 'html',
