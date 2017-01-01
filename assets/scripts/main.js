@@ -15,7 +15,7 @@ $(function() {
             loadingParentElement: 'html',
             loadingClass: 'animsition-loading',
             timeout: true,
-            timeoutCountdown: 5000,
+            timeoutCountdown: 2000,
             onLoadEvent: true,
             browser: [ 'animation-duration', '-webkit-animation-duration'],
             overlay : true,
@@ -161,6 +161,13 @@ $(function() {
         /* ~~~~~~~~~~ AOS Init ~~~~~~~~~~ */
 
         AOS.init();
+
+
+        /* ~~~~~~~~~~ Dense (Retina images) init ~~~~~~~~~~ */
+
+        $('img').dense({
+            'glue' : '@'
+        });
 
     });
 
