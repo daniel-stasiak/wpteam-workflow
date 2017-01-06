@@ -92,7 +92,7 @@ add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 //             'description' => __( 'Widgets in this section are displayed on blog pages.', 'theme_name' ),
 //             'before_widget' => '<li id="%1$s" class="widget %2$s">',
 //         'after_widget'  => '</li>',
-//         'before_title'  => '<h2 class="widget-title">',
+//         'before_title'  => '<h2 class="widget__title">',
 //         'after_title'   => '</h2>',
 //         )
 //     );
@@ -106,6 +106,11 @@ add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 // function my_remove_menu_pages() {
 //     remove_menu_page('edit.php');
 // }
+
+
+/* ~~~~~~~~~~ Hide ACF ~~~~~~~~~~ */
+
+// add_filter('acf/settings/show_admin', '__return_false');
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
