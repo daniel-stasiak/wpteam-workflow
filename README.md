@@ -1,6 +1,6 @@
 # WebApp Generator
 
-Generator with bower and gulp for new project created by [Dawid Stasiak](https://dawidstasiak.pl/en).
+Generator with bower and gulp for new project created by [WP Team](http://wpteam.com).
 
 Repository works great with WordPress.
 
@@ -12,23 +12,38 @@ Repository works great with WordPress.
 4. Auto adding bower files to your assets folder
 5. Watch your files
 
-```gulp watch```
+```sh
+gulp watch
+```
 
 This task is watching all of files (like SCSS or JS) and compile them to minified version after every change.
 
-```gulp serve```
+```sh
+gulp serve
+```
 
 This task make's for you virtual server and show your changes live
 
-```gulp (default)```
+```sh
+gulp (default)
+```
 
 This is the default task which compiled all files, uglify, and minify them
 
 ## Installation
 
-1. Clone this repository to your local ```git clone https://github.com/weareacclaim/gulp-bower-webapp.git```
-2. Install npm modules ```npm install```
-3. Install bower components ```bower install```
+1. Clone this repository to your local
+```sh
+git clone https://github.com/weareacclaim/gulp-bower-webapp.git
+```
+2. Install npm modules
+```sh
+npm install
+```
+3. Install bower components
+```sh
+bower install
+```
 4. Enjoy!
 
-ⓒ 2017 All rights reserved. [WP Team](http://wpteam.com). WPTeam is a division of [Acclaim](http://weareacclaim.com).
+ⓒ 2017 All rights reserved. [WP Team](http://wpteam.com). WPTeam is a division of Acclaim
