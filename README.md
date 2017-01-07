@@ -2,48 +2,45 @@
 
 Generator with bower and gulp for new project created by [WP Team](http://wpteam.com).
 
-Repository works great with WordPress.
+[![N|Solid](https://cldup.com/k_YU_-fvII.png)](http://wpteam.com)
 
-## Gulp.js featurs
+## WP Team standards of coding
 
-1. Compile SCSS to CSS
-2. Concat and uglify all CSS files to one minify file
-3. Concat and uglify all JS files to one minify file
-4. Auto adding bower files to your assets folder
-5. Watch your files
-
-```sh
-gulp watch
-```
-
-This task is watching all of files (like SCSS or JS) and compile them to minified version after every change.
-
-```sh
-gulp serve
-```
-
-This task make's for you virtual server and show your changes live
-
-```sh
-gulp (default)
-```
-
-This is the default task which compiled all files, uglify, and minify them
+Please take a look at WP Team [standards of coding](docs/README_docs.md) created for our workflow.
 
 ## Installation
 
-1. Clone this repository to your local
+Clone this repository to your local
 ```sh
 git clone https://github.com/weareacclaim/gulp-bower-webapp.git
 ```
-2. Install npm modules
+Install npm modules
 ```sh
 npm install
 ```
-3. Install bower components
+Install bower components
 ```sh
 bower install
 ```
-4. Enjoy!
+Enjoy!
 
-ⓒ 2017 All rights reserved. [WP Team](http://wpteam.com). WPTeam is a division of Acclaim
+## Gulp
+This package comes with Gulp and Bower.
+
+### Gulp features
+
+1. Ultra-fast compiling SCSS to CSS
+2. Concating and uglifing all CSS files (included Bower files) to one minify file
+3. Concating and uglifing all JS files (included Bower files) to one minify file
+4. Compressing all images
+5. Watching your files
+
+### Gulp tasks
+The following tasks are available:
+
+- `gulp watch` is watching all of SCSS and JS files and compiles them to minified version on every change
+- `gulp images` is compressing all images files anc copying them to destination folder
+- `gulp serve` is creating virtual server for your project
+- `gulp` is a default task, which is compiling, uglifing and minifing all of files
+
+ⓒ 2017 All rights reserved. [WP Team](http://wpteam.com). WP Team is a division of Acclaim
