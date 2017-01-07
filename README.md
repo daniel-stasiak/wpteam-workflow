@@ -1,8 +1,8 @@
-# WebApp Generator
-
-Generator with bower and gulp for new project created by [WP Team](http://wpteam.com).
+# WP Team - Workflow
 
 [![N|Solid](https://cldup.com/k_YU_-fvII.png)](http://wpteam.com)
+
+Workflow created to builidng custom WordPess themes - by [WP Team](http://wpteam.com).
 
 ## WP Team standards of coding
 
