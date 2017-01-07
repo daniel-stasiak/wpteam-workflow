@@ -108,7 +108,7 @@
 
     /* ~~~~~~~~~~ Element paddings and margins ~~~~~~~~~~ */
 
-    .element-paddings {
+    .element-paddings-both {
         padding: $element-space__xs 0;
 
         @include media-breakpoint-up(sm) {
@@ -126,47 +126,45 @@
         @include media-breakpoint-up(xl) {
             padding: $element-space__xl 0;
         }
+    }
 
-        &--top {
-            padding-top: $element-space__xs;
-            padding-bottom: 0;
+    .element-paddings-top {
+        padding-top: $element-space__xs;
 
-            @include media-breakpoint-up(sm) {
-                padding-top: $element-space__sm;
-            }
-
-            @include media-breakpoint-up(md) {
-                padding-top: $element-space__md;
-            }
-
-            @include media-breakpoint-up(lg) {
-                padding-top: $element-space__lg;
-            }
-
-            @include media-breakpoint-up(xl) {
-                padding-top: $element-space__xl;
-            }
+        @include media-breakpoint-up(sm) {
+            padding-top: $element-space__sm;
         }
 
-        &--bottom {
-            padding-bottom: $element-space__xs;
-            padding-top: 0;
+        @include media-breakpoint-up(md) {
+            padding-top: $element-space__md;
+        }
 
-            @include media-breakpoint-up(sm) {
-                padding-bottom: $element-space__sm;
-            }
+        @include media-breakpoint-up(lg) {
+            padding-top: $element-space__lg;
+        }
 
-            @include media-breakpoint-up(md) {
-                padding-bottom: $element-space__md;
-            }
+        @include media-breakpoint-up(xl) {
+            padding-top: $element-space__xl;
+        }
+    }
 
-            @include media-breakpoint-up(lg) {
-                padding-bottom: $element-space__lg;
-            }
+    .element-paddings-bottom {
+        padding-bottom: $element-space__xs;
 
-            @include media-breakpoint-up(xl) {
-                padding-bottom: $element-space__xl;
-            }
+        @include media-breakpoint-up(sm) {
+            padding-bottom: $element-space__sm;
+        }
+
+        @include media-breakpoint-up(md) {
+            padding-bottom: $element-space__md;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $element-space__lg;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-bottom: $element-space__xl;
         }
     }
 
@@ -188,47 +186,47 @@
         @include media-breakpoint-up(xl) {
             margin: $element-space__xl 0;
         }
+    }
 
-        &--top {
-            margin-top: $element-space__xs;
-            margin-bottom: 0;
+    .element-margins-top {
+        margin-top: $element-space__xs;
+        margin-bottom: 0;
 
-            @include media-breakpoint-up(sm) {
-                margin-top: $element-space__sm;
-            }
-
-            @include media-breakpoint-up(md) {
-                margin-top: $element-space__md;
-            }
-
-            @include media-breakpoint-up(lg) {
-                margin-top: $element-space__lg;
-            }
-
-            @include media-breakpoint-up(xl) {
-                margin-top: $element-space__xl;
-            }
+        @include media-breakpoint-up(sm) {
+            margin-top: $element-space__sm;
         }
 
-        &--bottom {
-            margin-bottom: $element-space__xs;
-            margin-top: 0;
+        @include media-breakpoint-up(md) {
+            margin-top: $element-space__md;
+        }
 
-            @include media-breakpoint-up(sm) {
-                margin-bottom: $element-space__sm;
-            }
+        @include media-breakpoint-up(lg) {
+            margin-top: $element-space__lg;
+        }
 
-            @include media-breakpoint-up(md) {
-                margin-bottom: $element-space__md;
-            }
+        @include media-breakpoint-up(xl) {
+            margin-top: $element-space__xl;
+        }
+    }
 
-            @include media-breakpoint-up(lg) {
-                margin-bottom: $element-space__lg;
-            }
+    .element-margins-bottom {
+        margin-bottom: $element-space__xs;
+        margin-top: 0;
 
-            @include media-breakpoint-up(xl) {
-                margin-bottom: $element-space__xl;
-            }
+        @include media-breakpoint-up(sm) {
+            margin-bottom: $element-space__sm;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: $element-space__md;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: $element-space__lg;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: $element-space__xl;
         }
     }
 
