@@ -12,21 +12,23 @@ Please take a look at WP Team [standards of coding](docs/README_docs.md) created
 
 Clone this repository to your local
 ```sh
-git clone https://github.com/weareacclaim/gulp-bower-webapp.git
+$ git clone https://github.com/weareacclaim/gulp-bower-webapp.git
 ```
 Install npm modules
 ```sh
-npm install
+$ npm install
 ```
 Install bower components
 ```sh
-bower install
+$ bower install
 ```
 Enjoy!
 
-## Gulp
-This package comes with Gulp and Bower.
+## What's included?
 
+Workflow is currently based on [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com). Structure of files is based on mobile-first coding. [Sass](http://sass-lang.com) is created using [BEM](http://getbem.com/introduction/) ideology. Repository is fully automated by [Gulp](http://gulpjs.com) tasks. Workflow includes [Bower](https://bower.io), so you can very easy include new plugins - thanks to Gulp all of JS and CSS files of Bower plugins are automatically included into main scripts and styles files.
+
+## Gulp
 ### Gulp features
 
 1. Ultra-fast compiling SCSS to CSS
@@ -42,5 +44,21 @@ The following tasks are available:
 - `gulp images` is compressing all images files anc copying them to destination folder
 - `gulp serve` is creating virtual server for your project
 - `gulp` is a default task, which is compiling, uglifing and minifing all of files
+
+## Bower compontents
+Plugins preinstalled on this repo:
+1. [Animsition](http://git.blivesta.com/animsition/)
+2. [AOS](https://michalsnik.github.io/aos/)
+3. [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com)
+4. [Hamburgers](https://jonsuh.com/hamburgers/)
+5. [Dense](http://dense.rah.pw)
+6. [Font Awesome](http://fontawesome.io)
+7. [jQuery](https://jquery.com)
+8. [jQuery Easing](https://jqueryui.com/easing/)
+9. [mmenu](http://mmenu.frebsite.nl)
+10. [matchHeight](http://brm.io/jquery-match-height/)
+11. [Modernizr](https://modernizr.com)
+12. [Select2](https://select2.github.io)
+13. [Tether](http://tether.io)
 
 ⓒ 2017 All rights reserved. [WP Team](http://wpteam.com). WP Team is a division of Acclaim
