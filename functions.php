@@ -66,6 +66,14 @@ function mysite_opengraph_content($val) {
 }
 
 
+/* ~~~~~~~~~~ Turning off REST API ~~~~~~~~~~ */
+
+add_filter('rest_authentication_errors', 'disable_rest_api', 99);
+function disable_rest_api() {
+	return new WP_Error('rest_api_disabled', 'REST API disables', array('status' => 403));
+}
+
+
 /* ~~~~~~~~~~ Add featured image to page ~~~~~~~~~~ */
 
 add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
