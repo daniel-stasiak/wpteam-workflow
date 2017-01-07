@@ -38,6 +38,7 @@ Workflow is currently based on [Bootstrap 4 (Alpha 6)](https://v4-alpha.getboots
 5. Watching your files
 
 ### Gulp tasks
+
 The following tasks are available:
 
 - `gulp watch` is watching all of SCSS and JS files and compiles them to minified version on every change
@@ -46,7 +47,9 @@ The following tasks are available:
 - `gulp` is a default task, which is compiling, uglifing and minifing all of files
 
 ## Bower compontents
+
 Plugins preinstalled on this repo:
+
 1. [Animsition](http://git.blivesta.com/animsition/)
 2. [AOS](https://michalsnik.github.io/aos/)
 3. [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com)
