@@ -4,12 +4,12 @@
 
 	/* ~~~~~~~~~~ Lato ~~~~~~~~~~ */
 
-	@mixin primary-font($fontName) {
-	    @if $fontName == "normal" {
+	@mixin primary-font($fontWeight) {
+	    @if $fontWeight == "normal" {
 	        font-weight: 300;
-	    } @elseif $fontName == "medium" {
+	    } @elseif $fontWeight == "medium" {
 	        font-weight: 400;
-	    } @elseif $fontName == "bold" {
+	    } @elseif $fontWeight == "bold" {
 	        font-weight: 700;
 	    }
 	    font-family: 'Lato', sans-serif;
