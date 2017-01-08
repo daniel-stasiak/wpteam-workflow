@@ -1,4 +1,4 @@
-# Standards of coding - Styles
+# Workflow capabilities - Styles
 
 Main style file is located in ```assets/styles/sass/style.scss```, it's build with 5 parts:
 
@@ -139,5 +139,118 @@ Predfinied style file for Homepage, Header, and Footer
 ### 5.2 General
 
 In this file are set styles for ```body```, headlines, italic content, bold content, and some elements which are different for each project like hamburger colour or to top button colour. This is file where you should set all global styles.
+
+In ```body``` class you should set ```font-size``` and ```line-height``` for the paragraphs of content for all project.
+
+In this file you should set global classes for buttons using on website. Example:
+
+```sh
+.asgard-button {
+    @include primary-font('bold');
+    font-size: 14px;
+    margin-top: 25px;
+    display: inline-block;
+    border-radius: 100px;
+    padding: 6.5px 20px;
+    border: 2px solid transparent;
+
+    @include media-breakpoint-up(sm) {
+        margin-top: 30px;
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-top: 35px;
+    }
+
+    &--wide-paddings {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &__full-background {
+        &:hover,
+        &:focus {
+            background: transparent;
+        }
+
+        &--white-background {
+            background: #fff;
+            border-color: #fff;
+
+            &:hover,
+            &:focus {
+                color: #fff;
+            }
+        }
+
+        &--gray-color {
+            color: $secondary-color;
+        }
+
+        &--green-background {
+            background: $primary-color;
+            border-color: $primary-color;
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+
+        &--white-color {
+            color: #fff;
+        }
+    }
+
+    &__outline {
+        &--gray-border-and-color {
+            border-color: $secondary-color;
+            color: $secondary-color;
+        }
+
+        &--gray-background {
+            &:hover,
+            &:focus {
+                background: $secondary-color;
+                color: #fff;
+            }
+        }
+
+        &--white-border-and-color {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        &--white-background {
+            &:hover,
+            &:focus {
+                background: #fff;
+                color: $secondary-color;
+            }
+        }
+        &--green-border-and-color {
+            border-color: $primary-color;
+            color: $primary-color;
+        }
+
+        &--green-background {
+            &:hover,
+            &:focus {
+                background: $primary-color;
+                color: #fff;
+            }
+        }
+    }
+}
+```
+
+Each part of the document should be preceded by comment with description. Example:
+
+```sh
+/* ~~~~~~~~~~ Here should go description ~~~~~~~~~~ */
+
+.some-class {
+}
+```
 
 ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim

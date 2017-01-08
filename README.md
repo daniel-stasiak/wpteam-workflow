@@ -4,9 +4,9 @@
 
 Workflow created to builidng custom WordPess themes - by [WP Team](http://wpteam.com).
 
-## WP Team standards of coding
+## Workflow capabilities
 
-Please take a look at WP Team [standards of coding](docs/README_docs.md) created for our workflow.
+To learn more about possiblities of our workflow please take a look at [Workflow capabilities](docs/README_docs.md).
 
 ## Installation
 
@@ -29,6 +29,8 @@ Enjoy!
 Workflow is currently based on [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com). Structure of files is based on mobile-first coding. [Sass](http://sass-lang.com) is created using [BEM](http://getbem.com/introduction/) ideology. Repository is fully automated by [Gulp](http://gulpjs.com) tasks. Workflow includes [Bower](https://bower.io), so you can very easy include new plugins - thanks to Gulp all of JS and CSS files of Bower plugins are automatically included into main scripts and styles files.
 
 ## Gulp
+
+If you want to know more about how is working our `gulpfile.js` please go to: [How's working our Gulp File](docs/README_gulpfile.md)
 ### Gulp features
 
 1. Ultra-fast compiling SCSS to CSS
@@ -38,7 +40,6 @@ Workflow is currently based on [Bootstrap 4 (Alpha 6)](https://v4-alpha.getboots
 5. Watching your files
 
 ### Gulp tasks
-
 The following tasks are available:
 
 - `gulp watch` is watching all of SCSS and JS files and compiles them to minified version on every change
@@ -47,9 +48,7 @@ The following tasks are available:
 - `gulp` is a default task, which is compiling, uglifing and minifing all of files
 
 ## Bower compontents
-
 Plugins preinstalled on this repo:
-
 1. [Animsition](http://git.blivesta.com/animsition/)
 2. [AOS](https://michalsnik.github.io/aos/)
 3. [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com)
@@ -64,4 +63,4 @@ Plugins preinstalled on this repo:
 12. [Select2](https://select2.github.io)
 13. [Tether](http://tether.io)
 
-ⓒ 2017 All rights reserved. [WP Team](http://wpteam.com). WP Team is a division of Acclaim
+ⓒ 2017 All rights reserved WP Team](http://wpteam.com). WP Team is a division of Acclaim
