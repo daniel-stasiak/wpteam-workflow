@@ -4,7 +4,7 @@
 
 Clone this repository to your ```wp-content/themes/``` folder.
 ```sh
-$ git clone https://github.com/weareacclaim/gulp-bower-webapp.git
+$ git clone https://github.com/weareacclaim/wpteam-workflow.git
 ```
 Install ```npm``` modules
 ```sh
