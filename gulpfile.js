@@ -108,7 +108,7 @@ var gulp = require('gulp'),
     });
 
 
-    /* ~~~~~~~~~~ Clean styles and scripts ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Clean styles, scripts, and images ~~~~~~~~~~ */
 
     gulp.task('clean', function() {
         return del(['styles', 'scripts', 'images']);

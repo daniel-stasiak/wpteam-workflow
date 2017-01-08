@@ -12,4 +12,8 @@
 
 [Workflow capabilities - HTML](README_html.md)
 
+## Gulp
+
+[Workflow capabilities - Gulp](README_gulp.md)
+
 ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
