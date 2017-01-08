@@ -8,4 +8,8 @@
 
 [Workflow capabilities - Scripts](README_scripts.md)
 
+## HTML
+
+[Workflow capabilities - HTML](README_html.md)
+
 ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
