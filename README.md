@@ -8,17 +8,21 @@ Workflow created to builidng custom WordPess themes - by [WP Team](http://wpteam
 
 To learn more about possiblities of our workflow please take a look at [Workflow capabilities](docs/README_docs.md).
 
-## Installation
+## Step by step workflow implementation
 
-Clone this repository to your local
+See WP Team rules of [Step by step workflow implementation](docs/README_implementation.md).
+
+## Quick Installation
+
+Clone this repository to your ```wp-content/themes/``` folder.
 ```sh
 $ git clone https://github.com/weareacclaim/gulp-bower-webapp.git
 ```
-Install npm modules
+Install ```npm``` modules
 ```sh
 $ npm install
 ```
-Install bower components
+Install ```bower``` components
 ```sh
 $ bower install
 ```
@@ -30,7 +34,7 @@ Workflow is currently based on [Bootstrap 4 (Alpha 6)](https://v4-alpha.getboots
 
 ## Gulp
 
-If you want to know more about how is working our `gulpfile.js` please go to: [Workflow capabilities - Gulp](docs/README_gulp.md)
+If you want to know more about how is working our `gulpfile.js` please go to: [How's working our Gulp File](docs/README_gulp.md)
 
 ### Gulp features
 
@@ -44,10 +48,10 @@ If you want to know more about how is working our `gulpfile.js` please go to: [W
 
 The following tasks are available:
 
-- `gulp watch` is watching all of SCSS and JS files and compiles them to minified version on every change
-- `gulp images` is compressing all images files anc copying them to destination folder
-- `gulp serve` is creating virtual server for your project
-- `gulp` is a default task, which is compiling, uglifing and minifing all of files
+- `$ gulp watch` is watching all of SCSS and JS files and compiles them to minified version on every change
+- `$ gulp images` is compressing all images files anc copying them to destination folder
+- `$ gulp serve` is creating virtual server for your project
+- `$ gulp` is a default task, which is compiling, uglifing and minifing all of files
 
 ## Bower compontents
 
