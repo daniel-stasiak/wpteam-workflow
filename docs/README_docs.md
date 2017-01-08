@@ -1,189 +1,145 @@
-# Dillinger
+# Standards of coding - by [WP Team](http://wpteam.com)
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+## SCSS (with BEM)
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
+Main style file is located in ```assets/styles/sass/style.scss```, it's build with 5 parts:
 
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
+### 1. Bower components
 
-You can also:
-  - Import and save files from GitHub, Dropbox, Google Drive and One Drive
-  - Drag and drop files into Dillinger
-  - Export documents as Markdown, HTML and PDF
+Bower components part loads SCSS files for bower components which won't be automatiacally implemented i.e.:
+- Bootstrap
+- Font awesome
+- Select2
+- Hamburgers
 
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
+### 2. Base
+#### 2.1. Fonts
+In this file you should create ```@mixin```s for all fonts that will be used in project.
+Mixin should contain one value for ```font-weight```.
 
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
-
-### Tech
-
-Dillinger uses a number of open source projects to work properly:
-
-* [AngularJS] - HTML enhanced for web apps!
-* [Ace Editor] - awesome web-based text editor
-* [markdown-it] - Markdown parser done right. Fast and easy to extend.
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
-* [Gulp] - the streaming build system
-* [keymaster.js] - awesome keyboard handler lib by [@thomasfuchs]
-* [jQuery] - duh
-
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
-
-### Installation
-
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
-
-Download and extract the [latest pre-built release](https://github.com/joemccann/dillinger/releases).
-
-Install the dependencies and devDependencies and start the server.
+For Google Fonts and Typekit:
 
 ```sh
-$ cd dillinger
-$ npm install -d
-$ node app
+@mixin primary-font($fontWeight) {
+    @if $fontWeight == "normal" {
+        font-weight: 300;
+    } @elseif $fontWeighte == "medium" {
+        font-weight: 400;
+    } @elseif $fontWeight == "bold" {
+        font-weight: 700;
+    }
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+}
 ```
 
-For production environments...
+For @font-face generated:
 
 ```sh
-$ npm install --production
-$ npm run predeploy
-$ NODE_ENV=production node app
+@mixin secondary-font($fontWeight) {
+    @if $fontWeight == "regular" {
+        font-family: 'gotham-lightgotham-light', sans-serif;
+    } @elseif $fontWeight == "medium" {
+        font-family: 'gotham-bookgotham-book', sans-serif;
+    } @elseif $fontWeight == "bold" {
+        font-family: 'gotham-boldgotham-bold', sans-serif;
+    }
+    font-weight: normal;
+    font-style: normal;
+}
 ```
 
-### Plugins
+#### 2.2. Reset
 
-Dillinger is currently extended with the following plugins
+It's reset for standard CSS rules, copied from [HTML5 Reset Styleshet](http://html5doctor.com/html-5-reset-stylesheet/). There are added few more styles for transitions to ```<a>```, and ```<button>``` tag.
 
-* Dropbox
-* Github
-* Google Drive
-* OneDrive
+### 3. Components
 
-Readmes, how to use them in your own application can be found here:
+It's set of CSS clases which are using in some of the projects:
 
-* [plugins/dropbox/README.md] [PlDb]
-* [plugins/github/README.md] [PlGh]
-* [plugins/googledrive/README.md] [PlGd]
-* [plugins/onedrive/README.md] [PlOd]
+#### 3.1. Animsition
 
-### Development
+Fix for animsition plugin (turn it on if your project is using [Animsition](http://git.blivesta.com/animsition/) plugin).
 
-Want to contribute? Great!
+#### 3.2. Bootstrap 4 Vertical Center Modal
 
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantanously see your updates!
+Fix which allows you to vertical center standard [Bootstrap Modal](http://v4-alpha.getbootstrap.com/components/modal/).
 
-Open your favorite Terminal and run these commands.
-
-First Tab:
-```sh
-$ node app
-```
-
-Second Tab:
-```sh
-$ gulp watch
-```
-
-(optional) Third:
-```sh
-$ karma start
-```
-#### Building for source
-For production release:
-```sh
-$ gulp build --prod
-```
-Generating pre-built zip archives for distribution:
-```sh
-$ gulp build dist --prod
-```
-### Docker
-Dillinger is very easy to install and deploy in a Docker container.
-
-By default, the Docker will expose port 80, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
+Your html structure should look like here:
 
 ```sh
-cd dillinger
-npm run-script build-docker
+<div class="vertical-alignment-helper">
+    [...]
+    <div class="modal-dialog vertical-align-center" role="document">
+        [...]
+    </div>
+    [...]
+</div>
 ```
-This will create the dillinger image and pull in the necessary dependencies. Moreover, this uses a _hack_ to get a more optimized `npm` build by copying the dependencies over and only installing when the `package.json` itself has changed.  Look inside the `package.json` and the `Dockerfile` for more details on how this works.
 
-Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 8000 of the host to port 80 of the Docker (or whatever port was exposed in the Dockerfile):
+#### 3.3. Gravity forms reset styles
+
+If your peojct contain [Gravity Forms](http://www.gravityforms.com) plugin you can simply reset all of standard CSS styles.
+
+#### 3.4. Re-captcha resized on mobile
+
+Fix which allows you to resize re-captcha container on smaller resoultions.
+
+#### 3.5. Skip to main content
+
+Component for the disabled users - facilitate navigation of the site.
+
+#### 3.6. WP Admin Bar Fix
+
+Fix for WP Admin Bar - which allows you show it correctly with our Wokflow.
+
+### 4. Helpers
+
+#### 4.1. Variables
+
+In this file are set all of variables. Here you should set colors for you projects, i.e.:
 
 ```sh
-docker run -d -p 8000:8080 --restart="always" <youruser>/dillinger:latest
+$primary-color: #XXXXXX;
+$secondary-color: #YYYYYY;
 ```
 
-Verify the deployment by navigating to your server address in your preferred browser.
+#### 4.2. Mixins
 
+In this file are ```@mixin```s for current project. By default there are two mixins.
+
+```@mixin fluid-type```
+This mixin set max and min ```font-size``` and ```line-height```. It needs 3 values, first: The biggest ```font-size``` of content, second: the smallest ```font-size```, and third: ```line-height```. Example:
 ```sh
-127.0.0.1:8000
+@include fluid-type(42px, 28px, 1.4);
 ```
 
-#### Kubernetes + Google Cloud
+```@mixin letter-spacing```
+This mixin set ```letter-spacing``` for RWD. It needs 1 value: number of ```letter-spacing```. Example:
+```sh
+@include letter-spacing(200);
+```
 
-See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
+#### 4.3. Repeaters
 
+In this file are set usefull classes to reusing them in project like section margins, section paddings, small margin from top for elements, background with cover option etc.
 
-#### docker-compose.yml
+#### 4.4. Content
 
-Change the path for the nginx conf mounting path to your full path, not mine!
+This file contain styles for ```.content``` class which should wrap all content elements on website.
 
-### N|Solid and NGINX
+First element fix set ```margin-top: 0``` for first element in ```.content``` div to avoid errors with current section spacings. Div ```.first-element-fix``` is automatically added into ```.content``` div in ```assets/scripts/main.js``` file.
 
-More details coming soon.
+Class ```.content``` set margins for headlines, and styles for ```<p>```, ```<ul>```, and ```<ol>``` tags. Otherwise it handle styles for ```<img>``` tag, included WordPress classes for images added in Content Editor.
 
+### 5. Layout
 
-### Todos
+#### 5.1. Pages -> Homepage, Header, Footer
 
- - Write Tests
- - Rethink Github Save
- - Add Code Comments
- - Add Night Mode
+Predfinied style file for Homepage, Header, and Footer
 
-License
-----
+#### 5.2 General
 
-MIT
+In this file are set styles for ```body```, headlines, italic content, bold content, and some elements which are different for each project like hamburger colour or to top button colour. This is file where you should set all global styles.
 
-
-**Free Software, Hell Yeah!**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [@thomasfuchs]: <http://twitter.com/thomasfuchs>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [keymaster.js]: <https://github.com/madrobby/keymaster>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
-
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]:  <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
+ⓒ 2017 All rights reserved WP Team](http://wpteam.com). WP Team is a division of Acclaim
