@@ -16,7 +16,7 @@ See WP Team rules of [Step by step workflow implementation](docs/README_implemen
 
 Clone this repository to your ```wp-content/themes/``` folder.
 ```sh
-$ git clone https://github.com/weareacclaim/wpteam-workflow.git
+$ git clone https://github.com/weareacclaim/gulp-bower-webapp.git
 ```
 Install ```npm``` modules
 ```sh
@@ -71,4 +71,4 @@ Plugins preinstalled on this repo:
 12. [Select2](https://select2.github.io)
 13. [Tether](http://tether.io)
 
-ⓒ 2017 All rights reserved WP Team](http://wpteam.com). WP Team is a division of Acclaim
+ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
