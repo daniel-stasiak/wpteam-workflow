@@ -1,5 +1,7 @@
 # Standards of coding - by [WP Team](http://wpteam.com)
 
+[![N|Solid](https://cldup.com/k_YU_-fvII.png)](http://wpteam.com)
+
 ## SCSS (with BEM)
 
 Main style file is located in ```assets/styles/sass/style.scss```, it's build with 5 parts:
