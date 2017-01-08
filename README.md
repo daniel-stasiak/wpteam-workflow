@@ -30,7 +30,7 @@ Workflow is currently based on [Bootstrap 4 (Alpha 6)](https://v4-alpha.getboots
 
 ## Gulp
 
-If you want to know more about how is working our `gulpfile.js` please go to: [How's working our Gulp File](docs/README_gulp.md)
+If you want to know more about how is working our `gulpfile.js` please go to: [Workflow capabilities - Gulp](docs/README_gulp.md)
 
 ### Gulp features
 
