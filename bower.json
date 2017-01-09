@@ -1,15 +1,15 @@
 {
-  "name": "gulp-bower-webapp",
-  "description": "Generator by Dawid Stasiak (http://dawidstasiak.pl/en)",
+  "name": "wpteam-workflow",
+  "description": "Workflow - WP Team (http://wpteam.com)",
   "main": "index.php",
   "authors": [
-    "Dawid Stasiak (http://dawidstasiak.pl/en)"
+    "WP Team (http://wpteam.com)"
   ],
   "license": "ISC",
   "keywords": [
     "keyword"
   ],
-  "homepage": "http://dawidstasiak.pl/en",
+  "homepage": "http://wpteam.com",
   "ignore": [
     "**/.*",
     "node_modules",

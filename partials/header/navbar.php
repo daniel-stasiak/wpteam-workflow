@@ -16,7 +16,7 @@
                             //     'theme_location'  => 'main_navigation',
                             //     'container'       => false,
                             //     'menu_id'         => false,
-                            //     'menu_class'      => 'nav navbar-nav',
+                            //     'menu_class'      => 'navbar-nav mr-auto',
                             //     'depth'           => 2,
                             //     'fallback_cb'     => 'bs4navwalker::fallback',
                             //     'walker'          => new bs4navwalker()
