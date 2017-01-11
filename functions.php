@@ -60,8 +60,8 @@ add_filter('acf/load_value', 'eae_encode_emails');
 
 /* ~~~~~~~~~~ OG Image fix ~~~~~~~~~~ */
 
-add_filter('wpseo_pre_analysis_post_content', 'mysite_opengraph_content');
-function mysite_opengraph_content($val) {
+add_filter('wpseo_pre_analysis_post_content', 'wpteam_opengraph_content');
+function wpteam_opengraph_content($val) {
 	return preg_replace("/<img[^>]+>/i", "", $val);
 }
 
@@ -91,15 +91,15 @@ add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
 /* ~~~~~~~~~~ Init Sidebar ~~~~~~~~~~ */
 
-// add_action( 'widgets_init', 'theme_name_widgets_init' );
-// function theme_name_widgets_init() {
+// add_action( 'widgets_init', 'wpteam_widgets_init' );
+// function wpteam_widgets_init() {
 //     register_sidebar(
 //         array(
-//             'name' => __( 'Blog', 'theme_name' ),
+//             'name' => __( 'Blog', 'wpteam' ),
 //             'id' => 'sidebar-blog',
-//             'description' => __( 'Widgets in this section are displayed on blog pages.', 'theme_name' ),
-//             'before_widget' => '<li id="%1$s" class="widget %2$s">',
-//         'after_widget'  => '</li>',
+//             'description' => __( 'Widgets in this section are displayed on blog pages.', 'wpteam' ),
+//             'before_widget' => '<div id="%1$s" class="widget %2$s">',
+//         'after_widget'  => '</div>',
 //         'before_title'  => '<h2 class="widget__title">',
 //         'after_title'   => '</h2>',
 //         )
