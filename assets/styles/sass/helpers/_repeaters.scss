@@ -108,7 +108,7 @@
 
     /* ~~~~~~~~~~ Element paddings and margins ~~~~~~~~~~ */
 
-    .element-paddings-both {
+    .element-paddings {
         padding: $element-space__xs 0;
 
         @include media-breakpoint-up(sm) {
@@ -128,7 +128,7 @@
         }
     }
 
-    .element-paddings-top {
+    .element-padding-top {
         padding-top: $element-space__xs;
 
         @include media-breakpoint-up(sm) {
@@ -148,7 +148,7 @@
         }
     }
 
-    .element-paddings-bottom {
+    .element-padding-bottom {
         padding-bottom: $element-space__xs;
 
         @include media-breakpoint-up(sm) {
@@ -188,7 +188,7 @@
         }
     }
 
-    .element-margins-top {
+    .element-margin-top {
         margin-top: $element-space__xs;
         margin-bottom: 0;
 
@@ -209,7 +209,7 @@
         }
     }
 
-    .element-margins-bottom {
+    .element-margin-bottom {
         margin-bottom: $element-space__xs;
         margin-top: 0;
 
