@@ -44,27 +44,6 @@ if( !is_admin()){
 // add_image_size( 'image-type-title', 'X', 'X', true);
 
 
-/* ~~~~~~~~~~ Let Wordpress use SVG files ~~~~~~~~~~ */
-
-add_filter('wp_check_filetype_and_ext', 'ignore_upload_ext', 10, 4);
-function ignore_upload_ext($checked, $file, $filename, $mimes){
-    if(!$checked['type']){
-        $wp_filetype = wp_check_filetype( $filename, $mimes );
-        $ext = $wp_filetype['ext'];
-        $type = $wp_filetype['type'];
-        $proper_filename = $filename;
-
-        if($type && 0 === strpos($type, 'image/') && $ext !== 'svg'){
-            $ext = $type = false;
-        }
-
-        $checked = compact('ext','type','proper_filename');
-    }
-
-    return $checked;
-}
-
-
 /* ~~~~~~~~~~ Protection for e-mail addresses in html ~~~~~~~~~~ */
 
 add_filter('acf/load_value', 'eae_encode_emails');
