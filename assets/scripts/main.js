@@ -182,19 +182,12 @@ $(function() {
             if($('#wpadminbar').length) {
                 var WPAdminBarHeight = $('#wpadminbar').height();
 
-                if(!$('.navbar--transparent').length) {
-                    marginTop += WPAdminBarHeight;
-                } else {
-
-                    marginTop = WPAdminBarHeight;
-                }
+                marginTop += WPAdminBarHeight;
 
                 $('.main-header').css("top", WPAdminBarHeight);
             }
 
-            if(!$('.navbar--transparent').length || $('#wpadminbar').length) {
-                $('main').css('margin-top', marginTop);
-            }
+            $('main').css('margin-top', marginTop);
         });
 
 
