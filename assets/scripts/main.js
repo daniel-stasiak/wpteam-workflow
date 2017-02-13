@@ -57,15 +57,28 @@ $(function() {
 
         $('.scroll').on('click', function(e) {
             e.preventDefault();
-            $('html, body').animate({
-                scrollTop: ($($(this).attr('href')).offset().top - $('.main-header').height()) + 'px'
-            }, 1000, 'swing');
+
+            if($('#wpadminbar').length) {
+                $('html, body').animate({
+                    scrollTop: ($($(this).attr('href')).offset().top - ($('.main-header').height() + $('#wpadminbar').height())) + 'px'
+                }, 1000, 'swing');
+            } else {
+                $('html, body').animate({
+                    scrollTop: ($($(this).attr('href')).offset().top - $('.main-header').height()) + 'px'
+                }, 1000, 'swing');
+            }
         });
 
         if(window.location.hash) {
-            $('html, body').animate({
-                scrollTop: ($(window.location.hash).offset().top - $('.main-header').height()) + 'px'
-            }, 1000, 'swing');
+            if($('#wpadminbar').length) {
+                $('html, body').animate({
+                    scrollTop: ($(window.location.hash).offset().top - ($('.main-header').height() + $('#wpadminbar').height())) + 'px'
+                }, 1000, 'swing');
+            } else {
+                $('html, body').animate({
+                    scrollTop: ($(window.location.hash).offset().top - $('.main-header').height()) + 'px'
+                }, 1000, 'swing');
+            }
         }
 
 
