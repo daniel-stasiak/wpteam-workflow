@@ -8,7 +8,7 @@
   		@return $value / ($value * 0 + 1);
 	}
 
-	@mixin fluid-type($max-font-size, $min-font-size, $line-height: 1.3) {
+	@mixin fluid-type($min-font-size, $max-font-size, $line-height: 1.3) {
   		font-size: $min-font-size;
   		line-height: $line-height;
 

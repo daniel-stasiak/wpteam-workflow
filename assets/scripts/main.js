@@ -52,43 +52,39 @@ $(function() {
 
         /* ~~~~~~~~~~ Set animation scroll when URL is with #anchor and make smooth scroll ~~~~~~~~~~ */
 
-        if ( window.location.hash ) scroll(0,0);
-        setTimeout( function() { scroll(0,0); }, 1);
+        $(function(){
+            if ( window.location.hash ) scroll(0,0);
+            setTimeout( function() { scroll(0,0); }, 1);
 
-        $('.scroll').on('click', function(e) {
-            e.preventDefault();
+            var headerHeight = $('.main-header').height();
 
             if($('#wpadminbar').length) {
+                headerHeight += $('#wpadminbar').height();
+            }
+
+            $('.scroll').on('click', function(e) {
+                e.preventDefault();
+
                 $('html, body').animate({
-                    scrollTop: ($($(this).attr('href')).offset().top - ($('.main-header').height() + $('#wpadminbar').height())) + 'px'
+                    scrollTop: ($($(this).attr('href')).offset().top - headerHeight) + 'px'
                 }, 1000, 'swing');
-            } else {
+            });
+
+            if(window.location.hash) {
                 $('html, body').animate({
-                    scrollTop: ($($(this).attr('href')).offset().top - $('.main-header').height()) + 'px'
+                    scrollTop: ($(window.location.hash).offset().top - headerHeight) + 'px'
                 }, 1000, 'swing');
             }
         });
-
-        if(window.location.hash) {
-            if($('#wpadminbar').length) {
-                $('html, body').animate({
-                    scrollTop: ($(window.location.hash).offset().top - ($('.main-header').height() + $('#wpadminbar').height())) + 'px'
-                }, 1000, 'swing');
-            } else {
-                $('html, body').animate({
-                    scrollTop: ($(window.location.hash).offset().top - $('.main-header').height()) + 'px'
-                }, 1000, 'swing');
-            }
-        }
 
 
         /* ~~~~~~~~~~ Return to top button ~~~~~~~~~~ */
 
         $(window).scroll(function() {
             if ($(this).scrollTop() >= 100) {
-                $('#return-to-top').addClass('isVisible');
+                $('.return-to-top').addClass('return-to-top--visible');
             } else {
-                $('#return-to-top').removeClass('isVisible');
+                $('.return-to-top').removeClass('return-to-top--visible');
             }
         });
 

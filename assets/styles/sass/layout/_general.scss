@@ -32,7 +32,7 @@
 
     /* ~~~~~~~~~~ To top ~~~~~~~~~~ */
 
-    #return-to-top {
+    .return-to-top {
         position: fixed;
         bottom: 50px;
         right: 50px;
@@ -51,10 +51,10 @@
             display: none;
         }
 
-        &.isVisible {
+        &--visible {
+            @extend %single-transition;
             opacity: 0.75;
             visibility: visible;
-            @extend %single-transition;
 
             &:hover {
                 opacity: 1;
