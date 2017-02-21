@@ -136,7 +136,11 @@ $(function() {
         var API = $menu.data( "mmenu" );
 
         $icon.on( "click", function() {
-           API.open();
+            if($icon.hasClass('is-active')) {
+                API.close();
+            } else {
+                API.open();
+            }
         });
 
         API.bind( "opened", function() {
