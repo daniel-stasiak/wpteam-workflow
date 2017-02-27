@@ -78,7 +78,8 @@
 
     /* ~~~~~~~~~~ Images ~~~~~~~~~~ */
 
-    img {
+    img,
+    .wp-caption {
         width: 100%;
         height: auto;
         margin-top: 25px;
@@ -102,6 +103,21 @@
             @include media-breakpoint-up(sm) {
                 width: auto;
             }
+        }
+
+        &.aligncenter {
+            width: 100%;
+
+            @include media-breakpoint-up(sm) {
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .wp-caption-text {
+            @include fluid-type(13px, 14px);
+            margin-top: 10px;
         }
     }
 
