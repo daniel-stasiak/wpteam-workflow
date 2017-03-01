@@ -9,16 +9,16 @@
             </div><!-- /.col col-auto -->
             <div class="col col-auto">
                 <?php
-                    // wp_nav_menu([
-                    //     'menu'            => 'Main - navigation',
-                    //     'theme_location'  => 'main_navigation',
-                    //     'container'       => false,
-                    //     'menu_id'         => false,
-                    //     'menu_class'      => 'navbar-nav mr-auto',
-                    //     'depth'           => 2,
-                    //     'fallback_cb'     => 'bs4navwalker::fallback',
-                    //     'walker'          => new bs4navwalker()
-                    // ]);
+                    wp_nav_menu([
+                        'menu'            => 'Main - navigation',
+                        'theme_location'  => 'main_navigation',
+                        'container'       => false,
+                        'menu_id'         => false,
+                        'menu_class'      => 'navbar-nav mr-auto',
+                        'depth'           => 2,
+                        'fallback_cb'     => 'bs4navwalker::fallback',
+                        'walker'          => new bs4navwalker()
+                    ]);
                 ?>
                 <button id="mmenu-triger" class="hamburger hamburger--squeeze" type="button" aria-label="Menu">
                     <span class="hamburger-box">

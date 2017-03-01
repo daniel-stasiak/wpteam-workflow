@@ -9,7 +9,6 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
     }
 
 
@@ -63,46 +62,6 @@
 
     .clearfix {
         clear: both;
-    }
-
-
-    /* ~~~~~~~~~~ Lists ~~~~~~~~~~ */
-
-    .centered-list {
-        text-align: left;
-
-        @include media-breakpoint-up(md) {
-            text-align: center;
-        }
-
-        li {
-            position: relative;
-            display: block;
-
-            @include media-breakpoint-up(md) {
-                display: inline-block;
-            }
-        }
-    }
-
-    .reset-list {
-        list-style: none;
-
-        ul,
-        ol {
-            list-style: none;
-        }
-
-        li {
-            text-indent: 0;
-        }
-    }
-
-
-    /* ~~~~~~~~~~ Overflow ~~~~~~~~~~ */
-
-    .overflow-x-hidden {
-        overflow-x: hidden;
     }
 
 
@@ -255,12 +214,4 @@
         @include media-breakpoint-up(md) {
             padding-top: 25px;
         }
-    }
-
-
-    /* ~~~~~~~~~~ Flexbox ~~~~~~~~~~~ */
-
-    .flexbox {
-        display: flex;
-        list-style: none;
     }

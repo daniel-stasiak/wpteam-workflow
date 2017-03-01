@@ -31,11 +31,9 @@
     }
 
     a {
-        border-bottom: 1px dotted transparent;
-
         &:hover,
         &:focus {
-            border-color: inherit;
+            border-color: $primary-color;
         }
     }
 
@@ -91,6 +89,7 @@
             margin: 0 25px 15px 0;
 
             @include media-breakpoint-up(sm) {
+                max-width: 100%;
                 width: auto;
             }
         }
@@ -101,6 +100,7 @@
             margin: 0 0 15px 25px;
 
             @include media-breakpoint-up(sm) {
+                max-width: 100%;
                 width: auto;
             }
         }
@@ -119,6 +119,8 @@
         .wp-caption-text {
             @include fluid-type(13px, 14px);
             margin-top: 10px;
+            text-align: center;
+            font-style: italic !important;
         }
     }
 
@@ -135,15 +137,15 @@
         }
 
         @include media-breakpoint-up(md) {
-            height: 300px;
+            height: 308px;
         }
 
         @include media-breakpoint-up(lg) {
-            height: 350px;
+            height: 390px;
         }
 
         @include media-breakpoint-up(xl) {
-            height: 400px;
+            height: 410px;
         }
     }
 
@@ -208,6 +210,59 @@
             img {
                 border: none !important;
                 margin-top: 0;
+            }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Preformatted ~~~~~~~~~~ */
+
+    pre {
+        @include fluid-type(15px, 16px);
+        margin-top: 25px;
+        background: #3A3A3A;
+        border-radius: 3px;
+        padding: 25px;
+        color: #fff;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        display: block;
+    }
+
+
+    /* ~~~~~~~~~ Blockquote ~~~~~~~~~~ */
+
+    blockquote {
+        margin-top: 25px;
+        border-left: 5px solid $primary-color;
+        padding-left: 25px;
+
+    }
+
+
+    /* ~~~~~~~~~~ Table ~~~~~~~~~~ */
+
+    table {
+        border: 1px solid #E5E5E5;
+        margin-top: 40px;
+
+        tr {
+            border-bottom: 1px solid #E5E5E5;
+
+            &:last-child {
+                border: 0;
+            }
+        }
+
+        td {
+            border-right: 1px solid #E5E5E5;
+            padding: 15px;
+
+            &:last-child {
+                border: 0;
             }
         }
     }
