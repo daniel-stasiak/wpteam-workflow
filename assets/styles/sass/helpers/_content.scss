@@ -237,9 +237,22 @@
 
     blockquote {
         margin-top: 25px;
-        border-left: 5px solid $primary-color;
-        padding-left: 25px;
+        border-left: 2px solid $primary-color;
+        padding-left: 15px;
 
+        @include media-breakpoint-up(sm) {
+            border-left-width: 3px;
+            padding-left: 20px;
+        }
+
+        @include media-breakpoint-up(md) {
+            border-left-width: 4px;
+            padding-left: 25px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            border-left-width: 5px;
+        }
     }
 
 
