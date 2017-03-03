@@ -103,7 +103,7 @@ var gulp = require('gulp'),
     /* ~~~~~~~~~~ Images optim ~~~~~~~~~~ */
 
     gulp.task('images-optim', function () {
-        return gulp.src('assets/images/*')
+        return gulp.src('assets/images/**/*')
             .pipe(imagemin())
             .pipe(gulp.dest('images'))
     });
