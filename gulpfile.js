@@ -58,6 +58,7 @@ var gulp = require('gulp'),
     gulp.task('styles', function() {
         return gulp.src('assets/styles/css/**/*.css')
             .pipe(sourcemaps.init())
+            .pipe(postcss([ autoprefixer({ browsers: ['last 10 versions'] }) ]))
             .pipe(concat('style.min.css'))
             .pipe(sourcemaps.write())
             .pipe(gulp.dest('styles/'))
