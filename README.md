@@ -64,11 +64,12 @@ Plugins preinstalled on this repo:
 5. [Dense](http://dense.rah.pw)
 6. [Font Awesome](http://fontawesome.io)
 7. [jQuery](https://jquery.com)
-8. [jQuery Easing](https://jqueryui.com/easing/)
-9. [mmenu](http://mmenu.frebsite.nl)
-10. [matchHeight](http://brm.io/jquery-match-height/)
-11. [Modernizr](https://modernizr.com)
-12. [Select2](https://select2.github.io)
-13. [Tether](http://tether.io)
+8. [jQuery Actual](http://dreamerslab.com/blog/en/get-hidden-elements-width-and-height-with-jquery/)
+9. [jQuery Easing](https://jqueryui.com/easing/)
+10. [mmenu](http://mmenu.frebsite.nl)
+11. [matchHeight](http://brm.io/jquery-match-height/)
+12. [Modernizr](https://modernizr.com)
+13. [Select2](https://select2.github.io)
+14. [Tether](http://tether.io)
 
 ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
