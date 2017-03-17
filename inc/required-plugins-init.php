@@ -241,7 +241,7 @@ function wp_team_register_required_plugins() {
 		),
 
 		array(
-			'name'               => 'Clean WP Admin Menue', // The plugin name.
+			'name'               => 'Clean WP Admin Menu', // The plugin name.
 			'slug'               => 'clean-wp-admin-menu', // The plugin slug (typically the folder name).
 			'source'             => 'https://downloads.wordpress.org/plugin/clean-wp-admin-menu.1.0.1.zip', // The plugin source.
 			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
