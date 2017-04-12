@@ -65,11 +65,6 @@ function disable_rest_api() {
 }
 
 
-/* ~~~~~~~~~~ Add featured image to page ~~~~~~~~~~ */
-
-add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
-
-
 /* ~~~~~~~~~~ ACF Google Maps API Key ~~~~~~~~~~ */
 
 // function my_acf_init() {
@@ -119,5 +114,6 @@ add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
     require_once('inc/required-plugins-init.php');
     require_once('inc/bs4navwalker.php');
     require_once('inc/custom-functions.php');
+    require_once('inc/shortcodes.php');
 
 ?>

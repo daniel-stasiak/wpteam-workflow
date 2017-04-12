@@ -19,7 +19,6 @@
   ],
   "dependencies": {
     "jquery.easing": "^1.3.1",
-    "animsition": "git://github.com/blivesta/animsition.git#^4.0.1",
     "modernizr": "^3.3.1",
     "tether": "^1.3.2",
     "bootstrap": "v4.0.0-alpha.6",
@@ -29,7 +28,6 @@
     "jQuery.mmenu": "mmenu#^5.7.4",
     "css-hamburgers": "^0.5.0",
     "aos": "^2.1.1",
-    "dense": "*",
-    "jquery.actual": "^1.0.19"
+    "dense": "*"
   }
 }

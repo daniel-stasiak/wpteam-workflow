@@ -57,19 +57,17 @@ The following tasks are available:
 
 Plugins preinstalled on this repo:
 
-1. [Animsition](http://git.blivesta.com/animsition/)
-2. [AOS](https://michalsnik.github.io/aos/)
-3. [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com)
-4. [Hamburgers](https://jonsuh.com/hamburgers/)
-5. [Dense](http://dense.rah.pw)
-6. [Font Awesome](http://fontawesome.io)
-7. [jQuery](https://jquery.com)
-8. [jQuery Actual](http://dreamerslab.com/blog/en/get-hidden-elements-width-and-height-with-jquery/)
-9. [jQuery Easing](https://jqueryui.com/easing/)
-10. [mmenu](http://mmenu.frebsite.nl)
-11. [matchHeight](http://brm.io/jquery-match-height/)
-12. [Modernizr](https://modernizr.com)
-13. [Select2](https://select2.github.io)
-14. [Tether](http://tether.io)
+1. [AOS](https://michalsnik.github.io/aos/)
+2. [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com)
+3. [Hamburgers](https://jonsuh.com/hamburgers/)
+4. [Dense](http://dense.rah.pw)
+5. [Font Awesome](http://fontawesome.io)
+6. [jQuery](https://jquery.com)
+7. [jQuery Easing](https://jqueryui.com/easing/)
+8. [mmenu](http://mmenu.frebsite.nl)
+9. [matchHeight](http://brm.io/jquery-match-height/)
+10. [Modernizr](https://modernizr.com)
+11. [Select2](https://select2.github.io)
+12. [Tether](http://tether.io)
 
 ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim

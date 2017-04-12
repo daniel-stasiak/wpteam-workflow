@@ -31,9 +31,11 @@
         <?php wp_head(); ?>
     </head>
 
-    <body <?php body_class('animsition'); ?>>
+    <body <?php body_class(); ?>>
         <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <div class="alert alert-danger" role="alert">
+                <string>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+            </div>
         <![endif]-->
 
         <a href="javascript:" id="return-to-top" class="return-to-top">
