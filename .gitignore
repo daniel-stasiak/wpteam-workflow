@@ -2,4 +2,7 @@
 .sass-cache/
 node_modules/
 bower_components/
+styles/
+scripts/
+assets/styles/css/style.css
 sftp-config.json
