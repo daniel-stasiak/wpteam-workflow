@@ -77,40 +77,31 @@
     /* ~~~~~~~~~~ Images ~~~~~~~~~~ */
 
     img,
-    .wp-caption {
-        width: 100% !important;
+    .wpwidth: auto;
         height: auto;
+        max-width: 100%;
         margin-top: 25px;
         display: block;
 
         &.alignleft {
             float: left;
-            width: 100%;
+            width: auto;
+            max-width: 100%;
             margin: 0 25px 15px 0;
-
-            @include media-breakpoint-up(sm) {
-                max-width: 100%;
-                width: auto;
-            }
         }
 
          &.alignright {
             float: right;
-            width: 100%;
+            width: auto;
+            max-width: 100%;
             margin: 0 0 15px 25px;
-
-            @include media-breakpoint-up(sm) {
-                max-width: 100%;
-                width: auto;
-            }
         }
 
         &.aligncenter {
-            width: 100%;
+            width: auto;
+            max-width: 100%;
 
             @include media-breakpoint-up(sm) {
-                max-width: 100%;
-                width: auto;
                 margin-left: auto;
                 margin-right: auto;
             }
