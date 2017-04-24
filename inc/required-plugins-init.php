@@ -109,18 +109,6 @@ function wp_team_register_required_plugins() {
 		),
 
 		array(
-			'name'               => 'Advanced Automatic Updates', // The plugin name.
-			'slug'               => 'automatic-updater', // The plugin slug (typically the folder name).
-			'source'             => 'https://github.com/pento/automatic-updater/archive/master.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-		),
-
-		array(
 			'name'               => 'Email Address Encoder', // The plugin name.
 			'slug'               => 'email-address-encoder', // The plugin slug (typically the folder name).
 			'source'             => 'https://github.com/wp-plugins/email-address-encoder/archive/master.zip', // The plugin source.
@@ -217,46 +205,10 @@ function wp_team_register_required_plugins() {
 		),
 
 		array(
-			'name'               => 'GTmetrix for WordPress', // The plugin name.
-			'slug'               => 'gtmetrix-for-wordpress', // The plugin slug (typically the folder name).
-			'source'             => 'https://downloads.wordpress.org/plugin/gtmetrix-for-wordpress.0.4.2.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-		),
-
-		array(
-			'name'               => 'W3 Total Cache', // The plugin name.
-			'slug'               => 'w3-total-cache', // The plugin slug (typically the folder name).
-			'source'             => 'https://downloads.wordpress.org/plugin/w3-total-cache.0.9.5.2.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-		),
-
-		array(
 			'name'               => 'Clean WP Admin Menu', // The plugin name.
 			'slug'               => 'clean-wp-admin-menu', // The plugin slug (typically the folder name).
 			'source'             => 'https://downloads.wordpress.org/plugin/clean-wp-admin-menu.1.0.1.zip', // The plugin source.
 			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-		),
-
-		array(
-			'name'               => 'Google Analytics for WordPress by MonsterInsights', // The plugin name.
-			'slug'               => 'google-analytics-for-wordpress', // The plugin slug (typically the folder name).
-			'source'             => 'https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.0.16.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
