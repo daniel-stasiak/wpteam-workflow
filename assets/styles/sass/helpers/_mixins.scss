@@ -52,3 +52,21 @@
 			letter-spacing: $letterSpacingToEm + em;
 		}
 	}
+
+
+	/* ~~~~~~~~~~ Sticky WordPress Admin Bar Fix ~~~~~~~~~~ */
+
+	@mixin admin-sticky-fix( $offset: 0 ) {
+  		@if $offset != 0 and type-of($offset) == 'number' {
+    		$mobile-wp-admin-bar-height: $mobile-wp-admin-bar-height + $offset;
+    		$desktop-wp-admin-bar-height: $desktop-wp-admin-bar-height + $offset;
+  		}
+
+  		.admin-bar & {
+    		top: $mobile-wp-admin-bar-height;
+
+    		@media screen and (min-width: 783px) {
+      			top: $desktop-wp-admin-bar-height;
+    		}
+  		}
+	}

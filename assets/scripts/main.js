@@ -35,6 +35,12 @@ $(function() {
 
             /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
 
+            $('.main-header').addClass('mmenu-fixed');
+
+            if($('#wpadminbar').length) {
+                $('#wpadminbar').addClass('mmenu-fixed');
+            }
+
             var $menu = $("#mobile-navigation").mmenu({
                 "extensions": [
                     "pagedim-black",
@@ -138,15 +144,6 @@ $(function() {
             $('.content').prepend('<span class="first-element-fix"></span>');
 
 
-            /* ~~~~~~~~~~ Add mmenu class to fixed elements ~~~~~~~~~~ */
-
-            $('.main-header').addClass('mmenu-fixed');
-
-            if($('#wpadminbar').length) {
-                $('#wpadminbar').addClass('mmenu-fixed');
-            }
-
-
             /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
 
             $('#mobile-navigation .navigation li a').addClass('mm-fullsubopen');
@@ -176,23 +173,6 @@ $(function() {
         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
         /* ~~~~~~~~~~ Functions ~~~~~~~~~~ */
         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-            /* ~~~~~~~~~~ Main margin top ~~~~~~~~~~ */
-
-            $(function(){
-                var marginTop = $('.main-header').height();
-
-                if($('#wpadminbar').length) {
-                    var WPAdminBarHeight = $('#wpadminbar').height();
-
-                    marginTop += WPAdminBarHeight;
-
-                    $('.main-header').css("top", WPAdminBarHeight);
-                }
-
-                $('main').css('margin-top', marginTop);
-            });
-
 
             /* ~~~~~~~~~~ Bootstrap modal margin top if WP admin exist ~~~~~~~~~~ */
 

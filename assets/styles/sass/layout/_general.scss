@@ -74,10 +74,6 @@
     .hamburger {
         transform:scale(0.7);
         padding: 0;
-        position: absolute;
-        top: 50%;
-        margin-top: -12px;
-        right: 12px;
 
         @include media-breakpoint-up(md) {
             display: none;
@@ -93,5 +89,16 @@
                     border-radius: 3px;
                 }
             }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Main ~~~~~~~~~~ */
+
+    #main {
+        margin-top: 65px;
+
+        .admin-bar & {
+            margin-top: 65px + $mobile-wp-admin-bar-height;
         }
     }

@@ -3,6 +3,7 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 	.main-header {
+		@include admin-sticky-fix();
 		position: fixed;
 		top: 0;
 		width: 100%;
