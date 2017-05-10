@@ -10,7 +10,7 @@
             <div class="col col-auto">
                 <?php
                     wp_nav_menu([
-                        'menu'            => 'Main - navigation',
+                        'menu'            => 'Main Navigation',
                         'theme_location'  => 'main_navigation',
                         'container'       => false,
                         'menu_id'         => false,
