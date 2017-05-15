@@ -2,6 +2,7 @@
 /* ~~~~~~~~~~ Content ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+body#tinymce,
 .content {
 
     /* ~~~~~~~~~~ First element fix ~~~~~~~~~~ */
@@ -26,11 +27,11 @@
 
     /* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
 
-    > p:not(li) {
+    > p {
         @extend .element-small-margin-top;
     }
 
-    a {
+    a:not([class*='-button']) {
         &:hover,
         &:focus {
             border-color: $primary-color;
