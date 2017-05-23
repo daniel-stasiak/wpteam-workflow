@@ -23,7 +23,7 @@
     //         $return .= ' mbc-button__full-background--dark';
     //     }
 
-    //     $return .= '">'.$content.'</a>';
+    //     $return .= '">'.apply_filters( 'the_content', $content ).'</a>';
 
     //     return $return;
     // }
