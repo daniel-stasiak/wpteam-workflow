@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row align-items-center justify-content-between">
             <div class="col col-auto">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand animsition-link">
-                    <?php //echo file_get_contents(get_template_directory().'/images/logo__XXX.svg'); ?>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand">
+                    <img src="<?php echo get_template_directory(); ?>/images/logo__XXX.svg" alt="<?php echo get_bloginfo('name'); ?>" class="navbar-brand__logo" />
                 </a>
             </div><!-- /.col col-auto -->
             <div class="col col-auto">
