@@ -27,7 +27,6 @@
     "select2": "^4.0.3",
     "jQuery.mmenu": "mmenu#^5.7.4",
     "css-hamburgers": "^0.5.0",
-    "aos": "^2.1.1",
     "dense": "*"
   }
 }

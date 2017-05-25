@@ -20,12 +20,6 @@ $(function() {
 
             $('select').select2();
 
-
-            /* ~~~~~~~~~~ AOS Init ~~~~~~~~~~ */
-
-            AOS.init();
-
-
             /* ~~~~~~~~~~ Dense (Retina images) init ~~~~~~~~~~ */
 
             $('img').dense({
