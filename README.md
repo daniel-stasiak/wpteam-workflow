@@ -57,17 +57,16 @@ The following tasks are available:
 
 Plugins preinstalled on this repo:
 
-1. [AOS](https://michalsnik.github.io/aos/)
-2. [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com)
-3. [Hamburgers](https://jonsuh.com/hamburgers/)
-4. [Dense](http://dense.rah.pw)
-5. [Font Awesome](http://fontawesome.io)
-6. [jQuery](https://jquery.com)
-7. [jQuery Easing](https://jqueryui.com/easing/)
-8. [mmenu](http://mmenu.frebsite.nl)
-9. [matchHeight](http://brm.io/jquery-match-height/)
-10. [Modernizr](https://modernizr.com)
-11. [Select2](https://select2.github.io)
-12. [Tether](http://tether.io)
+1. [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com)
+2. [Hamburgers](https://jonsuh.com/hamburgers/)
+3. [Dense](http://dense.rah.pw)
+4. [Font Awesome](http://fontawesome.io)
+5. [jQuery](https://jquery.com)
+6. [jQuery Easing](https://jqueryui.com/easing/)
+7. [mmenu](http://mmenu.frebsite.nl)
+8. [matchHeight](http://brm.io/jquery-match-height/)
+9. [Modernizr](https://modernizr.com)
+10. [Select2](https://select2.github.io)
+11. [Tether](http://tether.io)
 
 ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
