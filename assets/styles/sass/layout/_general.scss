@@ -72,8 +72,11 @@
     /* ~~~~~~~~~~ Hamburger ~~~~~~~~~~ */
 
     .hamburger {
-        transform:scale(0.7);
+        display: block;
+        transform: scale(0.7);
         padding: 0;
+        width: 40px;
+        height: 24px;
 
         @include media-breakpoint-up(md) {
             display: none;
