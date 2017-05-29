@@ -8,11 +8,10 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
-    livereload = require('gulp-livereload'),
     del = require('del'),
     connect = require('gulp-connect-php'),
     lib = require('bower-files')(),
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync').create(),
     sourcemaps = require('gulp-sourcemaps'),
     jshint = require('gulp-jshint'),
     imagemin = require('gulp-imagemin'),
@@ -149,15 +148,13 @@ var gulp = require('gulp'),
     /* ~~~~~~~~~~ Virtual server ~~~~~~~~~~ */
 
     gulp.task('serve', ['watch'], function() {
-        connect.server({}, function (){
-            browserSync({
-                open: 'local',
-                proxy: 'localhost/project-name/',
-                files: [
-                    '**/*.php',
-                    '**/*.css',
-                    '**/*.js'
-                ]
-            });
+        browserSync.init({
+            open: 'local',
+            proxy: 'localhost/project-name/',
+            files: [
+                '**/*.php',
+                '**/*.css',
+                '**/*.js'
+            ]
         });
     });
