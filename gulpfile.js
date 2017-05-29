@@ -137,11 +137,12 @@ var gulp = require('gulp'),
 
     /* ~~~~~~~~~~ Watch files ~~~~~~~~~~ */
 
-    gulp.task('watch', function() {
+    gulp.task('watch', function(done) {
         gulp.watch('assets/styles/sass/**/*.scss', ['sass']);
         gulp.watch('assets/styles/css/*.css', ['styles']);
         gulp.watch('assets/scripts/**/*.js', ['scripts-validation', 'scripts']);
-        livereload.listen();
+        browserSync.reload();
+        done();
     });
 
 
@@ -151,7 +152,7 @@ var gulp = require('gulp'),
         connect.server({}, function (){
             browserSync({
                 open: 'local',
-                proxy: '127.0.0.1:8000',
+                proxy: 'localhost/project-name/',
                 files: [
                     '**/*.php',
                     '**/*.css',
