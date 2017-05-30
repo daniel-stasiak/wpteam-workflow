@@ -150,6 +150,7 @@ var gulp = require('gulp'),
     gulp.task('serve', ['watch'], function() {
         browserSync.init({
             open: 'local',
+            browser: 'firefox',
             proxy: 'localhost/project-name/',
             files: [
                 '**/*.php',
