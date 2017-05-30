@@ -189,6 +189,25 @@ $(function() {
                 if($this.html().replace(/\s|&nbsp;/g, '').length === 0)
                     $this.remove();
             });
+
+
+            /* ~~~~~~~~~~ Change navigation after scroll ~~~~~~~~~~ */
+
+            $(function(){
+                var lastScrollTop = 0;
+
+                $(window).scroll(function(event){
+                   var currentScrollPosition = $(this).scrollTop();
+
+                   if (currentScrollPosition > lastScrollTop && currentScrollPosition >= 150){
+                       $('.main-header').addClass('main-header--scrolled');
+                   } else {
+                        $('.main-header').removeClass('main-header--scrolled');
+                   }
+
+                   lastScrollTop = currentScrollPosition;
+                });
+            });
     });
 
 
