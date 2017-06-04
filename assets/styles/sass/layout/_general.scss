@@ -99,9 +99,9 @@
     /* ~~~~~~~~~~ Main ~~~~~~~~~~ */
 
     #main {
-        margin-top: 65px;
+        padding-top: 65px;
 
         .admin-bar & {
-            margin-top: 65px + $mobile-wp-admin-bar-height;
+            padding-top: 65px + $mobile-wp-admin-bar-height;
         }
     }
