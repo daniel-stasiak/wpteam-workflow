@@ -58,7 +58,15 @@ body#tinymce,
         ul,
         ol {
             list-style-position: outside;
-            margin-left: 25px;
+            margin: 0 0 15px 25px;
+
+            @include media-breakpoint-up(sm) {
+                margin-bottom: 20px;
+            }
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 25px;
+            }
         }
 
         ul {
