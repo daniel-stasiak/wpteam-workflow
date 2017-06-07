@@ -4,6 +4,7 @@
 
     /* ~~~~~~~~~~ Bootstrap ~~~~~~~~~~ */
 
+    @import "base/bootstrap-variables";
     @import "../../../bower_components/bootstrap/scss/bootstrap";
 
 
@@ -52,11 +53,6 @@
     /* ~~~~~~~~~~ Bootstrap 4 - Vertical centered modal ~~~~~~~~~~ */
 
     // @import "components/bootstrap-4-vertical-centered-modal";
-
-
-    /* ~~~~~~~~~~ Bootstrap Variables ~~~~~~~~~~ */
-
-    @import "components/bootstrap-variables";
 
 
     /* ~~~~~~~~~~ Gravity forms reset styles ~~~~~~~~~~ */

@@ -20,7 +20,6 @@ var PATHS = {
         'bower_components/font-awesome/scss',
         'bower_components/jQuery.mmenu/src/css',
         'bower_components/select2/src/scss',
-        'bower_components/tether/src/css'
     ],
     javascript: [
 
@@ -50,12 +49,10 @@ var PATHS = {
 
         'bower_components/select2/src/js/jquery.select2.js',
 
-        // 'bower_components/tether/src/js/**/*.js',
-
 
         /* ~~~~~~~~~~ Custom scripts ~~~~~~~~~~ */
 
-        'assets/scripts/*.js',
+        'assets/scripts/*.js'
     ]
 };
 
@@ -124,7 +121,7 @@ var COMPATIBILITY = [
 
         return gulp.src(PATHS.javascript)
             .pipe($.sourcemaps.init())
-            .pipe($.concat('scripts.min.js', {
+            .pipe($.concat('scripts.js', {
                 newLine:'\n;'
             }))
             .pipe(uglify)
@@ -136,7 +133,7 @@ var COMPATIBILITY = [
 
     /* ~~~~~~~~~~ Images optimization ~~~~~~~~~~ */
 
-    gulp.task('images', function () {
+    gulp.task('images-optim', function () {
         return gulp.src('assets/images/**/*')
             .pipe($.imagemin())
             .pipe(gulp.dest('images/'))
@@ -157,7 +154,7 @@ var COMPATIBILITY = [
     /* ~~~~~~~~~~ Clean styles, scripts, and images ~~~~~~~~~~ */
 
     gulp.task('clean', function() {
-        return del(['styles', 'scripts', 'images']);
+        return del(['styles', 'scripts', 'images-optim']);
     });
 
 
@@ -169,7 +166,7 @@ var COMPATIBILITY = [
 
     gulp.task('default', ['clean'], function(done) {
         sequence('copy',
-          ['sass', 'scripts', 'lint', 'images'],
+          ['sass', 'scripts', 'lint', 'images-optim'],
           done);
     });
 
@@ -178,7 +175,7 @@ var COMPATIBILITY = [
 
     gulp.task('images', function() {
         del(['images']);
-        gulp.start('images');
+        gulp.start('images-optim');
     });
 
 
@@ -186,7 +183,7 @@ var COMPATIBILITY = [
 
     gulp.task('watch', function(done) {
         gulp.watch('assets/styles/sass/**/*.scss', ['sass']);
-        gulp.watch('assets/scripts/**/*.js', ['scripts']);
+        gulp.watch('assets/scripts/**/*.js', ['scripts', 'lint']);
         browserSync.reload();
         done();
     });
