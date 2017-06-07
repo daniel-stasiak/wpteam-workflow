@@ -2,109 +2,155 @@
 /* ~~~~~~~~~~ Load plugins ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    cssnano = require('gulp-cssnano'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
-    del = require('del'),
-    connect = require('gulp-connect-php'),
-    lib = require('bower-files')(),
+var $ = require('gulp-load-plugins')(),
+    gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
-    sourcemaps = require('gulp-sourcemaps'),
-    jshint = require('gulp-jshint'),
-    imagemin = require('gulp-imagemin'),
-    postcss = require('gulp-postcss'),
-    autoprefixer = require('autoprefixer');
+    sequence    = require('run-sequence'),
+    del = require('del');
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ Variables ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+var PATHS = {
+    sass: [
+        'bower_components/bootstrap/scss',
+        'bower_components/css-hamburgers/_sass',
+        'bower_components/font-awesome/scss',
+        'bower_components/jQuery.mmenu/src/css',
+        'bower_components/select2/src/scss',
+        'bower_components/tether/src/css'
+    ],
+    javascript: [
+
+        /* ~~~~~~~~~~ Bower Components ~~~~~~~~~~ */
+
+        // 'bower_components/bootstrap/js/dist/alert.js',
+        'bower_components/bootstrap/js/dist/button.js',
+        'bower_components/bootstrap/js/dist/carousel.js',
+        'bower_components/bootstrap/js/dist/collapse.js',
+        'bower_components/bootstrap/js/dist/dropdown.js',
+        'bower_components/bootstrap/js/dist/modal.js',
+        // 'bower_components/bootstrap/js/dist/popover.js',
+        'bower_components/bootstrap/js/dist/scrollspy.js',
+        'bower_components/bootstrap/js/dist/tab.js',
+        'bower_components/bootstrap/js/dist/tooltip.js',
+        'bower_components/bootstrap/js/dist/util.js',
+
+        'bower_components/dense/src/dense.js',
+
+        'bower_components/jquery.easing/js/jquery.easing.compatibility.js',
+        'bower_components/jquery.easing/js/jquery.easing.js',
+
+        'bower_components/jQuery.mmenu/src/jquery.mmenu.js',
+        'bower_components/jQuery.mmenu/src/addons/fixedelements/jquery.mmenu.fixedelements.js',
+
+        'bower_components/matchHeight/jquery.matchHeight.js',
+
+        'bower_components/select2/src/js/jquery.select2.js',
+
+        // 'bower_components/tether/src/js/**/*.js',
+
+
+        /* ~~~~~~~~~~ Custom scripts ~~~~~~~~~~ */
+
+        'assets/scripts/*.js',
+    ]
+};
+
+var COMPATIBILITY = [
+    'last 10 versions',
+    'ie >= 9',
+    'Android >= 2.3'
+];
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Operations ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-    /* ~~~~~~~~~~ Bower scripts ~~~~~~~~~~ */
-
-    gulp.task('bower-scripts', function () {
-        return gulp.src(lib.ext('js').files)
-            .pipe(concat('bower-scripts.js'))
-            .pipe(gulp.dest('assets/scripts'))
-            .pipe(notify({ message: 'Bower scripts completed' }));
-    });
-
-
-    /* ~~~~~~~~~~ Bower styles ~~~~~~~~~~ */
-
-    gulp.task('bower-styles', function () {
-        return gulp.src(lib.ext('css').files)
-            .pipe(concat('bower-styles.css'))
-            .pipe(gulp.dest('assets/styles/css'))
-            .pipe(notify({ message: 'Bower styles completed' }));
-    });
-
-
     /* ~~~~~~~~~~ Sass compiliation ~~~~~~~~~~ */
 
     gulp.task('sass', function () {
         return gulp.src('assets/styles/sass/style.scss')
-            .pipe(sass().on('error', sass.logError))
-            .pipe(gulp.dest('assets/styles/css'));
-    });
-
-
-    /* ~~~~~~~~~~ Styles concat ~~~~~~~~~~ */
-
-    gulp.task('styles', function() {
-        return gulp.src('assets/styles/css/**/*.css')
-            .pipe(sourcemaps.init())
-            .pipe(postcss([ autoprefixer({ browsers: ['last 10 versions'] }) ]))
-            .pipe(concat('style.min.css'))
-            .pipe(sourcemaps.write())
+            .pipe($.sourcemaps.init())
+            .pipe($.sass({
+                includePaths: PATHS.sass
+            }))
+            .on('error', $.notify.onError({
+                message: "<%= error.message %>",
+                title: "Sass Error"
+            }))
+            .pipe($.autoprefixer({
+                browsers: COMPATIBILITY
+            }))
+            .pipe($.cssnano())
+            .pipe($.sourcemaps.write('.'))
             .pipe(gulp.dest('styles/'))
-            .pipe(notify({ message: 'Styles completed' }));
+            .pipe($.notify({ message: 'Styles completed' }));
     });
 
 
-    /* ~~~~~~~~~~ Styles concat and minify ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Lint custom JS file ~~~~~~~~~~ */
 
-    gulp.task('styles-minified', function() {
-        return gulp.src('assets/styles/css/**/*.css')
-            .pipe(sourcemaps.init())
-            .pipe(postcss([ autoprefixer({ browsers: ['last 10 versions'] }) ]))
-            .pipe(concat('style.min.css'))
-            .pipe(sourcemaps.write())
-            .pipe(cssnano())
-            .pipe(gulp.dest('styles/'))
-            .pipe(notify({ message: 'Minified styles completed' }));
-    });
+    gulp.task('lint', function() {
+        return gulp.src('assets/scripts/custom.js')
+        .pipe($.jshint())
+        .pipe($.notify(function (file) {
+            if (file.jshint.success) {
+                return false;
+            }
 
+            var errors = file.jshint.results.map(function (data) {
+                if (data.error) {
+                    return "(" + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
+                }
+            }).join("\n");
 
-    /* ~~~~~~~~~~ Scripts validation ~~~~~~~~~~ */
-
-    gulp.task('scripts-validation', function() {
-        return gulp.src('assets/scripts/main.js')
-            .pipe(jshint())
-            .pipe(jshint.reporter('default'));
+            return file.relative + " (" + file.jshint.results.length + " errors)\n" + errors;
+        }));
     });
 
 
     /* ~~~~~~~~~~ Scripts concat and minify ~~~~~~~~~~ */
 
     gulp.task('scripts', function() {
-        return gulp.src('assets/scripts/**/*.js')
-            .pipe(concat('scripts.min.js'))
-            .pipe(uglify())
-            .pipe(gulp.dest('scripts'))
-            .pipe(notify({ message: 'Scripts completed' }));
+        var uglify = $.uglify()
+            .on('error', $.notify.onError({
+                message: "<%= error.message %>",
+                title: "Uglify JS Error"
+            }));
+
+        return gulp.src(PATHS.javascript)
+            .pipe($.sourcemaps.init())
+            .pipe($.concat('scripts.min.js', {
+                newLine:'\n;'
+            }))
+            .pipe(uglify)
+            .pipe($.sourcemaps.write())
+            .pipe(gulp.dest('scripts/'))
+            .pipe($.notify({ message: 'Scripts completed' }));
     });
 
 
-    /* ~~~~~~~~~~ Images optim ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Images optimization ~~~~~~~~~~ */
 
-    gulp.task('images-optim', function () {
+    gulp.task('images', function () {
         return gulp.src('assets/images/**/*')
-            .pipe(imagemin())
-            .pipe(gulp.dest('images'))
+            .pipe($.imagemin())
+            .pipe(gulp.dest('images/'))
+    });
+
+
+    /* ~~~~~~~~~~ Copy ~~~~~~~~~~ */
+
+    gulp.task('copy', function() {
+
+        /* ~~~~~~~~~~ Font Awesome ~~~~~~~~~~ */
+
+        var fontAwesome = gulp.src('bower_components/font-awesome/fonts/**/*.*')
+            .pipe(gulp.dest('fonts/'));
     });
 
 
@@ -121,8 +167,10 @@ var gulp = require('gulp'),
 
     /* ~~~~~~~~~~ Default task ~~~~~~~~~~ */
 
-    gulp.task('default', ['clean', 'bower-scripts', 'bower-styles', 'sass'], function() {
-        gulp.start('styles-minified', 'scripts-validation', 'scripts', 'images-optim');
+    gulp.task('default', ['clean'], function(done) {
+        sequence('copy',
+          ['sass', 'scripts', 'lint', 'images'],
+          done);
     });
 
 
@@ -130,7 +178,7 @@ var gulp = require('gulp'),
 
     gulp.task('images', function() {
         del(['images']);
-        gulp.start('images-optim');
+        gulp.start('images');
     });
 
 
@@ -138,8 +186,7 @@ var gulp = require('gulp'),
 
     gulp.task('watch', function(done) {
         gulp.watch('assets/styles/sass/**/*.scss', ['sass']);
-        gulp.watch('assets/styles/css/*.css', ['styles']);
-        gulp.watch('assets/scripts/**/*.js', ['scripts-validation', 'scripts']);
+        gulp.watch('assets/scripts/**/*.js', ['scripts']);
         browserSync.reload();
         done();
     });

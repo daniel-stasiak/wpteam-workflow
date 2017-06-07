@@ -7,21 +7,6 @@
     @import "../../../bower_components/bootstrap/scss/bootstrap";
 
 
-    /* ~~~~~~~~~~ Font awesome ~~~~~~~~~~ */
-
-    @import "../../../bower_components/font-awesome/scss/font-awesome";
-
-
-    /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
-
-    @import "../../../bower_components/select2/src/scss/core";
-
-
-    /* ~~~~~~~~~~ Hamburgers ~~~~~~~~~~ */
-
-    @import "../../../bower_components/css-hamburgers/_sass/hamburgers/hamburgers";
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Base ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -69,6 +54,11 @@
     // @import "components/bootstrap-4-vertical-centered-modal";
 
 
+    /* ~~~~~~~~~~ Bootstrap Variables ~~~~~~~~~~ */
+
+    @import "components/bootstrap-variables";
+
+
     /* ~~~~~~~~~~ Gravity forms reset styles ~~~~~~~~~~ */
 
     // @import "components/gravity-forms-reset-styles";
@@ -77,11 +67,6 @@
     /* ~~~~~~~~~~ Re-captcha resized on mobile ~~~~~~~~~~ */
 
     // @import "components/re-captcha-resized-on-mobile.scss";
-
-
-    /* ~~~~~~~~~~ Animsition ~~~~~~~~~~ */
-
-    @import "components/animsition";
 
 
     /* ~~~~~~~~~~ Skip to main for disabled ~~~~~~~~~~ */
