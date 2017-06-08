@@ -20,6 +20,7 @@ var PATHS = {
         'bower_components/font-awesome/scss',
         'bower_components/jQuery.mmenu/src/css',
         'bower_components/select2/src/scss',
+        'bower_components/tether/src/css',
     ],
     javascript: [
 
@@ -48,6 +49,8 @@ var PATHS = {
         'bower_components/matchHeight/jquery.matchHeight.js',
 
         'bower_components/select2/src/js/jquery.select2.js',
+
+        'bower_components/tether/src/*js',
 
 
         /* ~~~~~~~~~~ Custom scripts ~~~~~~~~~~ */
