@@ -18,7 +18,7 @@ var PATHS = {
         'bower_components/bootstrap/scss',
         'bower_components/css-hamburgers/_sass',
         'bower_components/font-awesome/scss',
-        'bower_components/jQuery.mmenu/src/css',
+        'bower_components/jQuery.mmenu/dist/css',
         'bower_components/select2/src/scss',
         'bower_components/tether/src/css',
     ],
@@ -45,7 +45,7 @@ var PATHS = {
         'bower_components/jquery.easing/js/jquery.easing.compatibility.js',
         'bower_components/jquery.easing/js/jquery.easing.js',
 
-        'bower_components/jQuery.mmenu/dist/js/jquery.mmenu.min.js',
+        'bower_components/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
 
         'bower_components/matchHeight/jquery.matchHeight.js',
 
