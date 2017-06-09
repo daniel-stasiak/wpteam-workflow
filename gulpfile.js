@@ -26,16 +26,18 @@ var PATHS = {
 
         /* ~~~~~~~~~~ Bower Components ~~~~~~~~~~ */
 
-        // 'bower_components/bootstrap/js/dist/alert.js',
+        'bower_components/tether/dist/js/tether.js',
+
+        'bower_components/bootstrap/js/dist/alert.js',
         'bower_components/bootstrap/js/dist/button.js',
         'bower_components/bootstrap/js/dist/carousel.js',
         'bower_components/bootstrap/js/dist/collapse.js',
         'bower_components/bootstrap/js/dist/dropdown.js',
         'bower_components/bootstrap/js/dist/modal.js',
-        // 'bower_components/bootstrap/js/dist/popover.js',
+        'bower_components/bootstrap/js/dist/tooltip.js',
+        'bower_components/bootstrap/js/dist/popover.js',
         'bower_components/bootstrap/js/dist/scrollspy.js',
         'bower_components/bootstrap/js/dist/tab.js',
-        'bower_components/bootstrap/js/dist/tooltip.js',
         'bower_components/bootstrap/js/dist/util.js',
 
         'bower_components/dense/src/dense.js',
@@ -43,14 +45,11 @@ var PATHS = {
         'bower_components/jquery.easing/js/jquery.easing.compatibility.js',
         'bower_components/jquery.easing/js/jquery.easing.js',
 
-        'bower_components/jQuery.mmenu/src/jquery.mmenu.js',
-        'bower_components/jQuery.mmenu/src/addons/fixedelements/jquery.mmenu.fixedelements.js',
+        'bower_components/jQuery.mmenu/dist/js/jquery.mmenu.min.js',
 
         'bower_components/matchHeight/jquery.matchHeight.js',
 
-        'bower_components/select2/src/js/jquery.select2.js',
-
-        'bower_components/tether/src/*js',
+        'bower_components/select2/dist/js/select2.js',
 
 
         /* ~~~~~~~~~~ Custom scripts ~~~~~~~~~~ */
