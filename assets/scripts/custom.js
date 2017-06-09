@@ -182,9 +182,7 @@ $(function() {
 
             /* ~~~~~~~~~~ Replace all SVG images with inline SVG ~~~~~~~~~~ */
 
-            jQuery('img').filter(function() {
-                return this.src.match(/.*\.svg$/);
-            }).each(function(){
+            jQuery('img.svg').each(function(){
                 var $img = jQuery(this);
                 var imgID = $img.attr('id');
                 var imgClass = $img.attr('class');
