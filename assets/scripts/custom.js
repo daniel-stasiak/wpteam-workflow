@@ -29,12 +29,6 @@ $(function() {
 
             /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
 
-            $('.main-header').addClass('mmenu-fixed');
-
-            if($('#wpadminbar').length) {
-                $('#wpadminbar').addClass('mmenu-fixed');
-            }
-
             var $menu = $("#mobile-navigation").mmenu({
                 "extensions": [
                     "pagedim-black",
@@ -51,10 +45,17 @@ $(function() {
             }, {
                 classNames: {
                     fixedElements: {
-                        fixed: "mmenu-fixed"
+                        fixed: "mmenu-fixed",
+                        elemInsertSelector: '.main-content'
                     }
                 }
             });
+
+            $('.main-header').addClass('mmenu-fixed');
+
+            if($('#wpadminbar').length) {
+                $('#wpadminbar').addClass('mmenu-fixed');
+            }
 
             var $icon = $("#mmenu-triger");
             var API = $menu.data( "mmenu" );
