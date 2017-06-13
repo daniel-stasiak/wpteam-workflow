@@ -20,11 +20,10 @@ $(function() {
 
             $('select').select2();
 
-            /* ~~~~~~~~~~ Dense (Retina images) init ~~~~~~~~~~ */
 
-            $('img').dense({
-                'glue' : '@'
-            });
+            /* ~~~~~~~~~~ Retina init ~~~~~~~~~~ */
+
+            retinajs();
 
 
             /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */

@@ -40,14 +40,14 @@ var PATHS = {
         'bower_components/bootstrap/js/dist/tab.js',
         'bower_components/bootstrap/js/dist/util.js',
 
-        'bower_components/dense/src/dense.js',
-
         'bower_components/jquery.easing/js/jquery.easing.compatibility.js',
         'bower_components/jquery.easing/js/jquery.easing.js',
 
         'bower_components/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
 
         'bower_components/matchHeight/jquery.matchHeight.js',
+
+        'bower_components/retinajs/dist/retina.js',
 
         'bower_components/select2/dist/js/select2.js',
 
