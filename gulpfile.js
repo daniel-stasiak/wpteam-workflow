@@ -122,12 +122,12 @@ var COMPATIBILITY = [
             }));
 
         return gulp.src(PATHS.javascript)
-            .pipe($.sourcemaps.init())
+            // .pipe($.sourcemaps.init())
             .pipe($.concat('scripts.js', {
                 newLine:'\n;'
             }))
             .pipe(uglify)
-            .pipe($.sourcemaps.write())
+            // .pipe($.sourcemaps.write())
             .pipe(gulp.dest('scripts/'))
             .pipe($.notify({ message: 'Scripts completed' }));
     });
