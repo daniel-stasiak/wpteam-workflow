@@ -30,13 +30,75 @@ if(function_exists('register_nav_menus')) {
 }
 
 
-/* ~~~~~~~~~~ Set one jquery version for all of plugins ~~~~~~~~~~ */
 
-if( !is_admin()){
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"), false, '1.9.1');
-	wp_enqueue_script('jquery');
-}
+/* ~~~~~~~~~~ Enqueue all styles and scripts ~~~~~~~~~~ */
+
+/**
+* Learn more about enqueue_script: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_script}
+* Learn more about enqueue_style: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_style }
+*/
+
+if ( ! function_exists( 'wpteam_scripts' ) ) :
+	function wpteam_scripts() {
+		wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/styles/style.css', array(), filemtime( get_template_directory_uri() . '/styles/style.css'), 'all' );
+
+		wp_deregister_script( 'jquery' );
+		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', false );
+
+		wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), filemtime( get_template_directory_uri() . '/scripts/scripts.js'), true );
+	}
+
+	add_action( 'wp_enqueue_scripts', 'wpteam_scripts' );
+endif;
+
+
+/* ~~~~~~~~~~ MCE Add Button (Shortcodes) ~~~~~~~~~~ */
+
+// if ( ! function_exists( 'wpteam_add_mce_button' ) ) {
+
+// 	/**
+// 	 * Hooks your functions into the correct filters
+// 	 * @return array
+// 	 */
+
+// 	function wpteam_add_mce_button() {
+// 		if ( ! current_user_can( 'edit_posts' ) && ! current_user_can( 'edit_pages' ) ) {
+// 			return;
+// 		}
+// 		if ( 'true' === get_user_option( 'rich_editing' ) ) {
+// 			add_filter( 'mce_external_plugins', 'wpteam_add_tinymce_plugin' );
+// 			add_filter( 'mce_buttons', 'wpteam_register_mce_button' );
+// 		}
+// 	}
+
+// 	add_action( 'admin_head', 'wpteam_add_mce_button' );
+// }
+
+// if ( ! function_exists( 'wpteam_add_tinymce_plugin' ) ) {
+// 	/**
+// 	 * Register new button in the editor
+// 	 * @return array
+// 	 */
+
+// 	function wpteam_add_tinymce_plugin( $plugin_array ) {
+// 		$plugin_array['wpteam_mce_button'] = get_template_directory_uri() . '/assets/scripts/mce-button.js';
+
+// 		return $plugin_array;
+// 	}
+// }
+
+// if ( ! function_exists( 'wpteam_register_mce_button' ) ) {
+// 	/**
+// 	 * Register new button in the editor
+// 	 * @return array
+// 	 */
+
+// 	function wpteam_register_mce_button( $buttons ) {
+// 		array_push( $buttons, 'wpteam_mce_button' );
+
+// 		return $buttons;
+// 	}
+// }
 
 
 /* ~~~~~~~~~~ Specific image dimensions ~~~~~~~~~~ */

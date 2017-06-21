@@ -21,6 +21,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-connect-php": "0.0.7",
     "gulp-cssnano": "^2.1.0",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^2.4.0",
     "gulp-jshint": "^2.0.1",
     "gulp-load-plugins": "^1.5.0",
@@ -31,6 +32,7 @@
     "gulp-uglify": "^1.5.1",
     "jshint": "^2.9.2",
     "lodash": "^4.12.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "yargs": "^8.0.2"
   }
 }

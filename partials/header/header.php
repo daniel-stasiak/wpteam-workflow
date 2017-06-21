@@ -23,8 +23,6 @@
         <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/style.css<?php echo '?v=' . filemtime( get_stylesheet_directory() . '/styles/style.css'); ?>">
-
         <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" >
 

@@ -3,10 +3,12 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 var $ = require('gulp-load-plugins')(),
+    argv = require('yargs').argv,
     gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     sequence    = require('run-sequence'),
-    del = require('del');
+    del = require('del'),
+    cssnano = require('gulp-cssnano');
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -58,6 +60,8 @@ var PATHS = {
     ]
 };
 
+var isProduction = !!(argv.production);
+
 var COMPATIBILITY = [
     'last 10 versions',
     'ie >= 9',
@@ -84,8 +88,8 @@ var COMPATIBILITY = [
             .pipe($.autoprefixer({
                 browsers: COMPATIBILITY
             }))
-            .pipe($.cssnano())
-            .pipe($.sourcemaps.write('.'))
+            .pipe($.if(isProduction, cssnano()))
+            .pipe($.if(!isProduction, $.sourcemaps.write('.')))
             .pipe(gulp.dest('styles/'))
             .pipe($.notify({ message: 'Styles completed' }));
     });
@@ -122,12 +126,12 @@ var COMPATIBILITY = [
             }));
 
         return gulp.src(PATHS.javascript)
-            // .pipe($.sourcemaps.init())
+            .pipe($.sourcemaps.init())
             .pipe($.concat('scripts.js', {
                 newLine:'\n;'
             }))
-            .pipe(uglify)
-            // .pipe($.sourcemaps.write())
+            .pipe($.if(isProduction, uglify))
+            .pipe($.if(!isProduction, $.sourcemaps.write()))
             .pipe(gulp.dest('scripts/'))
             .pipe($.notify({ message: 'Scripts completed' }));
     });
