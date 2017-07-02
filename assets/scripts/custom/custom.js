@@ -231,7 +231,7 @@ $(function() {
             /* ~~~~~~~~~~ Sticky Footer ~~~~~~~~~~ */
 
             $(function(){
-                var $footer = $('.main-footer');
+                var $footer = $('.footer-wrapper');
 
                 var pos = $footer.position(),
                     height = ($(window).height() - pos.top) - ($footer.height() + 2);
