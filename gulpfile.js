@@ -56,7 +56,7 @@ var PATHS = {
 
         /* ~~~~~~~~~~ Custom scripts ~~~~~~~~~~ */
 
-        'assets/scripts/*.js'
+        'assets/scripts/custom/*.js'
     ]
 };
 
@@ -98,7 +98,7 @@ var COMPATIBILITY = [
     /* ~~~~~~~~~~ Lint custom JS file ~~~~~~~~~~ */
 
     gulp.task('lint', function() {
-        return gulp.src('assets/scripts/custom.js')
+        return gulp.src('assets/scripts/custom/custom.js')
         .pipe($.jshint())
         .pipe($.notify(function (file) {
             if (file.jshint.success) {

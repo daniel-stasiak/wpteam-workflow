@@ -40,12 +40,12 @@ if(function_exists('register_nav_menus')) {
 
 if ( ! function_exists( 'wpteam_scripts' ) ) :
 	function wpteam_scripts() {
-		wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/styles/style.css', array(), filemtime( get_template_directory_uri() . '/styles/style.css'), 'all' );
+		wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/styles/style.css', array(), '1.0.0', 'all' );
 
 		wp_deregister_script( 'jquery' );
 		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', false );
 
-		wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), filemtime( get_template_directory_uri() . '/scripts/scripts.js'), true );
+		wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), '1.0.0', true );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'wpteam_scripts' );
@@ -81,7 +81,7 @@ endif;
 // 	 */
 
 // 	function wpteam_add_tinymce_plugin( $plugin_array ) {
-// 		$plugin_array['wpteam_mce_button'] = get_template_directory_uri() . '/assets/scripts/mce-button.js';
+// 		$plugin_array['wpteam_mce_button'] = get_template_directory_uri() . '/assets/scripts/core/mce-button.js';
 
 // 		return $plugin_array;
 // 	}

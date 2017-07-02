@@ -206,7 +206,7 @@ $(function() {
     });
 
 
-    $(window).on("load resize",function(){
+    $(window).bind('load resize orientationChange', function () {
 
         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
         /* ~~~~~~~~~~ Functions ~~~~~~~~~~ */
@@ -226,6 +226,20 @@ $(function() {
                     }
                 });
             }
+
+
+            /* ~~~~~~~~~~ Sticky Footer ~~~~~~~~~~ */
+
+            $(function(){
+                var $footer = $('.main-footer');
+
+                var pos = $footer.position(),
+                    height = ($(window).height() - pos.top) - ($footer.height() + 2);
+
+                if (height > 0) {
+                    $footer.css('margin-top', height);
+                }
+            });
     });
 
 
