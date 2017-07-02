@@ -30,7 +30,6 @@ if(function_exists('register_nav_menus')) {
 }
 
 
-
 /* ~~~~~~~~~~ Enqueue all styles and scripts ~~~~~~~~~~ */
 
 /**
@@ -50,6 +49,34 @@ if ( ! function_exists( 'wpteam_scripts' ) ) :
 
 	add_action( 'wp_enqueue_scripts', 'wpteam_scripts' );
 endif;
+
+
+/* ~~~~~~~~~~ Widget areas ~~~~~~~~~~ */
+
+// if ( ! function_exists( 'wpteam_sidebar_widgets' ) ) :
+// 	function wpteam_sidebar_widgets() {
+// 		register_sidebar(array(
+// 	  		'id' => 'sidebar-widgets',
+// 	  		'name' => __( 'Sidebar widgets', 'wpteam' ),
+// 	  		'description' => __( 'Drag widgets to this sidebar container.', 'wpteam' ),
+// 	  		'before_widget' => '<div class="col-md-3"><section id="%1$s" class="widget %2$s">',
+// 	  		'after_widget' => '</section></div>',
+// 	  		'before_title' => '<h3 class="widget__title">',
+// 	  		'after_title' => '</h3>',
+// 		));
+
+// 		register_sidebar(array(
+// 	  		'id' => 'footer-widgets',
+// 	  		'name' => __( 'Footer widgets', 'wpteam' ),
+// 	  		'description' => __( 'Drag widgets to this footer container', 'wpteam' ),
+// 	  		'before_widget' => '<div class="col-md-3"><section id="%1$s" class="widget %2$s">',
+// 	  		'after_widget' => '</section></div>',
+// 	  		'before_title' => '<h3 class="widget__title">',
+// 	  		'after_title' => '</h3>',
+// 		));
+// 	}
+// 	add_action( 'widgets_init', 'wpteam_sidebar_widgets' );
+// endif;
 
 
 /* ~~~~~~~~~~ MCE Add Button (Shortcodes) ~~~~~~~~~~ */
