@@ -11,6 +11,7 @@
 
 		.navbar {
 			display: block;
+			padding: 0;
 
 			.navbar-brand {
 				display: block;
@@ -20,6 +21,11 @@
 
 			.navbar-nav {
 				flex-direction: inherit;
+				display: none;
+
+				@include media-breakpoint-up(md) {
+					display: flex;
+				}
 			}
 		}
 	}
