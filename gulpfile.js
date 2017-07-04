@@ -46,6 +46,7 @@ var PATHS = {
         'bower_components/jquery.easing/js/jquery.easing.js',
 
         'bower_components/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
+        'bower_components/jQuery.mmenu/dist/addons/fixedelements/jquery.mmenu.fixedelements.min.js',
 
         'bower_components/matchHeight/jquery.matchHeight.js',
 
