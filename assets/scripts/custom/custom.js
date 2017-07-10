@@ -28,6 +28,12 @@ $(function() {
 
             /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
 
+            $('.main-header').addClass('mmenu-fixed');
+
+            if($('#wpadminbar').length) {
+                $('#wpadminbar').addClass('mmenu-fixed');
+            }
+
             var $menu = $("#mobile-navigation").mmenu({
                 "extensions": [
                     "pagedim-black",
@@ -49,12 +55,6 @@ $(function() {
                     }
                 }
             });
-
-            $('.main-header').addClass('mmenu-fixed');
-
-            if($('#wpadminbar').length) {
-                $('#wpadminbar').addClass('mmenu-fixed');
-            }
 
             var $icon = $("#mmenu-triger");
             var API = $menu.data( "mmenu" );
@@ -136,6 +136,8 @@ $(function() {
             /* ~~~~~~~~~~ First content element fix ~~~~~~~~~~ */
 
             $('.content').prepend('<span class="first-element-fix"></span>');
+            $('blockquote').prepend('<span class="first-element-fix"></span>');
+            $('.panel').prepend('<span class="first-element-fix"></span>');
 
 
             /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
@@ -163,20 +165,12 @@ $(function() {
 
             /* ~~~~~~~~~~ Change navigation after scroll ~~~~~~~~~~ */
 
-            $(function(){
-                var lastScrollTop = 0;
-
-                $(window).scroll(function(event){
-                   var currentScrollPosition = $(this).scrollTop();
-
-                   if (currentScrollPosition > lastScrollTop && currentScrollPosition >= 150){
-                       $('.main-header').addClass('main-header--scrolled');
-                   } else {
-                        $('.main-header').removeClass('main-header--scrolled');
-                   }
-
-                   lastScrollTop = currentScrollPosition;
-                });
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 100) {
+                    $('.main-header').addClass('main-header--scrolled');
+                } else {
+                    $('.main-header').removeClass('main-header--scrolled');
+                }
             });
 
 
