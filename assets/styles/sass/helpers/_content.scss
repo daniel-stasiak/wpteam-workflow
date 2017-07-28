@@ -155,62 +155,103 @@ body#tinymce,
 
     .gallery {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 40px !important;
 
         &.gallery-columns-2 {
             .gallery-item {
-                flex-basis: 49%;
+                flex-basis: 50%;
             }
         }
 
         &.gallery-columns-3 {
             .gallery-item {
-                flex-basis: 32%;
+               flex-basis: 33.33%;
+
             }
         }
 
         &.gallery-columns-4 {
             .gallery-item {
-                flex-basis: 24%;
+                flex-basis: 50%;
+
+                @include media-breakpoint-up(sm) {
+                    flex-basis: 25%;
+                }
             }
         }
 
         &.gallery-columns-5 {
             .gallery-item {
-                flex-basis: 19%;
+                flex-basis: 33.33%;
+
+                @include media-breakpoint-up(sm) {
+                    flex-basis: 20%;
+                }
             }
         }
 
         &.gallery-columns-6 {
             .gallery-item {
-                flex-basis: 16%;
+                flex-basis: 33.33%;
+
+                @include media-breakpoint-up(sm) {
+                    flex-basis: 25%;
+                }
+
+                @include media-breakpoint-up(md) {
+                    flex-basis: 16.66%;
+                }
             }
         }
 
         &.gallery-columns-7 {
             .gallery-item {
-                flex-basis: 13.5%;
+                flex-basis: 33.33%;
+
+                @include media-breakpoint-up(sm) {
+                    flex-basis: 25%;
+                }
+
+                @include media-breakpoint-up(md) {
+                    flex-basis: 14.28%;
+                }
             }
         }
 
         &.gallery-columns-8 {
             .gallery-item {
-                flex-basis: 12%;
+                flex-basis: 25%;
+
+                @include media-breakpoint-up(md) {
+                    flex-basis: 12.5%;
+                }
             }
         }
 
         &.gallery-columns-9 {
             .gallery-item {
-                flex-basis: 10.5%;
+                flex-basis: 25%;
+
+                @include media-breakpoint-up(md) {
+                    flex-basis: 11.1%;
+                }
             }
         }
 
         .gallery-item {
+            flex-shrink: 0;
+
             img {
                 border: none !important;
                 margin-top: 0;
+            }
+
+            .gallery-icon {
+                width: calc(100% - 10px);
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
             }
         }
     }
