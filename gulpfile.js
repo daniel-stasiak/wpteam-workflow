@@ -169,12 +169,13 @@ var COMPATIBILITY = [
 /* ~~~~~~~~~~ Tasks ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-    /* ~~~~~~~~~~ Default task ~~~~~~~~~~ */
+     /* ~~~~~~~~~~ Default task ~~~~~~~~~~ */
 
-    gulp.task('default', ['clean'], function(done) {
-        sequence('copy',
-          ['sass', 'scripts', 'lint', 'images-optim'],
-          done);
+    gulp.task('default', function(done) {
+        gulp.watch('assets/styles/sass/**/*.scss', ['sass']);
+        gulp.watch('assets/scripts/**/*.js', ['scripts', 'lint']);
+        browserSync.reload();
+        done();
     });
 
 
@@ -188,11 +189,10 @@ var COMPATIBILITY = [
 
     /* ~~~~~~~~~~ Watch files ~~~~~~~~~~ */
 
-    gulp.task('watch', function(done) {
-        gulp.watch('assets/styles/sass/**/*.scss', ['sass']);
-        gulp.watch('assets/scripts/**/*.js', ['scripts', 'lint']);
-        browserSync.reload();
-        done();
+    gulp.task('build', ['clean'], function(done) {
+        sequence('copy',
+          ['sass', 'scripts', 'lint', 'images-optim'],
+          done);
     });
 
 
