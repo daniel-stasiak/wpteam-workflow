@@ -30,27 +30,6 @@ if(function_exists('register_nav_menus')) {
 }
 
 
-/* ~~~~~~~~~~ Enqueue all styles and scripts ~~~~~~~~~~ */
-
-/**
-* Learn more about enqueue_script: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_script}
-* Learn more about enqueue_style: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_style }
-*/
-
-if ( ! function_exists( 'wpteam_scripts' ) ) :
-	function wpteam_scripts() {
-		wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/styles/style.css', array(), '1.0.0', 'all' );
-
-		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', false );
-
-		wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), '1.0.0', true );
-	}
-
-	add_action( 'wp_enqueue_scripts', 'wpteam_scripts' );
-endif;
-
-
 /* ~~~~~~~~~~ Widget areas ~~~~~~~~~~ */
 
 // if ( ! function_exists( 'wpteam_sidebar_widgets' ) ) :
@@ -196,10 +175,49 @@ function disable_rest_api() {
 // add_filter('acf/settings/show_admin', '__return_false');
 
 
+/* ~~~~~~~~~~ Check featured image size ~~~~~~~~~~ */
+
+add_action('transition_post_status', 'check_featured_image_size_after_save', 10, 3);
+
+function check_featured_image_size_after_save($new_status, $old_status, $post){
+    $run_on_statuses = array('publish', 'pending', 'future');
+
+    if(!in_array($new_status, $run_on_statuses)) return;
+
+    $post_id = $post->ID;
+
+    if ( wp_is_post_revision( $post_id ) ) return; //not sure about this.. but apparently save is called twice when this happens
+
+    $image_data = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), "Full" );
+
+    if(!$image_data) return; //separate message if no image at all. (I use a plugin for this)
+
+    $image_width = $image_data[1];
+    $image_height = $image_data[2];
+
+    $min_width = 850;
+    $min_height = 450;
+
+    if($image_width < $min_width || $image_height < $min_height) {
+    // Being safe, honestly $old_status shouldn't be in $run_on_statuses... it wouldn't save the first time!
+        $reverted_status = in_array($old_status, $run_on_statuses) ? 'draft' : $old_status;
+
+        wp_update_post(array(
+            'ID' => $post_id,
+            'post_status' => $reverted_status,
+        ));
+
+        $back_link = admin_url("post.php?post=$post_id&action=edit");
+        wp_die("Featured Image not large enough, must be at least ${min_width}x$min_height. Reverting status to '$reverted_status'.<br><br><a href='$back_link'>Go Back</a>");
+    }
+}
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Required functions ~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+    require_once('inc/enqueue-scripts.php');
     require_once('inc/required-plugins-init.php');
     require_once('inc/bs4navwalker.php');
     require_once('inc/custom-functions.php');
