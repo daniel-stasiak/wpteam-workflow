@@ -22,14 +22,11 @@ var PATHS = {
         'bower_components/font-awesome/scss',
         'bower_components/jQuery.mmenu/dist/css',
         'bower_components/select2/src/scss',
-        // 'bower_components/owl.carousel/src/scss',
-        'bower_components/tether/src/css',
+        // 'bower_components/owl.carousel/src/scss'
     ],
     javascript: [
 
         /* ~~~~~~~~~~ Bower Components ~~~~~~~~~~ */
-
-        'bower_components/tether/dist/js/tether.js',
 
         'bower_components/bootstrap/js/dist/alert.js',
         'bower_components/bootstrap/js/dist/button.js',
@@ -37,10 +34,10 @@ var PATHS = {
         'bower_components/bootstrap/js/dist/collapse.js',
         'bower_components/bootstrap/js/dist/dropdown.js',
         'bower_components/bootstrap/js/dist/modal.js',
-        'bower_components/bootstrap/js/dist/tooltip.js',
         'bower_components/bootstrap/js/dist/popover.js',
         'bower_components/bootstrap/js/dist/scrollspy.js',
         'bower_components/bootstrap/js/dist/tab.js',
+        'bower_components/bootstrap/js/dist/tooltip.js',
         'bower_components/bootstrap/js/dist/util.js',
 
         'bower_components/jquery.easing/js/jquery.easing.compatibility.js',
