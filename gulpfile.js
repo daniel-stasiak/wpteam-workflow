@@ -22,7 +22,7 @@ var PATHS = {
         'bower_components/font-awesome/scss',
         'bower_components/jQuery.mmenu/dist/css',
         'bower_components/select2/src/scss',
-        'bower_components/owl.carousel/src/scss',
+        // 'bower_components/owl.carousel/src/scss',
         'bower_components/tether/src/css',
     ],
     javascript: [
@@ -49,13 +49,9 @@ var PATHS = {
         'bower_components/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
         'bower_components/jQuery.mmenu/dist/addons/fixedelements/jquery.mmenu.fixedelements.min.js',
 
-        'bower_components/masonry/dist/masonry.pkgd.js',
-
         'bower_components/matchHeight/jquery.matchHeight.js',
 
-        'bower_components/owl.carousel/dist/owl.carousel.js',
-
-        'bower_components/mixitup/dist/mixitup.js',
+        // 'bower_components/owl.carousel/dist/owl.carousel.js',
 
         'bower_components/retinajs/dist/retina.js',
 
