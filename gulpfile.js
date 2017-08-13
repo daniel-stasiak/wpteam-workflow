@@ -28,6 +28,9 @@ var PATHS = {
 
         /* ~~~~~~~~~~ Bower Components ~~~~~~~~~~ */
 
+        'bower_components/popper.js/index.js',
+        'bower_components/tooltip.js/index.js',
+
         'bower_components/bootstrap/js/dist/alert.js',
         'bower_components/bootstrap/js/dist/button.js',
         'bower_components/bootstrap/js/dist/carousel.js',
