@@ -1,4 +1,4 @@
-$(function() {
+(function($){
 
     $(document).ready(function() {
 
@@ -248,4 +248,4 @@ $(function() {
             catch(e){ return false; }
         }
 
-});
+})(jQuery);

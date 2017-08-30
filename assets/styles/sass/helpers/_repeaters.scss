@@ -137,7 +137,6 @@
 
     .element-margin-top {
         margin-top: $element-space__xs;
-        margin-bottom: 0;
 
         @include media-breakpoint-up(sm) {
             margin-top: $element-space__sm;
@@ -158,7 +157,6 @@
 
     .element-margin-bottom {
         margin-bottom: $element-space__xs;
-        margin-top: 0;
 
         @include media-breakpoint-up(sm) {
             margin-bottom: $element-space__sm;

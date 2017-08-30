@@ -7,8 +7,8 @@
 
 if ( ! function_exists( 'wpteam_scripts' ) ) :
     function wpteam_scripts() {
-        $js_version  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'scripts/scripts.js' ));
-        $css_version = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'styles/style.css' ));
+        $js_version  = filemtime(get_template_directory() . '/scripts/scripts.min.js' );
+        $css_version = filemtime(get_template_directory() . '/styles/style.min.css');
 
         wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/styles/style.css', array(), $css_version, 'all' );
 
