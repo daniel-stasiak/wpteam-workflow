@@ -1,3 +1,5 @@
+<?php
+
 /* ~~~~~~~~~~ Enqueue all styles and scripts ~~~~~~~~~~ */
 
 /**
@@ -79,3 +81,5 @@ function($in_footer) {
 
 //     return $tag;
 // }
+
+?>
