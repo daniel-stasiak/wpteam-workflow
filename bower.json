@@ -27,6 +27,7 @@
     "retinajs": "https://github.com/strues/retinajs.git#^2.1.2",
     "bootstrap": "v4.0.0-beta",
     "popper.js": "https://unpkg.com/popper.js",
-    "tooltip.js": "https://unpkg.com/tooltip.js"
+    "tooltip.js": "https://unpkg.com/tooltip.js",
+    "jquery-lazy": "^1.7.5"
   }
 }
