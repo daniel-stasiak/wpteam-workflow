@@ -43,6 +43,8 @@ var PATHS = {
         'bower_components/bootstrap/js/dist/tooltip.js',
         'bower_components/bootstrap/js/dist/util.js',
 
+        'bower_components/jquery-lazy/jquery.lazy.js',
+
         'bower_components/jquery.easing/js/jquery.easing.compatibility.js',
         'bower_components/jquery.easing/js/jquery.easing.js',
 
