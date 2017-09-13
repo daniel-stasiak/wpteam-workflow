@@ -9,16 +9,13 @@
 
 if ( ! function_exists( 'wpteam_scripts' ) ) :
     function wpteam_scripts() {
-        $js_version  = filemtime(get_template_directory() . '/scripts/scripts.min.js' );
-        $css_version = filemtime(get_template_directory() . '/styles/style.min.css');
-
-        wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/styles/style.css', array(), $css_version, 'all' );
+        wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/styles/style.css', array(), '1.0.0', 'all' );
 
         $in_footer = apply_filters('wpteam_load_jquery_in_footer', true);
         wp_deregister_script( 'jquery' );
         wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', $in_footer );
 
-        wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), $js_version, true );
+        wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), '1.0.0', true );
     }
 
     add_action( 'wp_enqueue_scripts', 'wpteam_scripts' );
