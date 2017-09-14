@@ -96,6 +96,52 @@
     }
 
 
+    /* ~~~~~~~~~~ Social Icons ~~~~~~~~~~ */
+
+    .social-icons {
+        &__item {
+            margin: 0 2.5px;
+
+            @include media-breakpoint-up(sm) {
+                margin: 0 5px;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &__social-icon-link {
+                display: block;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background: $primary-color;
+                color: #fff;
+
+                @include media-breakpoint-up(sm) {
+                    width: 37.5px;
+                    height: 37.5px;
+                }
+
+                @include media-breakpoint-up(md) {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &:hover,
+                &:focus {
+                    background: darken($primary-color, 5%);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
     /* ~~~~~~~~~~ Main ~~~~~~~~~~ */
 
     #main {
