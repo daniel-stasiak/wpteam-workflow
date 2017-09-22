@@ -211,6 +211,11 @@
         /* ~~~~~~~~~~ Functions ~~~~~~~~~~ */
         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+            /* ~~~~~~~~~~ AOS Refresh ~~~~~~~~~~ */
+
+            AOS.refresh();
+
+
             /* ~~~~~~~~~~ Bootstrap modal margin top if WP admin exist ~~~~~~~~~~ */
 
             if($('#wpadminbar').length) {
