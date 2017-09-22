@@ -51,9 +51,16 @@ body#tinymce,
 
     ul,
     ol {
-        @extend .element-small-margin-top;
         list-style-position: outside;
-        margin-left: 25px;
+        margin: 25px 0 0 25px;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: 30px;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-top: 30px;
+        }
 
         ul,
         ol {
@@ -79,6 +86,10 @@ body#tinymce,
 
         li {
             margin-top: 10px;
+
+            &:first-child {
+                margin-top: 0;
+            }
         }
     }
 
