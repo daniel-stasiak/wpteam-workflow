@@ -32,6 +32,9 @@ body#tinymce,
     }
 
     a:not([class*='-button']) {
+        color: $primary-color;
+        border-bottom: 1px solid transparent;
+
         &:hover,
         &:focus {
             border-color: $primary-color;
