@@ -213,7 +213,7 @@
 
             /* ~~~~~~~~~~ AOS Refresh ~~~~~~~~~~ */
 
-            AOS.refresh();
+            // AOS.refresh();
 
 
             /* ~~~~~~~~~~ Bootstrap modal margin top if WP admin exist ~~~~~~~~~~ */
