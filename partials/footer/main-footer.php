@@ -4,4 +4,4 @@
 	</footer><!-- /.main-footer -->
 </div><!-- /.footer-wrapper -->
 
-<!-- © <?php //echo date('Y'); ?> <?php //echo get_bloginfo('name'); ?> -->
+<!-- © <?php //echo date('Y').' '.get_bloginfo('name'); ?> -->

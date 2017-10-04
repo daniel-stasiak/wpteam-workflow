@@ -238,7 +238,7 @@
                 var $footer = $('.footer-wrapper');
 
                 var pos = $footer.position(),
-                    height = ($(window).height() - pos.top) - ($footer.height() + 2);
+                    height = ($(window).outerHeight() - pos.top) - ($footer.outerHeight() + 2);
 
                 if (height > 0) {
                     $footer.css('margin-top', height);
