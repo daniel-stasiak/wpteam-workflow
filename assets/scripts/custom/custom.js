@@ -224,9 +224,9 @@
                     var WPAdminBarHeight = $('#wpadminbar').height();
 
                     if(modalHeight >= $(window).height()) {
-                        $('.modal .vertical-alignment-helper').css("padding-top", (WPAdminBarHeight + 15));
+                        $('.modal').css("margin-top", (WPAdminBarHeight + 30));
                     } else {
-                        $('.modal .vertical-alignment-helper').css("padding-top", 15);
+                        $('.modal').css("margin-top", 30);
                     }
                 });
             }
