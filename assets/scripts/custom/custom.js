@@ -220,14 +220,8 @@
 
             if($('#wpadminbar').length) {
                 $('.modal').on('shown.bs.modal', function (e) {
-                    var modalHeight = $(this).find('.modal-content').height();
                     var WPAdminBarHeight = $('#wpadminbar').height();
-
-                    if(modalHeight >= $(window).height()) {
-                        $('.modal').css("margin-top", (WPAdminBarHeight + 30));
-                    } else {
-                        $('.modal').css("margin-top", 30);
-                    }
+                    $('.modal').css("margin-top", (WPAdminBarHeight + 30));
                 });
             }
 
