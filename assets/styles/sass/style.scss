@@ -2,12 +2,6 @@
 /* ~~~~~~~~~~ Bower components ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-    /* ~~~~~~~~~~ Bootstrap ~~~~~~~~~~ */
-
-    @import "base/bootstrap-variables";
-    @import "bootstrap";
-
-
     /* ~~~~~~~~~~ CSS Hamburgers ~~~~~~~~~~ */
 
     @import "hamburgers/hamburgers";
@@ -26,9 +20,16 @@
     /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
 
     @import "core";
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Base ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~ Bootstrap ~~~~~~~~~~ */
+
+    @import "base/bootstrap/bootstrap";
+
 
     /* ~~~~~~~~~~ Fonts ~~~~~~~~~~ */
 

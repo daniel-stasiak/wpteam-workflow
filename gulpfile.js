@@ -17,7 +17,6 @@ var $ = require('gulp-load-plugins')(),
 
 var PATHS = {
     sass: [
-        'bower_components/bootstrap/scss',
         'bower_components/css-hamburgers/_sass',
         'bower_components/font-awesome/scss',
         'bower_components/jQuery.mmenu/dist/css',
@@ -30,18 +29,6 @@ var PATHS = {
 
         'bower_components/popper.js/index.js',
         'bower_components/tooltip.js/index.js',
-
-        'bower_components/bootstrap/js/dist/alert.js',
-        'bower_components/bootstrap/js/dist/button.js',
-        'bower_components/bootstrap/js/dist/carousel.js',
-        'bower_components/bootstrap/js/dist/collapse.js',
-        'bower_components/bootstrap/js/dist/dropdown.js',
-        'bower_components/bootstrap/js/dist/modal.js',
-        'bower_components/bootstrap/js/dist/popover.js',
-        'bower_components/bootstrap/js/dist/scrollspy.js',
-        'bower_components/bootstrap/js/dist/tab.js',
-        'bower_components/bootstrap/js/dist/tooltip.js',
-        'bower_components/bootstrap/js/dist/util.js',
 
         'bower_components/jquery-lazy/jquery.lazy.js',
 
@@ -58,6 +45,21 @@ var PATHS = {
         'bower_components/retinajs/dist/retina.js',
 
         'bower_components/select2/dist/js/select2.js',
+
+
+        /* ~~~~~~~~~~ Core scripts ~~~~~~~~~~ */
+
+        'assets/scripts/core/bootstrap/alert.js',
+        'assets/scripts/core/bootstrap/button.js',
+        'assets/scripts/core/bootstrap/carousel.js',
+        'assets/scripts/core/bootstrap/collapse.js',
+        'assets/scripts/core/bootstrap/dropdown.js',
+        'assets/scripts/core/bootstrap/modal.js',
+        'assets/scripts/core/bootstrap/popover.js',
+        'assets/scripts/core/bootstrap/scrollspy.js',
+        'assets/scripts/core/bootstrap/tab.js',
+        'assets/scripts/core/bootstrap/tooltip.js',
+        'assets/scripts/core/bootstrap/util.js',
 
 
         /* ~~~~~~~~~~ Custom scripts ~~~~~~~~~~ */
