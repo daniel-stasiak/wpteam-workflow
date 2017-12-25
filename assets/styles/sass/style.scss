@@ -7,11 +7,6 @@
     @import "hamburgers/hamburgers";
 
 
-    /* ~~~~~~~~~~ Font Awesome ~~~~~~~~~~ */
-
-    @import "font-awesome";
-
-
     /* ~~~~~~~~~~ mmenu ~~~~~~~~~~ */
 
     @import "jquery.mmenu.all";
@@ -68,6 +63,11 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Components ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~ Font Awesome ~~~~~~~~~~ */
+
+    @import "components/font-awesome/fontawesome";
+
 
     /* ~~~~~~~~~~ Bootstrap 4 - Vertical centered modal ~~~~~~~~~~ */
 

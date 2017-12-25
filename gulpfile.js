@@ -18,7 +18,6 @@ var $ = require('gulp-load-plugins')(),
 var PATHS = {
     sass: [
         'bower_components/css-hamburgers/_sass',
-        'bower_components/font-awesome/scss',
         'bower_components/jQuery.mmenu/dist/css',
         'bower_components/select2/src/scss',
         // 'bower_components/owl.carousel/src/scss'
@@ -154,17 +153,6 @@ var COMPATIBILITY = [
     });
 
 
-    /* ~~~~~~~~~~ Copy ~~~~~~~~~~ */
-
-    gulp.task('copy', function() {
-
-        /* ~~~~~~~~~~ Font Awesome ~~~~~~~~~~ */
-
-        var fontAwesome = gulp.src('bower_components/font-awesome/fonts/**/*.*')
-            .pipe(gulp.dest('fonts/'));
-    });
-
-
     /* ~~~~~~~~~~ Clean styles, scripts, and images ~~~~~~~~~~ */
 
     gulp.task('clean', function() {
@@ -197,7 +185,7 @@ var COMPATIBILITY = [
     /* ~~~~~~~~~~ Watch files ~~~~~~~~~~ */
 
     gulp.task('build', ['clean'], function(done) {
-        sequence('copy',
+        sequence(
           ['sass', 'scripts', 'lint', 'images-optim'],
           done);
     });
