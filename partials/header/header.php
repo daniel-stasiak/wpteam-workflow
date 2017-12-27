@@ -38,6 +38,6 @@
 
         <a href="javascript:" id="return-to-top" class="return-to-top">
             <div class="vertical-center">
-                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                <i class="far fa-chevron-up"></i>
             </div><!-- /.vertical-center -->
         </a>
