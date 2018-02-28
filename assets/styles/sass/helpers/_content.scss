@@ -140,6 +140,19 @@ body#tinymce,
         }
     }
 
+    img {
+        display: block;
+    }
+
+    .wp-caption {
+        display: inline-block;
+        margin-bottom: 0;
+
+        img {
+            margin: 0;
+        }
+    }
+
 
     /* ~~~~~~~~~~ iFrame ~~~~~~~~~~ */
 
