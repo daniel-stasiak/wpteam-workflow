@@ -26,6 +26,7 @@
     "retinajs": "https://github.com/strues/retinajs.git#^2.1.2",
     "popper.js": "https://unpkg.com/popper.js",
     "tooltip.js": "https://unpkg.com/tooltip.js",
-    "jquery-lazy": "^1.7.5"
+    "jquery-lazy": "^1.7.5",
+    "owl.carousel": "^2.2.1"
   }
 }
