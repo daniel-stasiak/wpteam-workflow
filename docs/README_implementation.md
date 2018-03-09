@@ -56,7 +56,7 @@ In ```assets/styles/sass/layout/_general.scss``` you should set [fluid type mixi
 body {
     background: #fff;
     @include primary-font('regular');
-    @include fluid-type(18px, 16px, 1.4);
+    @include fluid-type(16px, 18px, 1.4);
 }
 ```
 
@@ -106,7 +106,7 @@ em {
 
 ## 7. Variables
 
-Set variables which will be reused in the project. Firstly you should [set primary and secondary colour](README_styles.md#41-variables). Then you can edit spacing for ```.element-margns-*``` and ```.element-margins-*``` classes.
+Set variables which will be reused in the project. Firstly you should [set primary and secondary colour](README_styles.md#41-variables). Then you can edit spacing for ```.element-margins``` and ```.element-paddings``` classes.
 
 ## 8. Buttons
 
