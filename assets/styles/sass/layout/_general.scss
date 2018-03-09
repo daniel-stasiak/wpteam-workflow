@@ -6,7 +6,7 @@
 
     body {
         // @include primary-font('regular');
-        // @include fluid-type(18px, 16px);
+        // @include fluid-type(16px, 18px);
         background: #fff;
     }
 
@@ -15,7 +15,7 @@
 
     h1 {
         // @include primary-font('regular');
-        // @include fluid-type(42px, 32px);
+        // @include fluid-type(32px, 42px);
     }
 
 
@@ -120,9 +120,45 @@
 
     #main {
         overflow: hidden;
-        padding-top: 65px;
+        padding-top: 52px;
+
+        @include media-breakpoint-up(sm) {
+            padding-top: 58px;
+        }
+
+        @include media-breakpoint-up(md) {
+            padding-top: 64px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 70px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-top: 71px;
+        }
 
         .admin-bar & {
-            padding-top: 65px + $mobile-wp-admin-bar-height;
+            padding-top: 52px + $mobile-wp-admin-bar-height;
+
+            @include media-breakpoint-up(sm) {
+                padding-top: 58px + $mobile-wp-admin-bar-height;
+            }
+
+            @include media-breakpoint-up(md) {
+                padding-top: 64px + $mobile-wp-admin-bar-height;
+            }
+
+            @media screen and (min-width: 783px) {
+                padding-top: 64px + $desktop-wp-admin-bar-height;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 70px + $desktop-wp-admin-bar-height;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-top: 71px + $desktop-wp-admin-bar-height;
+            }
         }
     }

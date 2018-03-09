@@ -14,13 +14,13 @@
 
     /* ~~~~~~~~~~ OWL ~~~~~~~~~~ */
 
-    // @import "owl.carousel";
-    // @import "owl.theme.default";
+    @import "owl.carousel";
+    @import "owl.theme.default";
 
 
     /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
 
-    @import "core";
+    // @import "core";
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -82,21 +82,6 @@
     /* ~~~~~~~~~~ Bootstrap 4 - Vertical centered modal ~~~~~~~~~~ */
 
     // @import "components/bootstrap-4-vertical-centered-modal";
-
-
-    /* ~~~~~~~~~~ Gravity forms reset styles ~~~~~~~~~~ */
-
-    // @import "components/gravity-forms-reset-styles";
-
-
-    /* ~~~~~~~~~~ Re-captcha resized on mobile ~~~~~~~~~~ */
-
-    // @import "components/re-captcha-resized-on-mobile.scss";
-
-
-    /* ~~~~~~~~~~ Skip to main for disabled ~~~~~~~~~~ */
-
-    @import "components/skip-to-main";
 
 
     /* ~~~~~~~~~~ WP Admin Bar Fix ~~~~~~~~~~ */

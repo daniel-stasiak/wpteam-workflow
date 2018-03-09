@@ -5,13 +5,17 @@ Main style file is located in ```assets/styles/sass/style.scss```, it's build wi
 ## 1. Bower components
 
 Bower components part loads SCSS files for bower components which won't be automatiacally implemented i.e.:
-- Bootstrap
-- Font awesome
+- Hamburgers CSS
+- jQuery mmenu
+- OWL Carousel
 - Select2
-- Hamburgers
 
 ## 2. Base
-### 2.1. Fonts
+### 2.1 Bootstrap
+
+This foldar contain whole Bootstrap 4 SASS elements
+
+### 2.2. Fonts
 In this file you should create ```@mixin```s for all fonts that will be used in project.
 Mixin should contain one value for ```font-weight```.
 
@@ -47,7 +51,7 @@ For @font-face generated:
 }
 ```
 
-### 2.2. Reset
+### 2.3. Reset
 
 It's reset for standard CSS rules, copied from [HTML5 Reset Styleshet](http://html5doctor.com/html-5-reset-stylesheet/). There are added few more styles for transitions to ```<a>```, and ```<button>``` tag.
 
@@ -55,11 +59,7 @@ It's reset for standard CSS rules, copied from [HTML5 Reset Styleshet](http://ht
 
 It's set of CSS clases which are using in some of the projects:
 
-### 3.1. Animsition
-
-Fix for animsition plugin (turn it on if your project is using [Animsition](http://git.blivesta.com/animsition/) plugin).
-
-### 3.2. Bootstrap 4 Vertical Center Modal
+### 3.1. Bootstrap 4 Vertical Center Modal
 
 Fix which allows you to vertical center standard [Bootstrap Modal](http://v4-alpha.getbootstrap.com/components/modal/).
 
@@ -75,19 +75,7 @@ Your html structure should look like here:
 </div>
 ```
 
-### 3.3. Gravity forms reset styles
-
-If your peojct contain [Gravity Forms](http://www.gravityforms.com) plugin you can simply reset all of standard CSS styles.
-
-### 3.4. Re-captcha resized on mobile
-
-Fix which allows you to resize re-captcha container on smaller resoultions.
-
-### 3.5. Skip to main content
-
-Component for the disabled users - facilitate navigation of the site.
-
-### 3.6. WP Admin Bar Fix
+### 3.2. WP Admin Bar Fix
 
 Fix for WP Admin Bar - which allows you show it correctly with our Wokflow.
 
@@ -104,18 +92,30 @@ $secondary-color: #YYYYYY;
 
 ### 4.2. Mixins
 
-In this file are ```@mixin```s for current project. By default there are two mixins.
+In this file are ```@mixin```s for current project.
 
 ```@mixin fluid-type```
-This mixin set max and min ```font-size``` and ```line-height```. It needs 3 values, first: The biggest ```font-size``` of content, second: the smallest ```font-size```, and third: ```line-height```. Example:
+This mixin set max and min ```font-size``` and ```line-height```. It needs 3 values, first: The smallest ```font-size``` of content, second: the biggest ```font-size```, and third: ```line-height```. Example:
 ```sh
-@include fluid-type(42px, 28px, 1.4);
+@include fluid-type(28px, 42px, 1.4);
 ```
 
 ```@mixin letter-spacing```
 This mixin set ```letter-spacing``` for RWD. It needs 1 value: number of ```letter-spacing```. Example:
 ```sh
 @include letter-spacing(200);
+```
+
+```@mixin admin-sticky-fix```
+This mixin moves fixed elements to make fully visible WordPress Admin Bar. It has one value: offset, but usually we're not using it. Example:
+```sh
+@include admin-sticky-fix();
+```
+
+```@mixin element-spacing```
+This mixin is giving ability to add marings or paddings for ```div``` or ```section``` elements. It has 3 values, first: Multipler of the $element-space__* variables for each breakpoint, second: Position of margin or padding (both = top & bottom, top, bottom), third: type (margin or padding)  Example:
+```sh
+@include element-spacing(.75, 'top', 'margin');
 ```
 
 ### 4.3. Repeaters
@@ -146,21 +146,13 @@ In this file you should set global classes for buttons using on website. Example
 
 ```sh
 .asgard-button {
+    @extend .element-medium-margin-top;
     @include primary-font('bold');
-    font-size: 14px;
-    margin-top: 25px;
+    @include fluid-type(14px, 15px);
     display: inline-block;
     border-radius: 100px;
     padding: 6.5px 20px;
     border: 2px solid transparent;
-
-    @include media-breakpoint-up(sm) {
-        margin-top: 30px;
-    }
-
-    @include media-breakpoint-up(md) {
-        margin-top: 35px;
-    }
 
     &--wide-paddings {
         padding-left: 40px;
@@ -253,4 +245,4 @@ Each part of the document should be preceded by comment with description. Exampl
 }
 ```
 
-ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
+ⓒ 2018 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim

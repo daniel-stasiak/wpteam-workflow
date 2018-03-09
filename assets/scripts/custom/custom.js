@@ -18,7 +18,7 @@
 
             /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
 
-            $('select').select2();
+            // $('select').select2();
 
 
             /* ~~~~~~~~~~ Retina init ~~~~~~~~~~ */
@@ -82,6 +82,42 @@
             /* ~~~~~~~~~~ Lazy Loading ~~~~~~~~~~ */
 
             $('.lazy').Lazy();
+
+
+            /* ~~~~~~~~~~ OWL Init ~~~~~~~~~~ */
+
+                /* ~~~~~ Slider Name ~~~~~ */
+
+                // $(function() {
+                //     var owlsampleSlider = $('#sample-slider');
+
+                //     owlsampleSlider.owlCarousel({
+                //         items: 3,
+                //         dots: false,
+                //         loop: true,
+                //         responsive : {
+                //             0 : {
+                //                 margin: 20
+                //             },
+                //             1200 : {
+                //                 items: 4,
+                //                 margin: 30
+                //             }
+                //         }
+                //     });
+
+                //     $('#prev-sample-slider').click(function(e) {
+                //         e.preventDefault();
+
+                //         owlsampleSlider.trigger('prev.owl.carousel');
+                //     });
+
+                //     $('#next-sample-slider').click(function(e) {
+                //         e.preventDefault();
+
+                //         owlsampleSlider.trigger('next.owl.carousel');
+                //     });
+                // });
 
 
         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

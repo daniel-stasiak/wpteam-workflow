@@ -1,8 +1,8 @@
-# WP Team - Workflow
+# Crunch
 
 [![N|Solid](https://cldup.com/k_YU_-fvII.png)](http://wpteam.com)
 
-Workflow created to builidng custom WordPess themes - by [WP Team](http://wpteam.com).
+Crunch is a WordPress starter theme based on Bootstrap 4 created by [WP Team](http://wpteam.com).
 
 ## Workflow capabilities
 
@@ -16,7 +16,7 @@ See WP Team rules of [Step by step workflow implementation](docs/README_implemen
 
 Clone this repository to your ```wp-content/themes/``` folder.
 ```sh
-$ git clone https://github.com/weareacclaim/wpteam-workflow.git
+$ git clone https://github.com/weareacclaim/crunch.git
 ```
 Install ```npm``` modules
 ```sh
@@ -30,7 +30,7 @@ Enjoy!
 
 ## What's included?
 
-Workflow is currently based on [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com). Structure of files is based on mobile-first coding. [Sass](http://sass-lang.com) is created using [BEM](http://getbem.com/introduction/) ideology. Repository is fully automated by [Gulp](http://gulpjs.com) tasks. Workflow includes [Bower](https://bower.io), so you can very easy include new plugins - thanks to Gulp all of JS and CSS files of Bower plugins are automatically included into main scripts and styles files.
+Workflow is currently based on [Bootstrap 4](https://getbootstrap.com). Structure of files is based on mobile-first coding. [Sass](http://sass-lang.com) is created using [BEM](http://getbem.com/introduction/) ideology. Repository is fully automated by [Gulp](http://gulpjs.com) tasks. Workflow includes [Bower](https://bower.io), so you can very easy include new plugins - thanks to Gulp all of JS and CSS files of Bower plugins are automatically included into main scripts and styles files.
 
 ## Gulp
 
@@ -48,25 +48,25 @@ If you want to know more about how is working our `gulpfile.js` please go to: [H
 
 The following tasks are available:
 
-- `$ gulp watch` is watching all of SCSS and JS files and compiles them to minified version on every change
+- `$ gulp build` is compiling all of files
+- `$ gulp build --production` is compiling, uglifing and minifing all of files
 - `$ gulp images` is compressing all images files anc copying them to destination folder
 - `$ gulp serve` is creating virtual server for your project
-- `$ gulp` is a default task, which is compiling, uglifing and minifing all of files
+- `$ gulp` is a default task, is watching all of SCSS and JS files and compiles them every file change
 
 ## Bower compontents
 
 Plugins preinstalled on this repo:
 
-1. [Bootstrap 4 (Alpha 6)](https://v4-alpha.getbootstrap.com)
+1. [Bootstrap 4](https://getbootstrap.com)
 2. [Hamburgers](https://jonsuh.com/hamburgers/)
-3. [Dense](http://dense.rah.pw)
-4. [Font Awesome](http://fontawesome.io)
-5. [jQuery](https://jquery.com)
-6. [jQuery Easing](https://jqueryui.com/easing/)
-7. [mmenu](http://mmenu.frebsite.nl)
-8. [matchHeight](http://brm.io/jquery-match-height/)
-9. [Modernizr](https://modernizr.com)
-10. [Select2](https://select2.github.io)
-11. [Tether](http://tether.io)
+3. [jQuery](https://jquery.com)
+4. [jQuery Easing](https://jqueryui.com/easing/)
+5. [jQuery Lazy](http://jquery.eisbehr.de/lazy/)
+6. [mmenu](http://mmenu.frebsite.nl)
+7. [matchHeight](http://brm.io/jquery-match-height/)
+8. [OWL Carousel](https://owlcarousel2.github.io/OwlCarousel2/)
+7. [Select2](https://select2.github.io)
+9. [Retina JS](http://imulus.github.io/retinajs/)
 
-ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
+ⓒ 2018 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim

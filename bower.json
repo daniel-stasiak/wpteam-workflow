@@ -1,32 +1,26 @@
 {
-  "name": "wpteam-workflow",
-  "description": "Workflow - WP Team (http://wpteam.com)",
-  "main": "index.php",
-  "authors": [
-    "WP Team (http://wpteam.com)"
-  ],
-  "license": "ISC",
-  "keywords": [
-    "keyword"
-  ],
-  "homepage": "http://wpteam.com",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "jquery.easing": "^1.3.1",
-    "matchHeight": "matchheight#^0.7.0",
-    "select2": "^4.0.3",
-    "jQuery.mmenu": "mmenu#^5.7.4",
-    "css-hamburgers": "^0.5.0",
-    "retinajs": "https://github.com/strues/retinajs.git#^2.1.2",
-    "popper.js": "https://unpkg.com/popper.js",
-    "tooltip.js": "https://unpkg.com/tooltip.js",
-    "jquery-lazy": "^1.7.5",
-    "owl.carousel": "^2.2.1"
-  }
+    "name": "crunch",
+    "main": [
+        "styles/style.css",
+        "scripts/scripts.js"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery.easing": "^1.3.1",
+        "matchHeight": "matchheight#^0.7.0",
+        "select2": "^4.0.3",
+        "jQuery.mmenu": "mmenu#^5.7.4",
+        "css-hamburgers": "^0.5.0",
+        "retinajs": "https://github.com/strues/retinajs.git#^2.1.2",
+        "popper.js": "https://unpkg.com/popper.js",
+        "tooltip.js": "https://unpkg.com/tooltip.js",
+        "jquery-lazy": "^1.7.5",
+        "owl.carousel": "^2.2.1"
+    }
 }
