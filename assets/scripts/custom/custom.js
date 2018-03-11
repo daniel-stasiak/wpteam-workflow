@@ -81,18 +81,6 @@
             $(".content a[href*='.jpg'], .content a[href*='.jpeg'], .content a[href*='.png']").fancybox();
 
 
-            /* ~~~~~~~~~~ Web Font Loader ~~~~~~~~~~ */
-
-            // WebFontConfig = {
-            //     google: {
-            //         families: ['Roboto:300,300i,400,400i,500,500i,700,700i']
-            //     },
-            //     typekit: {
-            //         id: 'cgy8byz'
-            //     }
-            // };
-
-
             /* ~~~~~~~~~~ OWL Init ~~~~~~~~~~ */
 
                 /* ~~~~~ Slider Name ~~~~~ */
@@ -297,15 +285,5 @@
             try{ document.createEvent("TouchEvent"); return true; }
             catch(e){ return false; }
         }
-
-
-        /* ~~~~~~~~~~ Async loading for typekit ~~~~~~~~~~ */
-
-        // (function(d) {
-        //     var wf = d.createElement('script'), s = d.scripts[0];
-        //     wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-        //     wf.async = true;
-        //     s.parentNode.insertBefore(wf, s);
-        // })(document);
 
 })(jQuery);
