@@ -22,7 +22,7 @@
 
             $in_footer = apply_filters('crunch_load_jquery_in_footer', true);
             wp_deregister_script( 'jquery' );
-            wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', $in_footer );
+            wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '2.2.4', $in_footer );
 
             wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), $js_version, true );
         }
@@ -35,7 +35,7 @@
 
     add_filter('crunch_load_jquery_in_footer',
     function($in_footer) {
-        if (is_page_template( 'page-templates/page-contact-bak.php' )) {
+        if (is_page_template( 'page-templates/contact-bak.php' )) {
             $in_footer = false;
         }
 
@@ -74,28 +74,67 @@
     * Learn more: https://wpshout.com/make-site-faster-async-deferred-javascript-introducing-script_loader_tag/
     */
 
-    // add_filter( 'script_loader_tag', 'wsds_defer_scripts', 10, 3 );
-    // function wsds_defer_scripts( $tag, $handle, $src ) {
+    add_filter( 'script_loader_tag', 'wsds_defer_scripts', 10, 3 );
+    function wsds_defer_scripts( $tag, $handle, $src ) {
 
-    //     $defer_scripts = array(
-    //         'thrive-compat-jquery',
-    //         'monsterinsights-lite-frontend-script',
-    //         'jquery',
-    //         'tp-tools',
-    //         'revmin',
-    //         'wc-add-to-cart',
-    //         'woocommerce',
-    //         'wc-cart-fragments',
-    //         'swatches-and-photos',
-    //         'main-scripts',
-    //         'tve-dash-frontend'
-    //     );
+        $defer_scripts = array(
+            'main-scripts'
+        );
 
-    //     if ( in_array( $handle, $defer_scripts ) ) {
-    //         return '<script src="' . $src . '" defer="defer" type="text/javascript"></script>' . "\n";
-    //     }
+        if ( in_array( $handle, $defer_scripts ) ) {
+            return '<script src="' . $src . '" defer="defer"></script>' . "\n";
+        }
 
-    //     return $tag;
+        return $tag;
+    }
+
+
+    /* ~~~~~~~~~~ MCE Add Button (Shortcodes) ~~~~~~~~~~ */
+
+    // if ( ! function_exists( 'crunch_add_mce_button' ) ) {
+
+    //  /**
+    //   * Hooks your functions into the correct filters
+    //   * @return array
+    //   */
+
+    //  function crunch_add_mce_button() {
+    //      if ( ! current_user_can( 'edit_posts' ) && ! current_user_can( 'edit_pages' ) ) {
+    //          return;
+    //      }
+    //      if ( 'true' === get_user_option( 'rich_editing' ) ) {
+    //          add_filter( 'mce_external_plugins', 'crunch_add_tinymce_plugin' );
+    //          add_filter( 'mce_buttons', 'crunch_register_mce_button' );
+    //      }
+    //  }
+
+    //  add_action( 'admin_head', 'crunch_add_mce_button' );
+    // }
+
+    // if ( ! function_exists( 'crunch_add_tinymce_plugin' ) ) {
+    //  /**
+    //   * Register new button in the editor
+    //   * @return array
+    //   */
+
+    //  function crunch_add_tinymce_plugin( $plugin_array ) {
+    //      $plugin_array['crunch_mce_button'] = get_template_directory_uri() . '/assets/scripts/core/mce-button.js';
+
+    //      return $plugin_array;
+    //  }
+    // }
+
+    // if ( ! function_exists( 'crunch_register_mce_button' ) ) {
+    //  /**
+    //   * Register new button in the editor
+    //   * @return array
+    //   */
+
+    //  function crunch_register_mce_button( $buttons ) {
+    //      array_push( $buttons, 'crunch_mce_button' );
+
+    //      return $buttons;
+    //  }
     // }
 
     ?>

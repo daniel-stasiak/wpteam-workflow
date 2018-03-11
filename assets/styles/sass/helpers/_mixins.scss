@@ -78,22 +78,22 @@
 
 		@if $type == 'padding' and $position == 'both' {
 
-			padding: ($element-space__xs * $multiplier);
+			padding: ($element-space__xs * $multiplier) 0;
 
 			@include media-breakpoint-up(sm) {
-			    padding: ($element-space__sm * $multiplier);
+			    padding: ($element-space__sm * $multiplier) 0;
 			}
 
 			@include media-breakpoint-up(md) {
-			    padding: ($element-space__md * $multiplier);
+			    padding: ($element-space__md * $multiplier) 0;
 			}
 
 			@include media-breakpoint-up(lg) {
-			    padding: ($element-space__lg * $multiplier);
+			    padding: ($element-space__lg * $multiplier) 0;
 			}
 
 			@include media-breakpoint-up(xl) {
-			    padding: ($element-space__xl * $multiplier);
+			    padding: ($element-space__xl * $multiplier) 0;
 			}
 
 		} @elseif $type == 'padding' and $position == 'top' {
@@ -138,22 +138,22 @@
 
 		} @elseif $type == 'margin' and $position == 'both' {
 
-			margin: ($element-space__xs * $multiplier);
+			margin: ($element-space__xs * $multiplier) 0;
 
 			@include media-breakpoint-up(sm) {
-			    margin: ($element-space__sm * $multiplier);
+			    margin: ($element-space__sm * $multiplier) 0;
 			}
 
 			@include media-breakpoint-up(md) {
-			    margin: ($element-space__md * $multiplier);
+			    margin: ($element-space__md * $multiplier) 0;
 			}
 
 			@include media-breakpoint-up(lg) {
-			    margin: ($element-space__lg * $multiplier);
+			    margin: ($element-space__lg * $multiplier) 0;
 			}
 
 			@include media-breakpoint-up(xl) {
-			    margin: ($element-space__xl * $multiplier);
+			    margin: ($element-space__xl * $multiplier) 0;
 			}
 
 		} @elseif $type == 'margin' and $position == 'top' {

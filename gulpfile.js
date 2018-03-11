@@ -8,7 +8,7 @@ var $           = require('gulp-load-plugins')(),
     browserSync = require('browser-sync').create(),
     sequence    = require('run-sequence'),
     del         = require('del'),
-    cssnano     = require('gulp-cssnano');
+    cleanCSS    = require('gulp-clean-css');
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -18,8 +18,8 @@ var $           = require('gulp-load-plugins')(),
 var PATHS = {
     sass: [
         'bower_components/css-hamburgers/_sass',
+        'bower_components/fancybox/dist',
         'bower_components/jQuery.mmenu/dist/css',
-        // 'bower_components/select2/src/scss',
         'bower_components/owl.carousel/src/scss'
     ],
     javascript: [
@@ -28,6 +28,8 @@ var PATHS = {
 
         'bower_components/popper.js/index.js',
         'bower_components/tooltip.js/index.js',
+
+        'bower_components/fancybox/dist/jquery.fancybox.js',
 
         'bower_components/jquery-lazy/jquery.lazy.js',
 
@@ -41,9 +43,7 @@ var PATHS = {
 
         'bower_components/owl.carousel/dist/owl.carousel.js',
 
-        'bower_components/retinajs/dist/retina.js',
-
-        // 'bower_components/select2/dist/js/select2.js',
+        'bower_components/webfontloader/webfontloader.js',
 
 
         /* ~~~~~~~~~~ Core scripts ~~~~~~~~~~ */
@@ -95,7 +95,7 @@ var COMPATIBILITY = [
             .pipe($.autoprefixer({
                 browsers: COMPATIBILITY
             }))
-            .pipe($.if(isProduction, cssnano()))
+            .pipe($.if(isProduction, cleanCSS({ level: { 1: {specialComments: 'none' }}})))
             .pipe($.if(!isProduction, $.sourcemaps.write('.')))
             .pipe(gulp.dest('styles/'))
             .pipe($.notify({ message: 'Styles completed' }));

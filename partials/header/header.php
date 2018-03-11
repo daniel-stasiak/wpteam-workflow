@@ -36,8 +36,6 @@
             </div>
         <![endif]-->
 
-        <a href="javascript:" id="return-to-top" class="return-to-top">
-            <div class="vertical-center">
-                <i class="far fa-chevron-up"></i>
-            </div><!-- /.vertical-center -->
+        <a href="javascript:" id="return-to-top" class="return-to-top d-flex align-items-center justify-content-center">
+            <i class="far fa-chevron-up"></i>
         </a>

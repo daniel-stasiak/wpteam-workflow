@@ -65,55 +65,6 @@
 	// endif;
 
 
-	/* ~~~~~~~~~~ MCE Add Button (Shortcodes) ~~~~~~~~~~ */
-
-	// if ( ! function_exists( 'crunch_add_mce_button' ) ) {
-
-	// 	/**
-	// 	 * Hooks your functions into the correct filters
-	// 	 * @return array
-	// 	 */
-
-	// 	function crunch_add_mce_button() {
-	// 		if ( ! current_user_can( 'edit_posts' ) && ! current_user_can( 'edit_pages' ) ) {
-	// 			return;
-	// 		}
-	// 		if ( 'true' === get_user_option( 'rich_editing' ) ) {
-	// 			add_filter( 'mce_external_plugins', 'crunch_add_tinymce_plugin' );
-	// 			add_filter( 'mce_buttons', 'crunch_register_mce_button' );
-	// 		}
-	// 	}
-
-	// 	add_action( 'admin_head', 'crunch_add_mce_button' );
-	// }
-
-	// if ( ! function_exists( 'crunch_add_tinymce_plugin' ) ) {
-	// 	/**
-	// 	 * Register new button in the editor
-	// 	 * @return array
-	// 	 */
-
-	// 	function crunch_add_tinymce_plugin( $plugin_array ) {
-	// 		$plugin_array['crunch_mce_button'] = get_template_directory_uri() . '/assets/scripts/core/mce-button.js';
-
-	// 		return $plugin_array;
-	// 	}
-	// }
-
-	// if ( ! function_exists( 'crunch_register_mce_button' ) ) {
-	// 	/**
-	// 	 * Register new button in the editor
-	// 	 * @return array
-	// 	 */
-
-	// 	function crunch_register_mce_button( $buttons ) {
-	// 		array_push( $buttons, 'crunch_mce_button' );
-
-	// 		return $buttons;
-	// 	}
-	// }
-
-
 	/* ~~~~~~~~~~ Specific image dimensions ~~~~~~~~~~ */
 
 	// add_image_size( 'image-type-title', 'X', 'X', true);
@@ -189,6 +140,53 @@
 	}
 
 	add_action('upload_mimes', 'add_file_types_to_uploads');
+
+
+	/* ~~~~~~~~~~ Add Styles To TINY MCE ~~~~~~~~~~ */
+
+	add_editor_style( 'styles/style.css' );
+
+
+	/* ~~~~~~~~~~ Deregister WP Embed ~~~~~~~~~~ */
+
+	function my_deregister_scripts(){
+	  	wp_deregister_script( 'wp-embed' );
+	}
+
+	add_action( 'wp_footer', 'my_deregister_scripts' );
+
+
+	/* ~~~~~~~~~~ Disable WP Emoji ~~~~~~~~~~ */
+
+	function disable_wp_emojicons() {
+	  	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	  	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	  	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	  	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	  	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	  	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	  	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+	  	add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+	}
+	add_action( 'init', 'disable_wp_emojicons' );
+
+	function disable_emojicons_tinymce( $plugins ) {
+	  	if ( is_array( $plugins ) ) {
+	    	return array_diff( $plugins, array( 'wpemoji' ) );
+	  	} else {
+	    	return array();
+	  	}
+	}
+
+
+	/* ~~~~~~~~~~ Add Fancybox attribute to WordPress Gallery ~~~~~~~~~~ */
+
+	add_filter('wp_get_attachment_link', 'crunch_add_rel_attribute');
+	function crunch_add_rel_attribute($link) {
+		global $post;
+		return str_replace('<a href', '<a data-fancybox="group" href', $link);
+	}
 
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
