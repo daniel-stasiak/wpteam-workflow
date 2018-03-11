@@ -274,16 +274,16 @@
 
             /* ~~~~~~~~~~ Sticky Footer ~~~~~~~~~~ */
 
-            $(function(){
-                var $footer = $('.footer-wrapper');
+            // $(function(){
+            //     var $footer = $('.footer-wrapper');
 
-                var pos = $footer.position(),
-                    height = ($(window).outerHeight() - pos.top) - ($footer.outerHeight() + 2);
+            //     var pos = $footer.position(),
+            //         height = ($(window).outerHeight() - pos.top) - ($footer.outerHeight() + 2);
 
-                if (height > 0) {
-                    $footer.css('margin-top', height);
-                }
-            });
+            //     if (height > 0) {
+            //         $footer.css('margin-top', height);
+            //     }
+            // });
     });
 
 
