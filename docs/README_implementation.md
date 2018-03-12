@@ -122,7 +122,11 @@ Settings -> Permalinks. Set Custom structure and input ```/%postname%```.
 
 Create new page for homepage, go to Settings -> Reading, and choose Front page displays: A static page and choose homepage.
 
-### 9.3. Update services
+### 9.3. Set Project Subtitle
+
+Appearance -> Customize -> Site Identity, and in Tagline field write the company slogan or main Homepage headline.
+
+### 9.4. Update services
 
 Paste following services to Update services:
 
