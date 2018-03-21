@@ -2,8 +2,8 @@
 // thanks to http://www.wpexplorer.com/wordpress-tinymce-tweaks/ for the help!
 
 (function() {
-	tinymce.PluginManager.add('wpteam_mce_button', function( editor, url ) {
-		editor.addButton( 'wpteam_mce_button', {
+	tinymce.PluginManager.add('crunch_mce_button', function( editor, url ) {
+		editor.addButton( 'crunch_mce_button', {
 			text: 'Shortcodes',
 			icon: false,
 			type: 'menubutton',
