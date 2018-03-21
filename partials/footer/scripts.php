@@ -1,25 +1,19 @@
 <?php wp_footer(); ?>
 
-<script>
-	/* ~~~~~~~~~~ Google Font ~~~~~~~~~~ */
+<!-- <script>
+    /* ~~~~~~~~~~ Fonts ~~~~~~~~~~ */
 
-	// WebFont.load({
-	//     google: {
-	//       	families: ['Droid Sans', 'Droid Serif']
-	//     }
-	// });
+    WebFontConfig = {
+        typekit: { id: 'yiu8nsr' },
+        google: {
+            families: ['Fira Sans:400,400i,500,600,700', 'sans-serif']
+        }
+    };
 
-
-	/* ~~~~~~~~~~ Typekit ~~~~~~~~~~ */
-
-	// WebFontConfig = {
-	//     typekit: { id: 'cgy8byz' }
-	// };
-
-	// (function(d) {
-	//     var wf = d.createElement('script'), s = d.scripts[0];
-	//     wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-	//     wf.async = true;
-	//     s.parentNode.insertBefore(wf, s);
-	// })(document);
-</script>
+    (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+    })(document);
+</script> -->
