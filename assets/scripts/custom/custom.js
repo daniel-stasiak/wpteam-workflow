@@ -80,6 +80,12 @@
 
             $(".content a[href*='.jpg'], .content a[href*='.jpeg'], .content a[href*='.png']").fancybox();
 
+            $('[data-fancybox]').fancybox({
+                youtube : {
+                    autoplay : 1
+                }
+            });
+
 
             /* ~~~~~~~~~~ OWL Init ~~~~~~~~~~ */
 
