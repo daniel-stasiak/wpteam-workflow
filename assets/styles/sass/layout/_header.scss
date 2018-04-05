@@ -27,5 +27,29 @@
 					display: flex;
 				}
 			}
+
+			.hamburger {
+			    display: block;
+			    transform: scale(0.7);
+			    padding: 0;
+			    width: 40px;
+			    height: 24px;
+
+			    @include media-breakpoint-up(md) {
+			        display: none;
+			    }
+
+			    .hamburger-box {
+			        .hamburger-inner {
+			            &,
+			            &:after,
+			            &:before {
+			                background-color: #000;
+			                height: 3px;
+			                border-radius: 3px;
+			            }
+			        }
+			    }
+			}
 		}
 	}

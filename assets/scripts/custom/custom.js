@@ -16,16 +16,6 @@
             });
 
 
-            /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
-
-            $('select').select2();
-
-
-            /* ~~~~~~~~~~ Retina init ~~~~~~~~~~ */
-
-            retinajs();
-
-
             /* ~~~~~~~~~~ Mobile navigation ~~~~~~~~~~ */
 
             $('.main-header').addClass('mmenu-fixed');
@@ -81,7 +71,56 @@
 
             /* ~~~~~~~~~~ Lazy Loading ~~~~~~~~~~ */
 
-            $('.lazy').Lazy();
+            $('.lazy').Lazy({
+                effect: 'fadeIn'
+            });
+
+
+            /* ~~~~~~~~~~ Fancybox Init ~~~~~~~~~~ */
+
+            $(".content a[href*='.jpg'], .content a[href*='.jpeg'], .content a[href*='.png']").fancybox();
+
+            $('[data-fancybox]').fancybox({
+                youtube : {
+                    autoplay : 1
+                }
+            });
+
+
+            /* ~~~~~~~~~~ OWL Init ~~~~~~~~~~ */
+
+                /* ~~~~~ Slider Name ~~~~~ */
+
+                // $(function() {
+                //     var owlsampleSlider = $('#sample-slider');
+
+                //     owlsampleSlider.owlCarousel({
+                //         items: 3,
+                //         dots: false,
+                //         loop: true,
+                //         responsive : {
+                //             0 : {
+                //                 margin: 20
+                //             },
+                //             1200 : {
+                //                 items: 4,
+                //                 margin: 30
+                //             }
+                //         }
+                //     });
+
+                //     $('#prev-sample-slider').click(function(e) {
+                //         e.preventDefault();
+
+                //         owlsampleSlider.trigger('prev.owl.carousel');
+                //     });
+
+                //     $('#next-sample-slider').click(function(e) {
+                //         e.preventDefault();
+
+                //         owlsampleSlider.trigger('next.owl.carousel');
+                //     });
+                // });
 
 
         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -202,6 +241,7 @@
                     $img.replaceWith($svg);
                 }, 'xml');
             });
+
     });
 
 
@@ -211,34 +251,33 @@
         /* ~~~~~~~~~~ Functions ~~~~~~~~~~ */
         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+            /* ~~~~~~~~~~ AOS Refresh ~~~~~~~~~~ */
+
+            // AOS.refresh();
+
+
             /* ~~~~~~~~~~ Bootstrap modal margin top if WP admin exist ~~~~~~~~~~ */
 
             if($('#wpadminbar').length) {
                 $('.modal').on('shown.bs.modal', function (e) {
-                    var modalHeight = $(this).find('.modal-content').height();
                     var WPAdminBarHeight = $('#wpadminbar').height();
-
-                    if(modalHeight >= $(window).height()) {
-                        $('.modal .vertical-alignment-helper').css("padding-top", (WPAdminBarHeight + 15));
-                    } else {
-                        $('.modal .vertical-alignment-helper').css("padding-top", 15);
-                    }
+                    $('.modal').css("margin-top", (WPAdminBarHeight + 30));
                 });
             }
 
 
             /* ~~~~~~~~~~ Sticky Footer ~~~~~~~~~~ */
 
-            $(function(){
-                var $footer = $('.footer-wrapper');
+            // $(function(){
+            //     var $footer = $('.footer-wrapper');
 
-                var pos = $footer.position(),
-                    height = ($(window).height() - pos.top) - ($footer.height() + 2);
+            //     var pos = $footer.position(),
+            //         height = ($(window).outerHeight() - pos.top) - ($footer.outerHeight() + 2);
 
-                if (height > 0) {
-                    $footer.css('margin-top', height);
-                }
-            });
+            //     if (height > 0) {
+            //         $footer.css('margin-top', height);
+            //     }
+            // });
     });
 
 

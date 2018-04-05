@@ -2,20 +2,14 @@
 /* ~~~~~~~~~~ Bower components ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-    /* ~~~~~~~~~~ Bootstrap ~~~~~~~~~~ */
-
-    @import "bootstrap";
-    @import "base/bootstrap-variables";
-
-
     /* ~~~~~~~~~~ CSS Hamburgers ~~~~~~~~~~ */
 
     @import "hamburgers/hamburgers";
 
 
-    /* ~~~~~~~~~~ Font Awesome ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Fancybox ~~~~~~~~~~ */
 
-    @import "font-awesome";
+    @import "jquery.fancybox";
 
 
     /* ~~~~~~~~~~ mmenu ~~~~~~~~~~ */
@@ -23,12 +17,20 @@
     @import "jquery.mmenu.all";
 
 
-    /* ~~~~~~~~~~ Select2 ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ OWL ~~~~~~~~~~ */
 
-    @import "core";
+    @import "owl.carousel";
+    @import "owl.theme.default";
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Base ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~ Bootstrap ~~~~~~~~~~ */
+
+    @import "base/bootstrap/bootstrap";
+
 
     /* ~~~~~~~~~~ Fonts ~~~~~~~~~~ */
 
@@ -68,24 +70,23 @@
 /* ~~~~~~~~~~ Components ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+    /* ~~~~~~~~~~ Font Awesome ~~~~~~~~~~ */
+
+    @import "components/font-awesome/fontawesome";
+    @import "components/font-awesome/fa-brands";
+    // @import "components/font-awesome/fa-light";
+    @import "components/font-awesome/fa-regular";
+    // @import "components/font-awesome/fa-solid";
+
+
     /* ~~~~~~~~~~ Bootstrap 4 - Vertical centered modal ~~~~~~~~~~ */
 
     // @import "components/bootstrap-4-vertical-centered-modal";
 
 
-    /* ~~~~~~~~~~ Gravity forms reset styles ~~~~~~~~~~ */
+    /* ~~~~~~~~~~ Fancybox ~~~~~~~~~~ */
 
-    // @import "components/gravity-forms-reset-styles";
-
-
-    /* ~~~~~~~~~~ Re-captcha resized on mobile ~~~~~~~~~~ */
-
-    // @import "components/re-captcha-resized-on-mobile.scss";
-
-
-    /* ~~~~~~~~~~ Skip to main for disabled ~~~~~~~~~~ */
-
-    @import "components/skip-to-main";
+    @import "components/fancybox";
 
 
     /* ~~~~~~~~~~ WP Admin Bar Fix ~~~~~~~~~~ */

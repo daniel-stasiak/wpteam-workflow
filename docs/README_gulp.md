@@ -1,50 +1,41 @@
 # Workflow capabilities - Gulp
 
 Our ```gulpfile.js``` is using:
-- [gulp-sass](https://www.npmjs.com/package/gulp-sass)
-- [gulp-cssnano](https://www.npmjs.com/package/gulp-cssnano)
-- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
-- [gulp-concat](https://www.npmjs.com/package/gulp-concat)
-- [gulp-notify](https://www.npmjs.com/package/gulp-notify)
-- [gulp-livereload](https://github.com/vohof/gulp-livereload)
-- [del](https://www.npmjs.com/package/del)
-- [gulp-connect-php](https://www.npmjs.com/package/gulp-connect-php)
 - [browser-sync](https://www.npmjs.com/package/browser-sync)
-- [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
-- [gulp-jshint](https://www.npmjs.com/package/gulp-jshint)
+- [del](https://www.npmjs.com/package/del)
+- [gulp](https://gulpjs.com)
+- [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer)
+- [gulp-concat](https://www.npmjs.com/package/gulp-concat)
+- [gulp-cssnano](https://www.npmjs.com/package/gulp-cssnano)
+- [gulp-if](https://www.npmjs.com/package/gulp-if)
 - [gulp-imagemin](https://github.com/vohof/gulp-livereload)
-- [gulp-postcss](https://github.com/postcss/gulp-postcss)
-- [autoprefixer](https://github.com/postcss/autoprefixer)
+- [gulp-jshint](https://www.npmjs.com/package/gulp-jshint)
+- [gulp-load-plugins](https://www.npmjs.com/package/gulp-load-plugins)
+- [gulp-notify](https://www.npmjs.com/package/gulp-notify)
+- [gulp-sass](https://www.npmjs.com/package/gulp-sass)
+- [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
+- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
+- [jshint](https://www.npmjs.com/package/jshint)
+- [run-sequence](https://www.npmjs.com/package/run-sequence)
+- [yargs](https://www.npmjs.com/package/yargs)
+
+## Variables
+
+PATHS var contain whole SASS and JS paths to bower plugins and workflow elements which in the Operations tasks will be compile, uglify, and minify to one JS and CSS file.
 
 ## Operations
 
-### Bower scripts
-
-This task is concating all JS files from ```bower-components/``` folder to one file called ```bower-scripts.js``` and placing it on ```assets/scripts/bower-scripts.js``` directory.
-
-### Bower styles
-
-This task is concating all CSS files from ```bower-components/``` folder to one file called ```bower-styles.css``` and place it on ```assets/styles/css/bower-styles.css``` directory.
-
 ### Sass
 
-This task is compiling main Sass file from ```assets/styles/sass/style.scss``` and placing it in ```assets/styles/css```.
+This task is concating all SASS files from PATHS.sass var and merging them with main SASS file from ```assets/styles/sass/style.scss```. Than whole is compiling and placing it in ```styles/```.
 
-### Styles concat
+### Lint custom JS file
 
-This task is concating all CSS files from ```assets/styles/css/``` to one file called ```style.min.css```, adding source maps to this file and placing it on ```styles/style.min.css```.
-
-### Styles concat and minify
-
-This task is the same as above, but concated ```style.min.css``` file has got vendors in source code for old browsers, and whole file is minified.
-
-### Scripts validation
-
-This task is validating main JS file placed in ```assets/scripts/main.js```.
+This task is validating main JS file placed in ```assets/scripts/custom/custom.js```.
 
 ### Scripts concat and minify
 
-This task is concating all JS files from ```assets/scripts/``` to one file called ```scripts.min.js```, minifing this file and placing it on ```scripts/scripts.min.js```.
+This task is concating all JS files from PATHS.javascript var  ```assets/scripts/``` to one file called ```scripts.js```, and placing it on ```scripts/```.
 
 ### Images optim
 
@@ -56,7 +47,7 @@ This task is deleting whole files
 
 ## Tasks
 
-### $ gulp watch
+### $ gulp
 
 This task is watching all of SCSS and JS files and compiles them to minified version on every change. Using operations:
 - Sass
@@ -73,9 +64,9 @@ This task is compressing all images files anc copying them to destination folder
 
 This task is creating virtual server for your project.
 
-### $ gulp
+### $ gulp build
 
-This is a default task, which is compiling, uglifing and minifing all of files. Using operation:
+This task is compiling, all of the files. Using operation:
 - Clean
 - Bower scripts
 - Bower styles
@@ -85,4 +76,16 @@ This is a default task, which is compiling, uglifing and minifing all of files. 
 - Scripts
 - Images optim
 
-ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
+### $ gulp build --production
+
+This task is compiling, uglifing and minifing all of the files. Using operation:
+- Clean
+- Bower scripts
+- Bower styles
+- Sass
+- Styles minified
+- Scripts validation
+- Scripts
+- Images optim
+
+ⓒ 2018 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim

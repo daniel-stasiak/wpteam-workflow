@@ -4,7 +4,7 @@
 
 	  	<li class="social-icons__item">
 			<a href="<?php the_field( 'social_icons_twitter', 'options' ); ?>" class="social-icons__item__social-icon-link d-flex align-items-center justify-content-center" target="_blank" rel="nofollow">
-				<i class="fa fa-twitter"></i>
+				<i class="fab fa-twitter"></i>
 			</a>
 	    </li><!-- .social-icons__item -->
 
@@ -14,7 +14,7 @@
 
 	  	<li class="social-icons__item">
 			<a href="<?php the_field( 'social_icons_youtube', 'options' ); ?>" class="social-icons__item__social-icon-link d-flex align-items-center justify-content-center" target="_blank" rel="nofollow">
-				<i class="fa fa-youtube"></i>
+				<i class="fab fa-youtube"></i>
 			</a>
 	    </li><!-- .social-icons__item -->
 
@@ -24,7 +24,7 @@
 
 	  	<li class="social-icons__item">
 			<a href="<?php the_field( 'social_icons_pinterest', 'options' ); ?>" class="social-icons__item__social-icon-link d-flex align-items-center justify-content-center" target="_blank" rel="nofollow">
-				<i class="fa fa-pinterest"></i>
+				<i class="fab fa-pinterest"></i>
 			</a>
 	    </li><!-- .social-icons__item -->
 
@@ -34,7 +34,7 @@
 
 	  	<li class="social-icons__item">
 			<a href="<?php the_field( 'social_icons_facebook', 'options' ); ?>" class="social-icons__item__social-icon-link d-flex align-items-center justify-content-center" target="_blank" rel="nofollow">
-				<i class="fa fa-facebook"></i>
+				<i class="fab fa-facebook"></i>
 			</a>
 	    </li><!-- .social-icons__item -->
 
@@ -44,7 +44,7 @@
 
 	  	<li class="social-icons__item">
 			<a href="<?php the_field( 'social_icons_instagram', 'options' ); ?>" class="social-icons__item__social-icon-link d-flex align-items-center justify-content-center" target="_blank" rel="nofollow">
-				<i class="fa fa-instagram"></i>
+				<i class="fab fa-instagram"></i>
 			</a>
 	    </li><!-- .social-icons__item -->
 
@@ -54,7 +54,7 @@
 
 	  	<li class="social-icons__item">
 			<a href="<?php the_field( 'social_icons_google', 'options' ); ?>" class="social-icons__item__social-icon-link d-flex align-items-center justify-content-center" target="_blank" rel="nofollow">
-				<i class="fa fa-google"></i>
+				<i class="fab fa-google"></i>
 			</a>
 	    </li><!-- .social-icons__item -->
 
@@ -64,7 +64,7 @@
 
 	  	<li class="social-icons__item">
 			<a href="<?php the_field( 'social_icons_linkedin', 'options' ); ?>" class="social-icons__item__social-icon-link d-flex align-items-center justify-content-center" target="_blank" rel="nofollow">
-				<i class="fa fa-linkedin"></i>
+				<i class="fab fa-linkedin-in"></i>
 			</a>
 	    </li><!-- .social-icons__item -->
 
@@ -74,7 +74,7 @@
 
 	  	<li class="social-icons__item">
 			<a href="<?php the_field( 'social_icons_rss', 'options' ); ?>" class="social-icons__item__social-icon-link d-flex align-items-center justify-content-center" target="_blank" rel="nofollow">
-				<i class="fa fa-rss"></i>
+				<i class="fab fa-rss"></i>
 			</a>
 	    </li><!-- .social-icons__item -->
 

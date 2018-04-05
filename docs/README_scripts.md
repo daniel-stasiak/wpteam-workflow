@@ -1,6 +1,6 @@
 # Workflow capabilities - Scripts
 
-Main scripts file is located in ```assets/scripts/main.js```.
+Main scripts file is located in ```assets/scripts/custom/custom.js```.
 
 In this file are located functions and objects to plugins used in project. Some examples:
 
@@ -77,5 +77,5 @@ $(function(){
 });
 ```
 
-ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
+ⓒ 2018 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
 

@@ -4,7 +4,7 @@
 
 Clone this repository to your ```wp-content/themes/``` folder.
 ```sh
-$ git clone https://github.com/weareacclaim/wpteam-workflow.git
+$ git clone https://github.com/weareacclaim/crunch.git
 ```
 Install ```npm``` modules
 ```sh
@@ -24,7 +24,6 @@ Create ```.gitignore``` file with following code inside:
 .sass-cache/
 node_modules/
 bower_components/
-sftp-config.json
 ```
 
 ## 3. Screenshot
@@ -39,37 +38,29 @@ Go to ```style.css``` file and edit current project details.
 
 Generate favicon by [Favicon & App Icon Generator](http://www.favicon-generator.org) and paste downloaded icons pack to current theme folder and to main root folder.
 
-## 6. Change sitemap URL
+## 6. Fonts
 
-Go to ```robots.txt``` file and edit URL of Sitemap value. Example:
-
-```sh
-Sitemap: http://projectdomain.com/sitemap_index.xml
-```
-
-## 7. Fonts
-
-### 7.1. Generate fonts
+### 6.1. Generate fonts
 
 Add fonts from Google Font or TypeKit to ```<head>``` tag in ```partials/header/header.php``` or create ```@font-face``` on [@font-face generator](https://www.fontsquirrel.com/tools/webfont-generator) and place generated CSS in ```assets/styles/sass/base/_fonts.scss```.
 
-### 7.2. Create mixins
+### 6.2. Create mixins
 
-Create ```@mixin``` to use the fonts in current project. To see how it should working go [here](docs/README_styles.md#21-fonts).
+Create ```@mixin``` to use the fonts in current project. To see how it should working go [here](README_styles.md#21-fonts).
 
-### 7.3. Set global font adjusts for current project.
+### 6.3. Set global font adjusts for current project.
 
-In ```assets/styles/sass/layout/_general.scss``` you should set [fluid type mixin](docs/README_styles.md#42-mixins) for whole document body. It should be the ```font-size```, ```line-height```, ```font-family```, and ```font-weight``` for paragraphs from PSD. Example:
+In ```assets/styles/sass/layout/_general.scss``` you should set [fluid type mixin](README_styles.md#42-mixins) for whole document body. It should be the ```font-size```, ```line-height```, ```font-family```, and ```font-weight``` for paragraphs from PSD. Example:
 
 ```sh
 body {
     background: #fff;
     @include primary-font('regular');
-    @include fluid-type(18px, 16px, 1.4);
+    @include fluid-type(16px, 18px, 1.4);
 }
 ```
 
-### 7.4. Set font adjusts for headlines
+### 6.4. Set font adjusts for headlines
 
 Set ```font-size```, ```line-height```, ```font-family```, and ```font-weight``` for headlines. Example:
 
@@ -82,23 +73,23 @@ h4 {
 }
 
 h1 {
-    @include fluid-type(62px, 42px);
+    @include fluid-type(42px, 62px);
 }
 
 h2 {
-    @include fluid-type(48px, 36px);
+    @include fluid-type(36px, 48px);
 }
 
 h3 {
-    @include fluid-type(38px, 28px);
+    @include fluid-type(28px, 38px);
 }
 
 h4 {
-    @include fluid-type(32px, 24px);
+    @include fluid-type(24px, 32px);
 }
 ```
 
-### 7.5. Set font adjusts for italic and bold content
+### 6.5. Set font adjusts for italic and bold content
 
 Example:
 
@@ -113,25 +104,29 @@ em {
 }
 ```
 
-## 8. Variables
+## 7. Variables
 
-Set variables which will be reused in the project. Firstly you should [set primary and secondary colour](docs/README_styles.md#41-variables). Then you can edit spacing for ```.element-margns-*``` and ```.element-margins-*``` classes.
+Set variables which will be reused in the project. Firstly you should [set primary and secondary colour](README_styles.md#41-variables). Then you can edit spacing for ```.element-margins``` and ```.element-paddings``` classes.
 
-## 9. Buttons
+## 8. Buttons
 
-Set [classes for buttons](docs/README_styles.md#52-general) for whole project.
+Set [classes for buttons](README_styles.md#52-general) for whole project.
 
-## 10. WordPress settings
+## 9. WordPress settings
 
-### 10.1. Permalinks
+### 9.1. Permalinks
 
 Settings -> Permalinks. Set Custom structure and input ```/%postname%```.
 
-### 10.2. Set homepage
+### 9.2. Set homepage
 
 Create new page for homepage, go to Settings -> Reading, and choose Front page displays: A static page and choose homepage.
 
-### 10.3. Update services
+### 9.3. Set Project Subtitle
+
+Appearance -> Customize -> Site Identity, and in Tagline field write the company slogan or main Homepage headline.
+
+### 9.4. Update services
 
 Paste following services to Update services:
 
@@ -163,9 +158,9 @@ http://ipings.com
 http://www.weblogalot.com/ping
 ```
 
-## 11. Now you can start coding!
+## 10. Now you can start coding!
 
-## 12. Set browser caching (not in all cases!)
+## 11. Set browser caching (not in all cases!)
 
 After finished project install [WP htaccess Control](https://srd.wordpress.org/plugins/wp-htaccess-control/) and in Custom htaccess tab input following code:
 
@@ -225,4 +220,4 @@ After finished project install [WP htaccess Control](https://srd.wordpress.org/p
 </IfModule>
 ```
 
-ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
+ⓒ 2018 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim

@@ -1,221 +1,197 @@
 <?php
+    /**
+    *   Crunch functions and definitions
+    *
+    *   @package Crunch
+    *   @since Crunch 2.0.0
+    */
 
-/* ~~~~~~~~~~ Add options page to Wordpress with ACF ~~~~~~~~~ */
-
-// if( function_exists('acf_add_options_page') ) {
-//     acf_add_options_page(array(
-//         'page_title'    => get_bloginfo('name'),
-//         'menu_title'    => get_bloginfo('name'),
-//         'menu_slug'     => 'theme-general-settings',
-//         'capability'    => 'edit_posts',
-//         'redirect'      => false
-//     ));
-
-//     acf_add_options_sub_page(array(
-//         'page_title'    => 'Home',
-//         'menu_title'    => 'Home',
-//         'parent_slug'   => 'theme-general-settings',
-//     ));
-// }
 
+	/* ~~~~~~~~~~ Add options page to Wordpress with ACF ~~~~~~~~~ */
 
-/* ~~~~~~~~~~ Add custom Wordpress navigation ~~~~~~~~~~ */
+	if( function_exists('acf_add_options_page') ) {
+	    acf_add_options_page(array(
+	        'page_title'    => get_bloginfo('name'),
+	        'menu_title'    => get_bloginfo('name'),
+	        'menu_slug'     => 'theme-general-settings',
+	        'capability'    => 'edit_posts',
+	        'redirect'      => false
+	    ));
 
-// if(function_exists('register_nav_menus')) {
-// 	register_nav_menus(
-// 		array(
-// 			'main_navigation' => 'Main Navigation'
-// 		)
-// 	);
-// }
+	    acf_add_options_sub_page(array(
+	        'page_title'    => 'Home',
+	        'menu_title'    => 'Home',
+	        'parent_slug'   => 'theme-general-settings',
+	    ));
+	}
 
 
-/* ~~~~~~~~~~ Widget areas ~~~~~~~~~~ */
+	/* ~~~~~~~~~~ Add custom Wordpress navigation ~~~~~~~~~~ */
 
-// if ( ! function_exists( 'wpteam_sidebar_widgets' ) ) :
-// 	function wpteam_sidebar_widgets() {
-// 		register_sidebar(array(
-// 	  		'id' => 'sidebar-widgets',
-// 	  		'name' => __( 'Sidebar widgets', 'wpteam' ),
-// 	  		'description' => __( 'Drag widgets to this sidebar container.', 'wpteam' ),
-// 	  		'before_widget' => '<div class="col-md-3"><section id="%1$s" class="widget %2$s">',
-// 	  		'after_widget' => '</section></div>',
-// 	  		'before_title' => '<h3 class="widget__title">',
-// 	  		'after_title' => '</h3>',
-// 		));
+	if(function_exists('register_nav_menus')) {
+		register_nav_menus(
+			array(
+				'main_navigation' => 'Main Navigation'
+			)
+		);
+	}
 
-// 		register_sidebar(array(
-// 	  		'id' => 'footer-widgets',
-// 	  		'name' => __( 'Footer widgets', 'wpteam' ),
-// 	  		'description' => __( 'Drag widgets to this footer container', 'wpteam' ),
-// 	  		'before_widget' => '<div class="col-md-3"><section id="%1$s" class="widget %2$s">',
-// 	  		'after_widget' => '</section></div>',
-// 	  		'before_title' => '<h3 class="widget__title">',
-// 	  		'after_title' => '</h3>',
-// 		));
-// 	}
-// 	add_action( 'widgets_init', 'wpteam_sidebar_widgets' );
-// endif;
 
+	/* ~~~~~~~~~~ Widget areas ~~~~~~~~~~ */
 
-/* ~~~~~~~~~~ MCE Add Button (Shortcodes) ~~~~~~~~~~ */
+	// if ( ! function_exists( 'crunch_sidebar_widgets' ) ) :
+	// 	function crunch_sidebar_widgets() {
+	// 		register_sidebar(array(
+	// 	  		'id' => 'sidebar-widgets',
+	// 	  		'name' => __( 'Sidebar widgets', 'crunch' ),
+	// 	  		'description' => __( 'Drag widgets to this sidebar container.', 'crunch' ),
+	// 	  		'before_widget' => '<div class="col-md-3"><section id="%1$s" class="widget %2$s">',
+	// 	  		'after_widget' => '</section></div>',
+	// 	  		'before_title' => '<h3 class="widget__title">',
+	// 	  		'after_title' => '</h3>',
+	// 		));
 
-// if ( ! function_exists( 'wpteam_add_mce_button' ) ) {
+	// 		register_sidebar(array(
+	// 	  		'id' => 'footer-widgets',
+	// 	  		'name' => __( 'Footer widgets', 'crunch' ),
+	// 	  		'description' => __( 'Drag widgets to this footer container', 'crunch' ),
+	// 	  		'before_widget' => '<div class="col-md-3"><section id="%1$s" class="widget %2$s">',
+	// 	  		'after_widget' => '</section></div>',
+	// 	  		'before_title' => '<h3 class="widget__title">',
+	// 	  		'after_title' => '</h3>',
+	// 		));
+	// 	}
+	// 	add_action( 'widgets_init', 'crunch_sidebar_widgets' );
+	// endif;
 
-// 	/**
-// 	 * Hooks your functions into the correct filters
-// 	 * @return array
-// 	 */
 
-// 	function wpteam_add_mce_button() {
-// 		if ( ! current_user_can( 'edit_posts' ) && ! current_user_can( 'edit_pages' ) ) {
-// 			return;
-// 		}
-// 		if ( 'true' === get_user_option( 'rich_editing' ) ) {
-// 			add_filter( 'mce_external_plugins', 'wpteam_add_tinymce_plugin' );
-// 			add_filter( 'mce_buttons', 'wpteam_register_mce_button' );
-// 		}
-// 	}
+	/* ~~~~~~~~~~ Specific image dimensions ~~~~~~~~~~ */
 
-// 	add_action( 'admin_head', 'wpteam_add_mce_button' );
-// }
+	// add_image_size( 'image-type-title', 'X', 'X', true);
 
-// if ( ! function_exists( 'wpteam_add_tinymce_plugin' ) ) {
-// 	/**
-// 	 * Register new button in the editor
-// 	 * @return array
-// 	 */
 
-// 	function wpteam_add_tinymce_plugin( $plugin_array ) {
-// 		$plugin_array['wpteam_mce_button'] = get_template_directory_uri() . '/assets/scripts/core/mce-button.js';
+	/* ~~~~~~~~~~ Set Post Thumbnail dimension ~~~~~~~~~~ */
 
-// 		return $plugin_array;
-// 	}
-// }
+	// set_post_thumbnail_size(X, X, true);
 
-// if ( ! function_exists( 'wpteam_register_mce_button' ) ) {
-// 	/**
-// 	 * Register new button in the editor
-// 	 * @return array
-// 	 */
 
-// 	function wpteam_register_mce_button( $buttons ) {
-// 		array_push( $buttons, 'wpteam_mce_button' );
+	/* ~~~~~~~~~~ Protection for e-mail addresses in html ~~~~~~~~~~ */
 
-// 		return $buttons;
-// 	}
-// }
+	add_filter('acf/load_value', 'eae_encode_emails');
 
 
-/* ~~~~~~~~~~ Specific image dimensions ~~~~~~~~~~ */
+	/* ~~~~~~~~~~ OG Image fix ~~~~~~~~~~ */
 
-// add_image_size( 'image-type-title', 'X', 'X', true);
+	add_filter('wpseo_pre_analysis_post_content', 'crunch_opengraph_content');
+	function crunch_opengraph_content($val) {
+		return preg_replace("/<img[^>]+>/i", "", $val);
+	}
 
 
-/* ~~~~~~~~~~ Protection for e-mail addresses in html ~~~~~~~~~~ */
+	/* ~~~~~~~~~~ ACF Google Maps API Key ~~~~~~~~~~ */
 
-add_filter('acf/load_value', 'eae_encode_emails');
+	// function my_acf_init() {
 
+	//     acf_update_setting('google_api_key', 'XXXXXXXXXXXXXXXXXXXX');
+	// }
 
-/* ~~~~~~~~~~ OG Image fix ~~~~~~~~~~ */
+	// add_action('acf/init', 'my_acf_init');
 
-add_filter('wpseo_pre_analysis_post_content', 'wpteam_opengraph_content');
-function wpteam_opengraph_content($val) {
-	return preg_replace("/<img[^>]+>/i", "", $val);
-}
 
+	/* ~~~~~~~~~~ Init Sidebar ~~~~~~~~~~ */
 
-/* ~~~~~~~~~~ Turning off REST API ~~~~~~~~~~ */
+	// add_action( 'widgets_init', 'crunch_widgets_init' );
+	// function crunch_widgets_init() {
+	//     register_sidebar(
+	//         array(
+	//             'name' => __( 'Blog', 'crunch' ),
+	//             'id' => 'sidebar-blog',
+	//             'description' => __( 'Widgets in this section are displayed on blog pages.', 'crunch' ),
+	//             'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	//         'after_widget'  => '</div>',
+	//         'before_title'  => '<h2 class="widget__title">',
+	//         'after_title'   => '</h2>',
+	//         )
+	//     );
+	// }
 
-add_filter('rest_authentication_errors', 'disable_rest_api', 99);
-function disable_rest_api() {
-	return new WP_Error('rest_api_disabled', 'REST API disables', array('status' => 403));
-}
 
+	/* ~~~~~~~~~~ Removing standard posts from WP Admin ~~~~~~~~~~ */
 
-/* ~~~~~~~~~~ ACF Google Maps API Key ~~~~~~~~~~ */
+	// add_action( 'admin_menu', 'my_remove_menu_pages' );
 
-// function my_acf_init() {
+	// function my_remove_menu_pages() {
+	//     remove_menu_page('edit.php');
+	// }
 
-//     acf_update_setting('google_api_key', 'XXXXXXXXXXXXXXXXXXXX');
-// }
 
-// add_action('acf/init', 'my_acf_init');
+	/* ~~~~~~~~~~ Hide ACF ~~~~~~~~~~ */
 
+	// add_filter('acf/settings/show_admin', '__return_false');
 
-/* ~~~~~~~~~~ Init Sidebar ~~~~~~~~~~ */
 
-// add_action( 'widgets_init', 'wpteam_widgets_init' );
-// function wpteam_widgets_init() {
-//     register_sidebar(
-//         array(
-//             'name' => __( 'Blog', 'wpteam' ),
-//             'id' => 'sidebar-blog',
-//             'description' => __( 'Widgets in this section are displayed on blog pages.', 'wpteam' ),
-//             'before_widget' => '<div id="%1$s" class="widget %2$s">',
-//         'after_widget'  => '</div>',
-//         'before_title'  => '<h2 class="widget__title">',
-//         'after_title'   => '</h2>',
-//         )
-//     );
-// }
+	/* ~~~~~~~~~~ Add SVG Support ~~~~~~~~~~ */
 
+	function add_file_types_to_uploads($file_types){
+		$new_filetypes = array();
+		$new_filetypes['svg'] = 'image/svg+xml';
+		$file_types = array_merge($file_types, $new_filetypes );
+		return $file_types;
+	}
 
-/* ~~~~~~~~~~ Removing standard posts from WP Admin ~~~~~~~~~~ */
+	add_action('upload_mimes', 'add_file_types_to_uploads');
 
-// add_action( 'admin_menu', 'my_remove_menu_pages' );
 
-// function my_remove_menu_pages() {
-//     remove_menu_page('edit.php');
-// }
+	/* ~~~~~~~~~~ Add Styles To TINY MCE ~~~~~~~~~~ */
 
+	add_editor_style( 'styles/style.css' );
 
-/* ~~~~~~~~~~ Hide ACF ~~~~~~~~~~ */
 
-// add_filter('acf/settings/show_admin', '__return_false');
+	/* ~~~~~~~~~~ Deregister WP Embed ~~~~~~~~~~ */
 
+	function my_deregister_scripts(){
+	  	wp_deregister_script( 'wp-embed' );
+	}
 
-/* ~~~~~~~~~~ Check featured image size ~~~~~~~~~~ */
+	add_action( 'wp_footer', 'my_deregister_scripts' );
 
-add_action('transition_post_status', 'check_featured_image_size_after_save', 10, 3);
 
-function check_featured_image_size_after_save($new_status, $old_status, $post){
-    $run_on_statuses = array('publish', 'pending', 'future');
+	/* ~~~~~~~~~~ Disable WP Emoji ~~~~~~~~~~ */
 
-    if(!in_array($new_status, $run_on_statuses)) return;
+	function disable_wp_emojicons() {
+	  	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	  	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	  	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	  	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	  	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	  	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	  	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
-    $post_id = $post->ID;
+	  	add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+	}
+	add_action( 'init', 'disable_wp_emojicons' );
 
-    if ( wp_is_post_revision( $post_id ) ) return; //not sure about this.. but apparently save is called twice when this happens
+	function disable_emojicons_tinymce( $plugins ) {
+	  	if ( is_array( $plugins ) ) {
+	    	return array_diff( $plugins, array( 'wpemoji' ) );
+	  	} else {
+	    	return array();
+	  	}
+	}
 
-    $image_data = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), "Full" );
 
-    if(!$image_data) return; //separate message if no image at all. (I use a plugin for this)
+	/* ~~~~~~~~~~ Add Fancybox attribute to WordPress Gallery ~~~~~~~~~~ */
 
-    $image_width = $image_data[1];
-    $image_height = $image_data[2];
+	add_filter('wp_get_attachment_link', 'crunch_add_rel_attribute');
+	function crunch_add_rel_attribute($link) {
+		global $post;
+		return str_replace('<a href', '<a data-fancybox="group" href', $link);
+	}
 
-    $min_width = 850;
-    $min_height = 450;
 
-    if($image_width < $min_width || $image_height < $min_height) {
-    // Being safe, honestly $old_status shouldn't be in $run_on_statuses... it wouldn't save the first time!
-        $reverted_status = in_array($old_status, $run_on_statuses) ? 'draft' : $old_status;
-
-        wp_update_post(array(
-            'ID' => $post_id,
-            'post_status' => $reverted_status,
-        ));
-
-        $back_link = admin_url("post.php?post=$post_id&action=edit");
-        wp_die("Featured Image not large enough, must be at least ${min_width}x$min_height. Reverting status to '$reverted_status'.<br><br><a href='$back_link'>Go Back</a>");
-    }
-}
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~ Required functions ~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	/* ~~~~~~~~~~ Required functions ~~~~~~~~~ */
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     require_once('inc/enqueue-scripts.php');
     require_once('inc/required-plugins-init.php');

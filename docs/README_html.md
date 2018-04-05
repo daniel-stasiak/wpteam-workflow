@@ -20,7 +20,7 @@ Example of single section with title, subtitle, content, and button:
                         <li>Second</li>
                     </ul>
                 </div>
-                <a href="about-us.php" class="company-name-button company-name-button__full-background company-name-button__full-background--green animsition-link">Learn more</a>
+                <a href="about-us.php" class="company-name-button company-name-button__full-background company-name-button__full-background--green">Learn more</a>
             </div>
         </div>
     </div>
@@ -32,10 +32,10 @@ Example of single section with title, subtitle, content, and button:
 Container with ```background-cover``` image editable in WP admin:
 
 ```sh
-<article class="single-news element-margins-top background-cover" style="background-image: url('images/img__single-news.jpg');">
+<article class="single-news element-margin-top background-cover" style="background-image: url('images/img__single-news.jpg');">
     <h2 class="single-news__title"><?php the_title(); ?></h2>
-    <a href="<?php the_permalink(); ?>" class="company-name-button company-name-button--smaller company-name-button__outline company-name-button__outline--pink animsition-link">Read more</a>
+    <a href="<?php the_permalink(); ?>" class="company-name-button company-name-button--smaller company-name-button__outline company-name-button__outline--pink">Read more</a>
 </article>
 ```
 
-ⓒ 2017 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim
+ⓒ 2018 All rights reserved [WP Team](http://wpteam.com). WP Team is a division of Acclaim

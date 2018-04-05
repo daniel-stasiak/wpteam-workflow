@@ -2,13 +2,13 @@
 /* ~~~~~~~~~~ Load plugins ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-var $ = require('gulp-load-plugins')(),
-    argv = require('yargs').argv,
-    gulp = require('gulp'),
+var $           = require('gulp-load-plugins')(),
+    argv        = require('yargs').argv,
+    gulp        = require('gulp'),
     browserSync = require('browser-sync').create(),
     sequence    = require('run-sequence'),
-    del = require('del'),
-    cssnano = require('gulp-cssnano');
+    del         = require('del'),
+    cleanCSS    = require('gulp-clean-css');
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -17,12 +17,10 @@ var $ = require('gulp-load-plugins')(),
 
 var PATHS = {
     sass: [
-        'bower_components/bootstrap/scss',
         'bower_components/css-hamburgers/_sass',
-        'bower_components/font-awesome/scss',
+        'bower_components/fancybox/dist',
         'bower_components/jQuery.mmenu/dist/css',
-        'bower_components/select2/src/scss',
-        // 'bower_components/owl.carousel/src/scss'
+        'bower_components/owl.carousel/src/scss'
     ],
     javascript: [
 
@@ -31,17 +29,7 @@ var PATHS = {
         'bower_components/popper.js/index.js',
         'bower_components/tooltip.js/index.js',
 
-        'bower_components/bootstrap/js/dist/alert.js',
-        'bower_components/bootstrap/js/dist/button.js',
-        'bower_components/bootstrap/js/dist/carousel.js',
-        'bower_components/bootstrap/js/dist/collapse.js',
-        'bower_components/bootstrap/js/dist/dropdown.js',
-        'bower_components/bootstrap/js/dist/modal.js',
-        'bower_components/bootstrap/js/dist/popover.js',
-        'bower_components/bootstrap/js/dist/scrollspy.js',
-        'bower_components/bootstrap/js/dist/tab.js',
-        'bower_components/bootstrap/js/dist/tooltip.js',
-        'bower_components/bootstrap/js/dist/util.js',
+        'bower_components/fancybox/dist/jquery.fancybox.js',
 
         'bower_components/jquery-lazy/jquery.lazy.js',
 
@@ -53,11 +41,24 @@ var PATHS = {
 
         'bower_components/matchHeight/jquery.matchHeight.js',
 
-        // 'bower_components/owl.carousel/dist/owl.carousel.js',
+        'bower_components/owl.carousel/dist/owl.carousel.js',
 
-        'bower_components/retinajs/dist/retina.js',
+        'bower_components/webfontloader/webfontloader.js',
 
-        'bower_components/select2/dist/js/select2.js',
+
+        /* ~~~~~~~~~~ Core scripts ~~~~~~~~~~ */
+
+        'assets/scripts/core/bootstrap/alert.js',
+        // 'assets/scripts/core/bootstrap/button.js',
+        // 'assets/scripts/core/bootstrap/carousel.js',
+        'assets/scripts/core/bootstrap/collapse.js',
+        'assets/scripts/core/bootstrap/dropdown.js',
+        'assets/scripts/core/bootstrap/modal.js',
+        // 'assets/scripts/core/bootstrap/popover.js',
+        'assets/scripts/core/bootstrap/scrollspy.js',
+        'assets/scripts/core/bootstrap/tab.js',
+        'assets/scripts/core/bootstrap/tooltip.js',
+        'assets/scripts/core/bootstrap/util.js',
 
 
         /* ~~~~~~~~~~ Custom scripts ~~~~~~~~~~ */
@@ -94,7 +95,7 @@ var COMPATIBILITY = [
             .pipe($.autoprefixer({
                 browsers: COMPATIBILITY
             }))
-            .pipe($.if(isProduction, cssnano()))
+            .pipe($.if(isProduction, cleanCSS({ level: { 1: {specialComments: 'none' }}})))
             .pipe($.if(!isProduction, $.sourcemaps.write('.')))
             .pipe(gulp.dest('styles/'))
             .pipe($.notify({ message: 'Styles completed' }));
@@ -152,17 +153,6 @@ var COMPATIBILITY = [
     });
 
 
-    /* ~~~~~~~~~~ Copy ~~~~~~~~~~ */
-
-    gulp.task('copy', function() {
-
-        /* ~~~~~~~~~~ Font Awesome ~~~~~~~~~~ */
-
-        var fontAwesome = gulp.src('bower_components/font-awesome/fonts/**/*.*')
-            .pipe(gulp.dest('fonts/'));
-    });
-
-
     /* ~~~~~~~~~~ Clean styles, scripts, and images ~~~~~~~~~~ */
 
     gulp.task('clean', function() {
@@ -176,7 +166,7 @@ var COMPATIBILITY = [
 
     /* ~~~~~~~~~~ Default task ~~~~~~~~~~ */
 
-    gulp.task('default', function(done) {
+    gulp.task('default', ['build'], function(done) {
         gulp.watch('assets/styles/sass/**/*.scss', ['sass']);
         gulp.watch('assets/scripts/**/*.js', ['scripts', 'lint']);
         browserSync.reload();
@@ -195,7 +185,7 @@ var COMPATIBILITY = [
     /* ~~~~~~~~~~ Watch files ~~~~~~~~~~ */
 
     gulp.task('build', ['clean'], function(done) {
-        sequence('copy',
+        sequence(
           ['sass', 'scripts', 'lint', 'images-optim'],
           done);
     });
@@ -203,7 +193,7 @@ var COMPATIBILITY = [
 
     /* ~~~~~~~~~~ Virtual server ~~~~~~~~~~ */
 
-    gulp.task('serve', ['default'], function() {
+    gulp.task('serve', ['build', 'default'], function() {
         browserSync.init({
             open: 'local',
             browser: 'firefox',

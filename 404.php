@@ -1,60 +1,29 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Page Not Found</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+<?php
+    /**
+    *   The template for displaying 404 pages (not found)
+    *
+    *   @package Crunch
+    *   @since Crunch 2.0.0
+    */
+?>
 
-        * {
-            line-height: 1.2;
-            margin: 0;
-        }
+<?php get_header(); ?>
 
-        html {
-            color: #888;
-            display: table;
-            font-family: sans-serif;
-            height: 100%;
-            text-align: center;
-            width: 100%;
-        }
+<main id="main" class="error-404-page-template">
 
-        body {
-            display: table-cell;
-            vertical-align: middle;
-            margin: 2em auto;
-        }
+    <section class="error-404">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="error-404__title">Page Not Found</h1><!-- /.error-404__title -->
+                    <div class="error-404__content content element-small-margin-top">
+                        <p>Sorry, but the page you were trying to view does not exist.</p>
+                    </div><!-- /.error-404__content content element-small-margin-top -->
+                </div><!-- /.col-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.error-404 -->
 
-        h1 {
-            color: #555;
-            font-size: 2em;
-            font-weight: 400;
-        }
+</main><!-- /#main.error-404-page-template -->
 
-        p {
-            margin: 0 auto;
-            width: 280px;
-        }
-
-        @media only screen and (max-width: 280px) {
-
-            body, p {
-                width: 95%;
-            }
-
-            h1 {
-                font-size: 1.5em;
-                margin: 0 0 0.3em;
-            }
-
-        }
-
-    </style>
-</head>
-<body>
-    <h1>Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
-</body>
-</html>
-<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
+<?php get_footer(); ?>
